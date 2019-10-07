@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            src: url(../font/iconfont.woff),
+                url(../font/iconfont.woff2),
+                url(../font/iconfont.eot),
+                url(../font/iconfont.svg),
+                url(../font/iconfont.ttf)
+        }
+
+        #box {
+            width: 100%;
+            height: 885px;
+        }
+
+        #header {
+            width: 100%;
+            height: 60px;
+        }
+
+        #header .bx {
+            width: 1236px;
+            height: 60px;
+            margin: 0 auto;
+        }
+
+        #header .logo {
+            width: 618px;
+            height: 60px;
+            float: left;
+        }
+
+        #header .logo a {
+            float: left;
+            width: 70px;
+            height: 20px;
+            /* margin-top: 20px; */
+        }
+
+        #header .logo img {
+            width: 84px;
+            height: 55px;
+        }
+
+        #header .logo span {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 35px;
+        }
+
+        #header .denglu {
+            width: 618px;
+            height: 60px;
+            float: left;
+        }
+
+        #header .denglu .first {
+            /* display: inline-block; */
+            float: right;
+            font-size: 14px;
+            color: #000;
+            line-height: 60px;
+        }
+
+        #header .denglu .hao {
+            /* display: inline-block; */
+            float: right;
+            font-size: 14px;
+            color: #4dc2ee;
+            line-height: 60px;
+        }
+
+        #index {
+            width: 100%;
+            height: 769px;
+            background: url(../img/indexbg.jpg) no-repeat;
+        }
+
+        #index .index_bx {
+            width: 1236px;
+            height: 769px;
+            margin: 0 auto;
+        }
+
+        #index .index_bx .vip {
+            width: 1236px;
+            height: 118px;
+            padding-top: 32px;
+        }
+
+        #index .index_bx .vip p {
+            width: 840px;
+            height: 85px;
+            font-size: 28px;
+            line-height: 85px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        #index .index_bx .message {
+            width: 840px;
+            height: 480px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        #index .index_bx .message .mes_box1 {
+            width: 663px;
+            height: 265px;
+            display: block;
+            height: 219px;
+            margin-left: 177px;
+            padding-top: 46px;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 {
+            width: 430px;
+            float: left;
+            height: 390px;
+            position: relative;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .username {
+            width: 430px;
+            height: 55px;
+            position: relative;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .username span {
+            margin-right: 20px;
+            font-size: 14px;
+            /* margin-left: -14px; */
+            float: left;
+            line-height: 40px;
+            color: #666;
+        }
+
+        /* #index .index_bx .message .mes_box1 .mes_box2 .username .username {
+            position: relative;
+            font-size: 14px;
+            width: 344px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 11px;
+            border: 1px solid #d6dbdd;
+        } */
+        #username {
+            position: relative;
+            font-size: 14px;
+            width: 344px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 11px;
+            border: 1px solid #d6dbdd;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .password {
+            width: 430px;
+            height: 55px;
+            position: relative;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .password span {
+            margin-right: 17px;
+            font-size: 14px;
+            margin-left: 17px;
+            float: left;
+            line-height: 40px;
+            color: #666;
+        }
+
+        /* #index .index_bx .message .mes_box1 .mes_box2 .password .pass {
+            position: relative;
+            font-size: 14px;
+            width: 344px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 11px;
+            border: 1px solid #d6dbdd;
+        } */
+        #password {
+            position: relative;
+            font-size: 14px;
+            width: 344px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 11px;
+            border: 1px solid #d6dbdd;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .repassword {
+            width: 430px;
+            height: 55px;
+            position: relative;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .repassword span {
+            margin-right: 20px;
+            font-size: 14px;
+            margin-left: -14px;
+            float: left;
+            line-height: 40px;
+            color: #666;
+        }
+
+        /* #index .index_bx .message .mes_box1 .mes_box2 .repassword .repass {
+            position: relative;
+            font-size: 14px;
+            width: 344px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 11px;
+            border: 1px solid #d6dbdd;
+        } */
+        #repasswd {
+            position: relative;
+            font-size: 14px;
+            width: 344px;
+            height: 32px;
+            line-height: 32px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 11px;
+            border: 1px solid #d6dbdd;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .touchcoad {
+            widows: 430px;
+            height: 40px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .touchcoad .yan {
+            line-height: 40px;
+            display: inline-block;
+            width: 43px;
+            text-align: right;
+            margin-right: 15px;
+            vertical-align: top;
+            font-size: 14px;
+            color: #666;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .touchcoad .touchbox {
+            height: 38px;
+            border: 1px solid #d6dbdd;
+            position: relative;
+            display: inline-block;
+            width: 358px;
+            line-height: 38px;
+            background: #f6f6f6;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .touchcoad .touchbox .door {
+            width: 38px;
+            height: 38px;
+            border-left: 1px solid #d6dbdd;
+            border-right: 1px solid #d6dbdd;
+            position: absolute;
+            top: 0;
+            left: -1px;
+            display: block;
+            z-index: 5;
+            cursor: move;
+            font-size: 18px;
+            line-height: 38px;
+            text-align: center;
+            color: #4dc2ee;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .touchcoad .touchbox .touchroad {
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: #59caff;
+            z-index: 0;
+        }
+
+        #index .index_bx .message .mes_box1 .mes_box2 .touchcoad .touchbox .what {
+            font-size: 14px;
+            color: #666;
+        }
+
+        #index .index_bx .message .finished {
+            width: 360px;
+            height: 50px;
+            background: #4dc2ee;
+            /* display: block; */
+            /* margin: 13px 240px; */
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: 80px;;
+            left:35px; 
+        }
+
+        #index .index_bx .message .yes {
+            /* margin-bottom: 20px; */
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            float: left;
+            margin-left: 200px;
+            margin-top: -50px;
+            /* margin-bottom: 200px; */
+        }
+
+        #index .index_bx .message .yes a {
+            color: #32beff;
+        }
+
+        #index .index_bx .hehe {
+            width: 1236px;
+            height: 139px;
+            margin: 0 auto;
+        }
+
+        #index .index_bx .hehe .he {
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 20px;
+        }
+
+        #bottom {
+            width: 100%;
+            height: 56px;
+            background: #2b2c2d;
+        }
+
+        #bottom .bottom {
+            width: 1236px;
+            height: 56px;
+            background: #2b2c2d;
+            margin: 0 auto;
+        }
+
+        #bottom .bottom .left {
+            width: 400px;
+            height: 16px;
+            float: left;
+            margin-top: 20px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .left a {
+            font-size: 12px;
+            display: inline-block;
+            height: 16px;
+            color: #515252;
+        }
+
+        #bottom .bottom .left :hover a {
+            color: #0c5ca8;
+        }
+
+        #bottom .bottom .left i {
+            color: #515252;
+            font-size: 10px;
+            padding: 0 5px;
+        }
+
+        #bottom .bottom .middle {
+            width: 402px;
+            height: 16px;
+            float: right;
+            margin-top: 20px;
+            line-height: 16px;
+            /* margin-left: 20px; */
+            color: #515252;
+        }
+
+        #bottom .bottom .middle span {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .middle i {
+            color: #515252;
+            padding: 0 5px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body id="box">
+    <div id="header">
+        <div class="bx">
+            <div class="logo">
+                <a href="">
+                    <img src="../img/logo.png" alt="">
+                </a>
+                <span>账号登录</span>
+            </div>
+            <div class="denglu">
+                <a href="" class="hao">直接登录</a>
+                <span class="first">我已注册，</span>
+            </div>
+        </div>
+    </div>
+    <div id="index">
+        <div class="index_bx">
+            <div class="vip">
+                <p>一个账号便利享受Haier所有服务</p>
+            </div>
+            <div class="message">
+                <div class="mes_box1">
+                    <div class="mes_box2">
+                        <form action="" id="myform">
+                            <div class="username">
+                                <span>用户名</span>
+                                <input type="text" id="username" name="username" placeholder="用户名" required>
+                            </div>
+                            <div class="password">
+                                <span>密码</span>
+                                <input type="password" id="password" name="password" placeholder="密码" required>
+                            </div>
+                            <div class="repassword">
+                                <span>确认密码</span>
+                                <input type="password" id="repasswd" name="repasswd" placeholder="确认密码" required>
+                            </div>
+                            <div class="touchcoad">
+                                <span class="yan">验证</span>
+                                <div class="touchbox">
+                                    <span class="door">></span>
+                                    <p class="touchroad">
+                                        <span class="what">
+                                            请按住滑块，拖到最右边
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <button class="finished">注册</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <button class="finished">注册</button> -->
+                <p class="yes">
+                    默认用户同意
+                    <a href="">《海尔注册用户服务条款》</a>
+                    <a href="">《法律声明及隐私权政策》</a>
+                </p>
+            </div>
+            <div class="hehe">
+                <p class="he">Haier账号支持所有产品和服务</p>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="bottom">
+            <div class="left">
+                <a href="">关于海尔</a>
+                <i>|</i>
+                <a href="">法律声明</a>
+                <i>|</i>
+                <a href="">联系我们</a>
+                <i>|</i>
+                <a href="">帮助中心</a>
+                <i>|</i>
+                <a href="">海尔门店</a>
+            </div>
+            <div class="middle">
+                <span>鲁ICP备09096283</span>
+                <i>|</i>
+                <span>Copyright ©2019 海尔集团 版权所有</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        var myformEle = document.getElementById('myform');
+        // var password = document.querySelector('#password');
+        // var repasswd = document.querySelector('#repasswd');
+
+        myformEle.addEventListener('submit', function (e) {
+
+        // myformEle.onsubmit = function (e) {
+            e.preventDefault();
+            var username = this.username.value;
+            var password = this.password.value;
+            var repasswd = this.repasswd.value;
+            var ajax = new XMLHttpRequest;
+            ajax.open('post', './index.php');
+            ajax.setRequestHeader(
+                'Content-Type',
+                'application/x-www-form-urlencoded'
+            );
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState == 4 && ajax.status == 200) {
+
+                    var data = JSON.parse(ajax.responseText);
+                    alert(data.msg);
+                    switch (data.code) {
+                        case 2:
+                            location = './first.html';
+                            break;
+                        case -1:
+                            e.target.username.value = '';
+                            e.target.username.focus();
+                            break;
+                        case -2:
+                            e.target.password.value = '';
+                            e.target.password.focus();
+                        default:
+                    }
+                }
+            }
+            ajax.send('username=' + username + '&password=' + password + '&repasswd=' + repasswd);
+        }, false);
+        // };
+    </script>
+</body>
+
+</html>

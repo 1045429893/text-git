@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            src: url(../font/iconfont.woff),
+                url(../font/iconfont.woff2),
+                url(../font/iconfont.eot),
+                url(../font/iconfont.svg),
+                url(../font/iconfont.ttf)
+        }
+
+        #box {
+            width: 100%;
+            height: 696px;
+        }
+
+        #header {
+            width: 100%;
+            height: 60px;
+        }
+
+        #header .bx {
+            width: 1236px;
+            height: 60px;
+            margin: 0 auto;
+        }
+
+        #header .logo {
+            width: 618px;
+            height: 60px;
+            float: left;
+        }
+
+        #header .logo a {
+            float: left;
+            width: 70px;
+            height: 20px;
+            /* margin-top: 20px; */
+        }
+
+        #header .logo img {
+            width: 84px;
+            height: 55px;
+        }
+
+        #header .logo span {
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 35px;
+        }
+
+        #header .denglu {
+            width: 618px;
+            height: 60px;
+            float: left;
+        }
+
+        #header .denglu .first {
+            /* display: inline-block; */
+            float: right;
+            font-size: 14px;
+            color: #4dc2ee;
+            line-height: 60px;
+        }
+
+        #header .denglu i {
+            padding: 0 10px;
+            color: #e5e5e5e5;
+            float: right;
+            margin-top: 18px;
+        }
+
+        #header .denglu .hao {
+            /* display: inline-block; */
+            float: right;
+            font-size: 14px;
+            color: #000;
+            line-height: 60px;
+        }
+
+        #login {
+            width: 100%;
+            height: 580px;
+            background: url(../img/denglubg.jpg)-326px -186px no-repeat;
+        }
+
+        #login .login_bx {
+            width: 1236px;
+            height: 580px;
+            margin: 0 auto;
+            position: relative;
+            /* padding-top: 37.5px; */
+        }
+
+        #login .login_bx .denglu {
+            width: 618px;
+            height: 488px;
+            position: absolute;
+            right: 0;
+            top: 37.5px;
+            /* background: #fff; */
+        }
+
+        #login .login_bx .denglu .main {
+            width: 420px;
+            height: 448px;
+            margin: 0 auto;
+            background: #fff;
+            position: relative;
+        }
+
+        #login .login_bx .denglu .main .title {
+            width: 420px;
+            height: 60px;
+            border-bottom: 2px solid #e5e5e5;
+            font-size: 16px;
+            text-indent: 2rem;
+            line-height: 60px;
+        }
+
+        #login .login_bx .denglu .main ul {
+            width: 360px;
+            height: 39px;
+            margin: 25px auto;
+        }
+
+        #login .login_bx .denglu .main .cpt {
+            width: 36px;
+            height: 38px;
+            font-family: "iconfont";
+            color: #005AAA;
+            font-size: 38px;
+            float: left;
+        }
+
+        #login .login_bx .denglu .main .norm {
+            width: 106px;
+            height: 38px;
+            line-height: 38px;
+            font-size: 14px;
+            float: left;
+            color: #005AAA;
+            margin-left: 20px;
+        }
+
+        #login .login_bx .denglu .main .phone {
+            width: 36px;
+            height: 38px;
+            font-family: "iconfont";
+            color: #c7cbcc;
+            font-size: 38px;
+            float: left;
+        }
+
+        #login .login_bx .denglu .main .take {
+            width: 84px;
+            height: 24px;
+            line-height: 20px;
+            font-size: 14px;
+            float: left;
+            color: #c7cbcc;
+            margin-left: 20px;
+        }
+
+        #login .login_bx .denglu .main .erweima {
+            width: 36px;
+            height: 38px;
+            font-family: "iconfont";
+            color: #c7cbcc;
+            font-size: 38px;
+            float: left;
+            margin-left: 20px;
+        }
+
+        #login .login_bx .denglu .main .write {
+            width: 360px;
+            height: 290px;
+            margin: 0 auto;
+        }
+
+        #login .login_bx .denglu .main .write .username {
+            width: 360px;
+            height: 65px;
+            position: relative;
+        }
+
+        /* #login .login_bx .denglu .main .write .username .name {
+            width: 360px;
+            height: 50px;
+            position: relative;
+            font-size: 14px;
+            width: 307px;
+            height: 42px;
+            line-height: 42px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 48px;
+            border: 1px solid #e5e5e5;
+        } */
+        #username {
+            width: 360px;
+            height: 50px;
+            position: relative;
+            font-size: 14px;
+            width: 307px;
+            height: 42px;
+            line-height: 42px;
+            color: #999;
+            outline: 0;
+            padding: 3px 3px 3px 48px;
+            border: 1px solid #e5e5e5;
+        }
+
+        #login .login_bx .denglu .main .write .username .peo {
+            widows: 48px;
+            height: 50px;
+            font-family: "iconfont";
+            font-size: 38px;
+            line-height: 50px;
+            text-align: center;
+            color: #999;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #login .login_bx .denglu .main .write .password {
+            width: 360px;
+            height: 65px;
+            position: relative;
+        }
+
+        /* #login .login_bx .denglu .main .write .password .pass {
+            width: 360px;
+            height: 50px;
+            position: relative;
+            font-size: 14px;
+            width: 307px;
+            height: 42px;
+            line-height: 42px;
+            color: #999;
+            outline: 0;
+            border: 1px solid #e5e5e5;
+            padding: 3px 3px 3px 48px;
+        } */
+        #password {
+            width: 360px;
+            height: 50px;
+            position: relative;
+            font-size: 14px;
+            width: 307px;
+            height: 42px;
+            line-height: 42px;
+            color: #999;
+            outline: 0;
+            border: 1px solid #e5e5e5;
+            padding: 3px 3px 3px 48px;
+        }
+
+        #login .login_bx .denglu .main .write .password .suo {
+            widows: 48px;
+            height: 50px;
+            font-family: "iconfont";
+            font-size: 38px;
+            line-height: 50px;
+            text-align: center;
+            color: #999;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #login .login_bx .denglu .main .yes {
+            width: 360px;
+            height: 24px;
+            /* margin: 0px auto; */
+            font-size: 14px;
+            line-height: 24px;
+            /* text-align: center; */
+            position: absolute;
+            bottom: 120px;
+            left:38px;
+        }
+
+        #login .login_bx .denglu .main .yes a {
+            font-size: 12px;
+            line-height: 24px;
+            color: #005AAA;
+           
+
+        }
+
+        #login .login_bx .denglu .main .take_in {
+            width: 360px;
+            height: 50px;
+            /* margin: 0 30px; */
+            font-size: 16px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: 700;
+            background: #4dc2ee;
+            color: #fff;
+            border-radius: 5px 5px 5px 5px;
+            margin-top: 94px;
+        }
+
+        #login .login_bx .denglu .others {
+            width: 268px;
+            height: 20px;
+            margin-top: 20px;
+            margin-left: 100px;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #login .login_bx .denglu .others a {
+            font-size: 14px;
+            color: #fff;
+        }
+
+        #bottom {
+            width: 100%;
+            height: 56px;
+            background: #2b2c2d;
+        }
+
+        #bottom .bottom {
+            width: 1236px;
+            height: 56px;
+            background: #2b2c2d;
+            margin: 0 auto;
+        }
+
+        #bottom .bottom .left {
+            width: 400px;
+            height: 16px;
+            float: left;
+            margin-top: 20px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .left a {
+            font-size: 12px;
+            display: inline-block;
+            height: 16px;
+            color: #515252;
+        }
+
+        #bottom .bottom .left :hover a {
+            color: #0c5ca8;
+        }
+
+        #bottom .bottom .left i {
+            color: #515252;
+            font-size: 10px;
+            padding: 0 5px;
+        }
+
+        #bottom .bottom .middle {
+            width: 402px;
+            height: 16px;
+            float: right;
+            margin-top: 20px;
+            line-height: 16px;
+            /* margin-left: 20px; */
+            color: #515252;
+        }
+
+        #bottom .bottom .middle span {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .middle i {
+            color: #515252;
+            padding: 0 5px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body id="box">
+    <div id="header">
+        <div class="bx">
+            <div class="logo">
+                <a href="">
+                    <img src="../img/logo.png" alt="">
+                </a>
+                <span>账号登录</span>
+            </div>
+            <div class="denglu">
+                <a href="" class="hao">梦想+会员首次激活登陆</a>
+                <i>|</i>
+                <a href="" class="first">注册海尔账号</a>
+            </div>
+        </div>
+    </div>
+    <div id="login">
+        <div class="login_bx">
+            <div class="denglu">
+                <div class="main">
+                    <div class="title">登录海尔账号</div>
+                    <ul>
+                        <li class="cpt">&#xe605;</li>
+                        <li class="norm">普通登录</li>
+                        <a href="">
+                            <li class="phone">&#xe609;</li>
+                            <li class="take">使用手机<br />动态密码登录</li>
+                        </a>
+                        <a href="">
+                            <li class="erweima">&#xe63e;</li>
+                        </a>
+                    </ul>
+                    <form action="" class="write">
+                        <div class="username">
+                            <input type="text" placeholder="用户名" name="username" id="username" required>
+                            <div class="peo">&#xe603;</div>
+                        </div>
+                        <div class="password">
+                            <input type="password" placeholder="密码" name="password" id="password" required>
+                            <div class="suo">&#xe619;</div>
+                        </div>
+                        <button class="take_in">
+                            登录
+                        </button>
+                    </form>
+                    <p class="yes">
+                        默认同意
+                        <a href="">《海尔注册用户服务条款》</a>
+                        <a href="">《法律声明及隐私权政策》</a>
+                    </p>
+
+                </div>
+                <ul class="others">
+                    <li class="wechar">
+                        <a
+                            href="http://haier.com/ids/admin/loginByThird.jsp?appName=haier2&amp;regFrom=wx&amp;returnUrl=https://www.haier.com/cn/&amp;loginFrom=homepage">微信</a>
+                    </li>
+                    <li class="weibo">
+                        <a
+                            href="https://user.haier.com/ids/admin/loginByThird.jsp?appName=haier2&amp;regFrom=sinaWeibo&amp;returnUrl=https://www.haier.com/cn/&amp;loginFrom=homepage">微博</a>
+                    </li>
+                    <li class="wangyi">
+                        <a
+                            href="https://user.haier.com/ids/admin/loginByThird.jsp?appName=haier2&regFrom=netEasePassport&returnUrl=https://www.haier.com/cn/&loginFrom=homepage">网易</a>
+                    </li>
+                    <li class="renren">
+                        <a
+                            href="https://user.haier.com/ids/admin/loginByThird.jsp?appName=haier2&regFrom=renren&returnUrl=https://www.haier.com/cn/&loginFrom=homepage">人人网</a>
+                    </li>
+                    <li class="happy">
+                        <a
+                            href="https://user.haier.com/ids/admin/loginByThird.jsp?appName=haier2&regFrom=kaixin&returnUrl=https://www.haier.com/cn/&loginFrom=homepage">开心网</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div class="bottom">
+            <div class="left">
+                <a href="">关于海尔</a>
+                <i>|</i>
+                <a href="">法律声明</a>
+                <i>|</i>
+                <a href="">联系我们</a>
+                <i>|</i>
+                <a href="">帮助中心</a>
+                <i>|</i>
+                <a href="">海尔门店</a>
+            </div>
+            <div class="middle">
+                <span>鲁ICP备09096283</span>
+                <i>|</i>
+                <span>Copyright ©2019 海尔集团 版权所有</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./ajax-1.1.2.js"></script>
+<!-- <script src="./cookie-0.1.1.js"></script> -->
+<script>
+    var myformEle = document.getElementsByClassName("write");
+    // myformEle.addEventListener('submit', function (e) {
+    myformEle.onsubmit = function (e) {
+        e.preventDefault();
+        var username = this.username.value;
+        var password = this.password.value;
+        var ajax = new XMLHttpRequest;
+        ajax.open('post', './login.php');
+        ajax.setRequestHeader(
+            'Content-Type',
+            'application/x-www-form-urlencoded'
+        );
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) {
+                var data = JSON.parse(ajax.responseText);
+                alert(data.msg);
+                if (res.code == 2) {
+                    // logged true
+                    // cookie('logged', true, { maxAge: 30 * 60 });
+                    location = '/first.html'; // 登录成功后，跳转到主页
+                }
+            }
+        }
+        ajax.send('username=' + username + '&password=' + password + '&repasswd=' + repasswd);
+        // },false);
+    };
+    
+    //   var formEle = document.getElementsByClassName("write");
+
+    //   formEle.onsubmit = function(e) {
+    //     e.preventDefault();
+
+    //     var username = this.username.value;
+    //     var password = this.password.value;
+
+    //     ajax({
+    //       type: 'post',
+    //       url: 'login.php',
+    //       data: { username, password }
+    //     }).then(res => {
+    //       alert(res.msg);
+    //       if (res.code == 2) {
+    //         location = '/'; // 登录成功后，跳转到主页
+    //       }
+    //     });
+    //   };
+
+</script>
+
+</html>

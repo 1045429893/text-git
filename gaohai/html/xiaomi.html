@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		#box {
+			width: 100%;
+			height: 6195px;
+			background: #f5f5f5;
+		}
+
+		#header {
+			width: 1263px;
+			height: 40px;
+			margin: 0 auto;
+			background: #333333;
+		}
+
+		#header .h1 {
+			width: 560px;
+			height: 12px;
+			background: #333333;
+			padding-top: 14px;
+			float: left;
+		}
+
+		#header .h1 .h11 {
+			font-size: 11px;
+			color: #a4b0b0;
+			line-height: 12px;
+			float: left;
+			margin-left: 9px;
+			padding-right: 9px;
+			border-right: 1px solid #424242;
+		}
+
+		#header .h1 .h11:hover {
+			color: white;
+		}
+
+		#box2 {
+			width: 50px;
+			height: 12px;
+			float: left;
+		}
+
+		#box2 .boxx {
+			width: 50px;
+			height: 12px;
+			font-size: 11px;
+			color: #a4b0b0;
+			line-height: 12px;
+			/*float: left;*/
+			/*float: right;*/
+			margin-left: 9px;
+			padding-right: 9px;
+			/*border-right: 1px solid #424242;*/
+		}
+
+		#box2 .boxxx {
+			width: 70px;
+			height: 83px;
+			display: none;
+			background: white;
+			position: relative;
+			border: 1px solid #000;
+			margin-left: -3px;
+		}
+
+		#box2 .boxxx .pp {
+			font-size: 12px;
+			color: #000;
+			text-align: center;
+		}
+
+		.boxxx img {
+			width: 70px;
+			height: 50px;
+
+		}
+
+		#box2:hover .boxxx {
+			display: block;
+			/*float: left;*/
+		}
+
+		#box2:hover .boxx {
+			color: white;
+		}
+
+		#header .h2 {
+			width: 86px;
+			height: 11px;
+			background: #333333;
+			float: left;
+			margin-left: 470px;
+			margin-top: 14px;
+		}
+
+		#header .h2 .h21 {
+			font-size: 11px;
+			color: #a4b0b0;
+			line-height: 11px;
+			float: left;
+			padding-right: 9px;
+			margin-left: 9px;
+			border-right: 1px solid #424242;
+		}
+
+		#header .h2 .h22 {
+			font-size: 11px;
+			color: #a4b0b0;
+			line-height: 11px;
+			float: left;
+			padding-right: 9px;
+			margin-left: 9px;
+		}
+
+		#header .h2 .h21:hover {
+			color: white;
+		}
+
+		#header .h2 .h22:hover {
+			color: white;
+		}
+
+		#h3 {
+			width: 120px;
+			height: 40px;
+			background: white;
+			float: right;
+			margin-right: 18px;
+		}
+
+		#h3 .h31 {
+			width: 120px;
+			height: 40px;
+			background: #424242;
+			font-size: 11px;
+			color: #a4b0b0;
+			line-height: 40px;
+			text-align: center;
+
+		}
+
+		#h3 .h32 {
+			width: 215px;
+			height: 100px;
+			background: #ff6700;
+			position: relative;
+			float: left;
+			left: -94px;
+			bottom: 0;
+			display: none;
+			z-index: 999;
+		}
+
+		#h3:hover .h32 {
+			display: block;
+		}
+
+		#h3:hover .h31 {
+			background: #ff6700;
+			color: #fff;
+		}
+
+		#banner {
+			width: 1263px;
+			height: 100px;
+			margin: 0 auto;
+			background: #ffffff;
+		}
+
+		#banner .logo {
+			margin-left: 9px;
+			margin-top: 22px;
+			float: left;
+		}
+
+		#banner .ba {
+			width: 705px;
+			height: 14px;
+			background: #ffffff;
+			margin-top: 45px;
+			margin-left: 157px;
+			float: left;
+		}
+
+		#banner .ba .lei {
+			font-size: 14px;
+			color: #333;
+			line-height: 14px;
+			margin-left: 41px;
+			float: left;
+		}
+
+		#banner .ba .lei:hover {
+			color: #ff6700;
+		}
+
+		#banner .table {
+			width: 325px;
+			height: 100px;
+			background: white;
+			float: right;
+			position: relative;
+		}
+
+		#banner .table .tr {
+			width: 249px;
+			height: 48px;
+			border: 1px solid #e0e0e0;
+			margin-left: 13px;
+			margin-top: 25px;
+		}
+
+		#banner .table .ball {
+			width: 34px;
+			height: 18px;
+			background: #eeeeee;
+			display: block;
+			font-size: 11px;
+			color: #757575;
+			line-height: 18px;
+			text-align: center;
+			position: absolute;
+			right: 150px;
+			bottom: 41px;
+		}
+
+		#banner .table .ball:hover {
+			color: white;
+			background: #ff6700;
+		}
+
+		#banner .table .baller {
+			width: 65px;
+			height: 18px;
+			background: #eeeeee;
+			display: block;
+			font-size: 11px;
+			color: #757575;
+			line-height: 18px;
+			text-align: center;
+			position: absolute;
+			right: 80px;
+			bottom: 41px;
+		}
+
+		#banner .table .baller:hover {
+			color: white;
+			background: #ff6700;
+		}
+
+		#banner .table .bian {
+			width: 50px;
+			height: 48px;
+			background: red;
+			float: right;
+			margin-right: 10px;
+			margin-top: 25px;
+			border-right: 1px solid #e0e0e0;
+			border-top: 1px solid #e0e0e0;
+			border-bottom: 1px solid #e0e0e0;
+		}
+
+		#banner .table .bian .ser {
+			width: 50px;
+			height: 48px;
+			float: left;
+			background: url(../img/u1.png) no-repeat;
+		}
+
+		#banner .table .bian .ser:hover {
+			background: url(../img/u2.png) no-repeat;
+			border: 1px solid #a4b0b0;
+		}
+
+		#nav {
+			width: 1263px;
+			height: 460px;
+			background: #ffffff;
+			margin: 0 auto;
+		}
+
+		#nav .tu {
+			width: 1228px;
+			height: 460px;
+			margin-left: 9px;
+			position: relative;
+
+		}
+
+
+		#mask {
+			width: 1228px;
+			height: 460px;
+			margin: 0 auto;
+			position: relative;
+			/* left: -21px; */
+			overflow: hidden;
+		}
+
+		#ul {
+			width: 7368px;
+			height: 460px;
+			position: absolute;
+			left: 0;
+		}
+
+		#ul li {
+			width: 1228px;
+			height: 460px;
+			float: left;
+		}
+
+		#ul li img {
+			width: 1228px;
+			height: 460px;
+		}
+
+		#mask span {
+			position: absolute;
+			width: 52px;
+			height: 52px;
+			top: 50%;
+			margin-top: -26px;
+			display: none;
+		}
+
+		#al {
+			background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/left_arrow.svg?v=2);
+			left: 300px;
+		}
+
+		#ar {
+			background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/right_arrow.svg?v=2);
+			right: 60px;
+		}
+
+		#ar:hover {
+			background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/right_arrowhover.svg?v=2);
+		}
+
+		#al:hover {
+			background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/left_arrowhover.svg?v=2);
+		}
+
+		#mask:hover span {
+			display: block;
+		}
+
+		#page {
+			padding: 5px;
+			width: 320px;
+			position: absolute;
+			left: 50%;
+			bottom: 10px;
+			margin-left: -40px;
+		}
+
+		#page p {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			margin-right: 10px;
+			float: left;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+
+
+
+
+
+
+
+		#nav .tu .pian {
+			width: 1228px;
+			height: 460px;
+			position: relative;
+		}
+
+		#nav .tu .zuo {
+			width: 235px;
+			height: 460px;
+			background: #606365;
+			opacity: 0.5;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		#nav .tu .zuo .zuo1 {
+			height: 40px;
+			color: white;
+			font-size: 12px;
+			line-height: 40px;
+			text-indent: 30px;
+		}
+
+		#nav .tu .zuo .zuo2 {
+			height: 40px;
+			color: white;
+			font-size: 12px;
+			line-height: 40px;
+			text-indent: 30px;
+			margin-top: 20px;
+			position: relative;
+		}
+
+		#nav .tu .zuo .z11 {
+			color: white;
+			font-size: 12px;
+			line-height: 40px;
+		}
+
+		#nav .tu .zuo .jt {
+			color: rgba(255, 255, 255, 0.5);
+			position: absolute;
+			right: 23px;
+			margin-top: 14px;
+		}
+
+		/*#nav .tu .zuo .zuo1 .jt{
+			position: absolute;
+			right: 23px;
+			bottom: 20px;
+		}*/
+		#nav .tu .zuo .zuo1:hover {
+			background: #ff6700;
+		}
+
+		#nav .tu .zuo .zuo2:hover {
+			background: #ff6700;
+		}
+
+		#nav .dian {
+			width: 120px;
+			height: 10px;
+			/*border: 1px solid #000;*/
+			position: absolute;
+			top: 425px;
+			right: 35px;
+
+		}
+
+		#nav .bolid {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			border: 2px solid #b0b0b0;
+			float: left;
+			margin-left: 10px;
+			/*position: absolute;*/
+		}
+
+		#nav .bolid:hover {
+			border: 2px solid #ff6700;
+		}
+
+		#choic {
+			width: 1263px;
+			height: 170px;
+			margin-top: 14px;
+			background: #ffffff;
+			margin: 0 auto;
+		}
+
+		#choic .c1 {
+			width: 235px;
+			height: 170px;
+			margin-left: 9px;
+			background: red;
+			float: left;
+			background: url(../img/gun2.png) no-repeat 20px 20px;
+
+		}
+
+		#choic .c1 .c11 {
+			width: 80px;
+			height: 84px;
+			float: left;
+			background: url(../img/gun.png) #5f5750 no-repeat 79px 9px;
+		}
+
+		#choic .c1 .wz {
+			margin-left: 30px;
+			margin-top: 23px;
+		}
+
+		#choic .c1 .c12 {
+			width: 76px;
+			height: 84px;
+			float: left;
+			background: url(../img/gun.png) #5f5750 no-repeat 75px 9px;
+		}
+
+		#choic .c1 .c13 {
+			width: 79px;
+			height: 84px;
+			float: left;
+			background: #5f5750;
+		}
+
+		#choic .c1 .c14 {
+			width: 80px;
+			height: 86px;
+			float: left;
+			background: url(../img/gun.png) #5f5750 no-repeat 79px 9px;
+		}
+
+		#choic .c1 .c15 {
+			width: 76px;
+			height: 86px;
+			float: left;
+			background: url(../img/gun.png) #5f5750 no-repeat 75px 9px;
+		}
+
+		#choic .c1 .c16 {
+			width: 79px;
+			height: 86px;
+			float: left;
+			background: #5f5750;
+		}
+
+		#choic .c2 {
+			width: 315px;
+			height: 170px;
+			margin-left: 16px;
+			background: white;
+			float: left;
+		}
+
+		#choic .c1 .wen {
+			font-size: 11px;
+			color: white;
+			float: left;
+			text-indent: 9px;
+		}
+
+		#choic .c1 .wen2 {
+			font-size: 11px;
+			color: white;
+			float: left;
+			text-indent: 9px;
+			margin-top: 7px;
+		}
+
+		#star {
+			width: 1263px;
+			height: 420px;
+			background: #ffffff;
+			margin: 0 auto;
+			margin-top: 44px;
+		}
+
+		#star .h1 {
+			font-size: 20px;
+			color: #333;
+			line-height: 20px;
+			text-indent: 9px;
+			float: left;
+		}
+
+		#star .boxing {
+			width: 1263px;
+			height: 340px;
+			float: left;
+		}
+
+		#star .stars {
+			width: 234px;
+			height: 340px;
+			background: #fafafa;
+			float: left;
+			margin-left: 14px;
+			margin-top: 16px;
+			border-top: 1px solid #83c44e;
+		}
+
+		#star .stars .lys {
+			margin-top: 50px;
+			margin-left: 84px;
+		}
+
+		#star .stars .h2 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 50px;
+		}
+
+		#star .stars .h3 {
+			font-size: 11px;
+			color: #b6b0c0;
+			line-height: 11px;
+			margin-top: 11px;
+			text-align: center;
+		}
+
+		#star .stars .h4 {
+			font-size: 12px;
+			color: #ff6709;
+			line-height: 12px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		#star .zhy1 {
+			display: block;
+			width: 34px;
+			height: 22px;
+			border: 1px solid #e0e0e0;
+			float: right;
+			background: url(../img/y1.png) no-repeat 0px 0px;
+		}
+
+		#star .zhy2 {
+			display: block;
+			width: 34px;
+			height: 22px;
+			border: 1px solid #e0e0e0;
+			float: right;
+			background: url(../img/z1.png) no-repeat 0px 0px;
+		}
+
+		#star .zhy1:hover {
+			background: url(../img/y2.png) no-repeat 0px 0px;
+		}
+
+		#star .zhy2:hover {
+			background: url(../img/z2.png) no-repeat 0px 0px;
+		}
+
+		#php {
+			width: 1263px;
+			height: 655px;
+			background: #f5f5f5;
+			margin: 0 auto;
+			margin-top: 78px;
+		}
+
+		#php .h1 {
+			font-size: 20px;
+			color: #333;
+			line-height: 20px;
+			text-indent: 9px;
+			display: inline;
+			float: left;
+		}
+
+		#php .php1 {
+			width: 234px;
+			height: 614px;
+			background: white;
+			float: left;
+			position: relative;
+			transition: 0.3s;
+			top: 0;
+			margin-left: 9px;
+			margin-top: 20px;
+		}
+
+		#php .php1:hover {
+			top: -5px;
+		}
+
+		#php .php1 .m71 {
+			width: 234px;
+			height: 614px;
+		}
+
+		#php .php2 {
+			width: 977px;
+			height: 614px;
+			/*border: 1px solid #000;*/
+			margin-left: 14px;
+			float: left;
+			margin-top: 20px;
+		}
+
+		#php .php2 .m9 {
+			width: 235px;
+			height: 300px;
+			background: #fff;
+			float: left;
+			position: relative;
+			transition: 0.3s;
+			top: 0;
+		}
+
+		#php .php2 .other {
+			margin-right: 12px;
+		}
+
+		#php .php2 .other2 {
+			margin-right: 12px;
+			margin-top: 12px;
+		}
+
+		#php .php2 .other3 {
+
+			margin-top: 12px;
+		}
+
+		#php .php2 .m9:hover {
+			top: -5px;
+		}
+
+		#php .php2 .m9 .m91 {
+			width: 160px;
+			height: 160px;
+			margin-left: 38px;
+			margin-top: 30px;
+		}
+
+		#php .php2 .m9 .h2 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 20px;
+		}
+
+		#php .php2 .m9 .h3 {
+			font-size: 11px;
+			color: #b6b0c0;
+			line-height: 11px;
+			margin-top: 15px;
+			text-align: center;
+		}
+
+		#php .php2 .m9 .h4 {
+			font-size: 12px;
+			color: #ff6709;
+			line-height: 12px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		#php .quanbu {
+			width: 1263px;
+			height: 19px;
+			font-size: 15px;
+			color: #000;
+			float: right;
+			/*background: url(../img/y3.png) no-repeat 1220px 0px;*/
+		}
+
+		#php .quanbu .look:hover {
+			background: url(../img/y4.png) no-repeat 75px 0px;
+			color: #ff6709;
+		}
+
+		#php .quanbu .look {
+			font-size: 15px;
+			width: 100px;
+			display: block;
+			color: #000;
+			line-height: 19px;
+			float: right;
+			margin-right: 50px;
+			background: url(../img/y3.png) no-repeat 75px 0px;
+		}
+
+		#dapei {
+			width: 1263px;
+			height: 654px;
+			margin: 0 auto;
+			background: #f5f5f5;
+			margin-top: 40px;
+		}
+
+		#dapei .d1 {
+			width: 1263px;
+			height: 22px;
+			background: #f5f5f5;
+		}
+
+		#dapei .d1 .h1 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#dapei .d1 .d11 {
+			width: 335px;
+			height: 22px;
+			float: right;
+			margin-right: 18px;
+			background: #f5f5f5;
+
+		}
+
+		#dapei .d1 .d11 .d12 {
+			font-size: 15px;
+			color: #000;
+			margin-left: 25px;
+		}
+
+		#dapei .d1 .d11 .d12:hover {
+			color: #ff6700;
+			border-bottom: 1px solid #ff6700;
+		}
+
+		#dapei .d2 {
+			width: 234px;
+			height: 614px;
+			background: #f5f5f5;
+			float: left;
+			margin-top: 19px;
+			margin-left: 9px;
+		}
+
+		#dapei .d2 .d21 {
+			float: left;
+		}
+
+		#dapei .d2 .d22 {
+			float: left;
+			margin-top: 14px;
+		}
+
+		#dapei .d3 {
+			width: 1001px;
+			height: 614px;
+			background: #f5f5f5;
+			float: left;
+			margin-top: 19px;
+
+		}
+
+		#dapei .d3 .d31 {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 14px;
+			background: white;
+			transition: 0.3s;
+			top: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#dapei .d3 .d32 {
+			width: 234px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			bottom: -100px;
+			background: #ff6709;
+			transition: 0.3s;
+
+		}
+
+		#dapei .d3 .d31:hover .d32 {
+			margin-top: 100px;
+			bottom: 0;
+			/*top: -5px;*/
+		}
+
+		#dapei .d3 .d31:hover {
+			top: -10px;
+		}
+
+		#dapei .d3 .oa {
+			margin-top: 14px;
+		}
+
+		#dapei .d3 .d31 .d311 {
+			margin-top: 52px;
+			margin-left: 92px;
+		}
+
+		#dapei .d3 .d31 .h2 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 20px;
+		}
+
+		#dapei .d3 .d31 .h3 {
+			font-size: 12px;
+			color: #ff6709;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 9px;
+		}
+
+		#dapei .d3 .d31 .h4 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 19px;
+		}
+
+		#dapei .d3 .d33 {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 14px;
+			background: white;
+		}
+
+		#dapei .d3 .d33 .d331 {
+			width: 234px;
+			height: 143px;
+			background: white;
+			float: left;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#dapei .d3 .d33 .d331:hover {
+			top: -5px;
+		}
+
+		#dapei .d3 .d33 .ob {
+			margin-top: 14px;
+		}
+
+		#dapei .d3 .d33 .d3311 {
+			margin-left: 140px;
+			margin-top: 45px;
+			float: left;
+		}
+
+		#dapei .d3 .d33 .h2 {
+			font-size: 12px;
+			color: #212121;
+			line-height: 12px;
+			margin-top: -56px;
+			float: left;
+			margin-left: 30px;
+		}
+
+		#dapei .d3 .d33 .h3 {
+			font-size: 12px;
+			color: #ff6709;
+			margin-left: 30px;
+			line-height: 12px;
+			margin-top: -30px;
+			float: left;
+		}
+
+		#peijian {
+			width: 1263px;
+			height: 654px;
+			margin: 0 auto;
+			background: #f5f5f5;
+			margin-top: 40px;
+		}
+
+		#peijian .d1 {
+			width: 1263px;
+			height: 22px;
+			background: #f5f5f5;
+		}
+
+		#peijian .d1 .h1 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#peijian .d1 .d11 {
+			width: 335px;
+			height: 22px;
+			float: right;
+			margin-right: 18px;
+			background: #f5f5f5;
+		}
+
+		#peijian .d1 .d11 .d12 {
+			font-size: 15px;
+			color: #000;
+			margin-left: 25px;
+		}
+
+		#peijian .d1 .d11 .d12:hover {
+			color: #ff6700;
+			border-bottom: 1px solid #ff6700;
+		}
+
+		#peijian .d2 {
+			width: 234px;
+			height: 614px;
+			background: white;
+			float: left;
+			margin-top: 19px;
+			margin-left: 9px;
+		}
+
+		#peijian .d2 .d21 {
+			float: left;
+		}
+
+		#peijian .d2 .d22 {
+			float: left;
+			margin-top: 14px;
+		}
+
+		#peijian .d3 {
+			width: 1001px;
+			height: 614px;
+			background: #f5f5f5;
+			float: left;
+			margin-top: 19px;
+
+		}
+
+		#peijian .d3 .d31 {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 14px;
+			background: white;
+			transition: 0.3s;
+			top: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#peijian .d3 .d32 {
+			width: 234px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			bottom: -100px;
+			background: #ff6709;
+			transition: 0.3s;
+
+		}
+
+		#peijian .d3 .d31:hover .d32 {
+			margin-top: 100px;
+			bottom: 0;
+			/*top: -5px;*/
+		}
+
+		#peijian .d3 .d31:hover {
+			top: -10px;
+		}
+
+		#peijian .d3 .oa {
+			margin-top: 14px;
+		}
+
+		#peijian .d3 .d31 .d311 {
+			margin-top: 52px;
+			margin-left: 92px;
+		}
+
+		#peijian .d3 .d31 .h2 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 20px;
+		}
+
+		#peijian .d3 .d31 .h3 {
+			font-size: 12px;
+			color: #ff6709;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 9px;
+		}
+
+		#peijian .d3 .d31 .h4 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 19px;
+		}
+
+		#peijian .d3 .d33 {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 14px;
+			background: white;
+		}
+
+		#peijian .d3 .d33 .d331 {
+			width: 234px;
+			height: 143px;
+			background: white;
+			float: left;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#peijian .d3 .d33 .d331:hover {
+			top: -5px;
+		}
+
+		#peijian .d3 .d33 .ob {
+			margin-top: 14px;
+		}
+
+		#peijian .d3 .d33 .d3311 {
+			margin-left: 140px;
+			margin-top: 45px;
+			float: left;
+		}
+
+		#peijian .d3 .d33 .h2 {
+			font-size: 12px;
+			color: #212121;
+			line-height: 12px;
+			margin-top: -56px;
+			float: left;
+			margin-left: 30px;
+		}
+
+		#peijian .d3 .d33 .h3 {
+			font-size: 12px;
+			color: #ff6709;
+			margin-left: 30px;
+			line-height: 12px;
+			margin-top: -30px;
+			float: left;
+		}
+
+		#zhoubian {
+			width: 1263px;
+			height: 654px;
+			margin: 0 auto;
+			background: #f5f5f5;
+			margin-top: 40px;
+		}
+
+		#zhoubian .d1 {
+			width: 1263px;
+			height: 22px;
+			background: #f5f5f5;
+		}
+
+		#zhoubian .d1 .h1 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#zhoubian .d1 .d11 {
+			width: 335px;
+			height: 22px;
+			float: right;
+			margin-right: 18px;
+			background: #f5f5f5;
+		}
+
+		#zhoubian .d1 .d11 .d12 {
+			font-size: 15px;
+			color: #000;
+			margin-left: 25px;
+		}
+
+		#zhoubian .d1 .d11 .d12:hover {
+			color: #ff6700;
+			border-bottom: 1px solid #ff6700;
+		}
+
+		#zhoubian .d2 {
+			width: 234px;
+			height: 614px;
+			background: white;
+			float: left;
+			margin-top: 19px;
+			margin-left: 9px;
+		}
+
+		#zhoubian .d2 .d21 {
+			float: left;
+		}
+
+		#zhoubian .d2 .d22 {
+			float: left;
+			margin-top: 14px;
+		}
+
+		#zhoubian .d3 {
+			width: 1001px;
+			height: 614px;
+			background: #f5f5f5;
+			float: left;
+			margin-top: 19px;
+
+		}
+
+		#zhoubian .d3 .d31 {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 14px;
+			background: white;
+			transition: 0.3s;
+			top: 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+		#zhoubian .d3 .d32 {
+			width: 234px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			bottom: -100px;
+			background: #ff6709;
+			transition: 0.3s;
+
+		}
+
+		#zhoubian .d3 .d31:hover .d32 {
+			margin-top: 100px;
+			bottom: 0;
+			/*top: -5px;*/
+		}
+
+		#zhoubian .d3 .d31:hover {
+			top: -10px;
+		}
+
+		#zhoubian .d3 .oa {
+			margin-top: 14px;
+		}
+
+		#zhoubian .d3 .d31 .d311 {
+			margin-top: 52px;
+			margin-left: 92px;
+		}
+
+		#zhoubian .d3 .d31 .h2 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 20px;
+		}
+
+		#zhoubian .d3 .d31 .h3 {
+			font-size: 12px;
+			color: #ff6709;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 9px;
+		}
+
+		#zhoubian .d3 .d31 .h4 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 19px;
+		}
+
+		#zhoubian .d3 .d33 {
+			width: 234px;
+			height: 300px;
+			float: left;
+			margin-left: 14px;
+			background: white;
+		}
+
+		#zhoubian .d3 .d33 .d331 {
+			width: 234px;
+			height: 143px;
+			background: white;
+			float: left;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#zhoubian .d3 .d33 .d331:hover {
+			top: -5px;
+		}
+
+		#zhoubian .d3 .d33 .ob {
+			margin-top: 14px;
+		}
+
+		#zhoubian .d3 .d33 .d3311 {
+			margin-left: 140px;
+			margin-top: 45px;
+			float: left;
+		}
+
+		#zhoubian .d3 .d33 .h2 {
+			font-size: 12px;
+			color: #212121;
+			line-height: 12px;
+			margin-top: -56px;
+			float: left;
+			margin-left: 30px;
+		}
+
+		#zhoubian .d3 .d33 .h3 {
+			font-size: 12px;
+			color: #ff6709;
+			margin-left: 30px;
+			line-height: 12px;
+			margin-top: -30px;
+			float: left;
+		}
+
+		#introduce {
+			width: 1263px;
+			height: 341px;
+			background: white;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+
+		#introduce .in1 {
+			width: 1263px;
+			height: 22px;
+			float: left;
+		}
+
+		#introduce .h1 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#introduce .in12 {
+			width: 69px;
+			height: 22px;
+			border: 1px solid #e0e0e0;
+			float: right;
+			margin-right: 27px;
+		}
+
+		#introduce .in12 .rl1 {
+			float: left;
+			width: 35px;
+			height: 22px;
+			/*display: block;*/
+			background: url(../img/z1.png) no-repeat;
+		}
+
+		#introduce .in12 .rl2 {
+			float: right;
+			width: 34px;
+			height: 22px;
+			display: block;
+			background: url(../img/y1.png) no-repeat;
+		}
+
+		#introduce .in12 .rl1:hover {
+			background: url(../img/z2.png) no-repeat;
+		}
+
+		#introduce .in12 .rl2:hover {
+			background: url(../img/y2.png) no-repeat;
+		}
+
+		#introduce .in2 {
+			width: 234px;
+			height: 301px;
+			background: #fafafa;
+			float: left;
+			margin-left: 9px;
+			margin-top: 16px;
+			margin-right: 5px;
+			border-top: 1px solid #83c44e;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#introduce .in2:hover {
+			top: -5px;
+
+		}
+
+		#introduce .in2 .lys {
+			margin-top: 30px;
+			margin-left: 84px;
+		}
+
+		#introduce .in2 .h2 {
+			font-size: 12px;
+			color: #212121;
+			text-align: center;
+			line-height: 12px;
+			margin-top: 50px;
+		}
+
+		#introduce .in2 .h3 {
+			font-size: 11px;
+			color: #b6b0c0;
+			line-height: 11px;
+			margin-top: 11px;
+			text-align: center;
+		}
+
+		#introduce .in2 .h4 {
+			font-size: 12px;
+			color: #ff6709;
+			line-height: 12px;
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		#rp {
+			width: 1263px;
+			height: 420px;
+			background: #f5f5f5;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+
+		#rp .rp1 {
+			width: 1263px;
+			height: 22px;
+			float: left;
+		}
+
+		#rp .h1 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#rp .rp2 {
+			width: 295px;
+			height: 380px;
+			background: white;
+			float: left;
+			margin-left: 9px;
+			margin-right: 5px;
+			margin-top: 19px;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#rp .rp2:hover {
+			top: -5px;
+		}
+
+		#rp .rp2 .rp21 {
+			width: 295px;
+			height: 220px;
+			float: left;
+		}
+
+		#rp .rp2 .h1 {
+			font-size: 12px;
+			color: #000;
+			line-height: 12px;
+			float: left;
+			margin-left: 30px;
+			margin-top: 30px;
+		}
+
+		#rp .rp2 .h2 {
+			font-size: 11px;
+			color: #cbb7b7;
+			line-height: 11px;
+			margin-left: 30px;
+			margin-top: 14px;
+			float: left;
+		}
+
+		#rp .rp2 .rp22 {
+			width: 168px;
+			height: 12px;
+			/*background: red;*/
+			margin-top: 24px;
+			margin-left: 30px;
+			float: left;
+		}
+
+		#rp .rp2 .rp22 .rp221 {
+			font-size: 12px;
+			color: #000;
+			line-height: 12px;
+			float: left;
+			padding-right: 10px;
+		}
+
+		#rp .rp2 .rp22 .rp222 {
+			font-size: 12px;
+			color: #ff6700;
+			line-height: 12px;
+			float: left;
+			padding-left: 10px;
+			border-left: 1px solid #e0e0e0;
+		}
+
+		#neirong {
+			width: 1263px;
+			height: 460px;
+			margin: 0 auto;
+			margin-top: 40px;
+			background: #f5f5f5;
+		}
+
+		#neirong .nei {
+			width: 1263px;
+			height: 22px;
+			float: left;
+		}
+
+		#neirong .nei .nei1 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			margin-left: 9px;
+		}
+
+		#neirong .books {
+			width: 295px;
+			height: 419px;
+			background: #ffffff;
+			margin-top: 19px;
+			margin-right: 5px;
+			margin-left: 9px;
+			border-top: 1px solid #ff6700;
+			float: left;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#neirong .books:hover {
+			top: -5px;
+		}
+
+		#neirong .books .h1 {
+			font-size: 14px;
+			color: #ff6700;
+			line-height: 14px;
+			text-align: center;
+			margin-top: 50px;
+			/*float: left;*/
+		}
+
+		#neirong .books .h4 {
+			font-size: 18px;
+			color: #000;
+			line-height: 14px;
+			text-align: center;
+			margin-top: 27px;
+		}
+
+		#neirong .books .p5 {
+			font-size: 11px;
+			color: #e0e0e0;
+			line-height: 22px;
+			margin-top: 11px;
+			width: 272px;
+			text-align: center;
+			text-indent: 11px;
+			margin-left: 10px;
+
+		}
+
+		#neirong .books .p6 {
+			font-size: 12px;
+			color: #b26c33;
+			margin-top: 15px;
+			text-align: center;
+		}
+
+		#neirong .books .pic5 {
+			margin-top: 32px;
+			margin-left: 95px;
+		}
+
+		#neirong .books .lunhuan {
+			width: 181px;
+			height: 14px;
+			margin-top: 30px;
+			margin-left: 51px;
+		}
+
+		#neirong .books span {
+			height: 10px;
+			width: 10px;
+			border: 2px solid #e0e0e0;
+			border-radius: 50%;
+			float: left;
+			margin-left: 26px;
+		}
+
+		#neirong .books span:hover {
+			border: 2px solid #ff6700;
+		}
+
+		#radio {
+			width: 1263px;
+			height: 325px;
+			background: #f5f5f5;
+			margin: 0 auto;
+			margin-top: 40px;
+		}
+
+		#radio .r1 {
+			width: 1263px;
+			height: 22px;
+		}
+
+		#radio .r1 .r11 {
+			font-size: 22px;
+			color: #000;
+			line-height: 22px;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#radio .r1 .all {
+			font-size: 15px;
+			color: #000;
+			line-height: 22px;
+			display: block;
+			float: right;
+			padding-right: 50px;
+			background: url(../img/y3.png) no-repeat 70px 0px;
+		}
+
+		#radio .r1 .all:hover {
+			color: #ff6700;
+			background: url(../img/y4.png) no-repeat 70px 0px;
+		}
+
+		#radio .r2 {
+			width: 295px;
+			height: 284px;
+			background: white;
+			margin-left: 9px;
+			margin-right: 5px;
+			margin-top: 19px;
+			float: left;
+			position: relative;
+			top: 0;
+			transition: 0.3s;
+		}
+
+		#radio .r2:hover {
+			top: -5px;
+		}
+
+		#radio .r2 .r24 {
+			position: absolute;
+			left: 20px;
+			top: 145px;
+		}
+
+		#radio .r2 .r21 {
+			width: 295px;
+			height: 180px;
+
+		}
+
+		#radio .r2 .r22 {
+			font-size: 17px;
+			color: #333;
+			line-height: 17px;
+			margin-top: 30px;
+			text-align: center;
+		}
+
+		#radio .r2 .r22:hover {
+			color: #ff6700;
+		}
+
+		#radio .r2 .r23 {
+			font-size: 11px;
+			color: #b0b0b0;
+			line-height: 11px;
+			text-align: center;
+			margin-top: 14px;
+		}
+
+		#footer {
+			width: 1263px;
+			height: 286px;
+			background: white;
+			margin: 0 auto;
+			margin-top: 60px;
+
+		}
+
+		#footer .f1 {
+			width: 1263px;
+			height: 79px;
+			background: white;
+			border-bottom: 1px solid #e0e0e0;
+		}
+
+		#footer .f1 .f11 {
+			width: 135px;
+			height: 23px;
+			font-size: 14px;
+			color: #6179b4;
+			margin-left: 60px;
+			padding-top: 27px;
+			text-align: center;
+			text-indent: 14px;
+			float: left;
+			padding-right: 53px;
+			background: url(../img/banzi.png) no-repeat 0px 27px;
+		}
+
+		#footer .f1 .f11:hover {
+			background: url(../img/banzi2.png) no-repeat 0px 27px;
+		}
+
+		#footer .f1 .f11 .f111 {
+			font-size: 14px;
+			color: #6179b4;
+			line-height: 23px;
+			/*text-align: center;*/
+		}
+
+		#footer .f1 .f11 .f111:hover {
+			color: #ff6700;
+		}
+
+		#footer .f2 {
+			width: 825px;
+			height: 115px;
+			margin-top: 40px;
+			background: red;
+			float: left;
+			margin-left: 9px;
+		}
+
+		#footer .f2 .f21 {
+			width: 165px;
+			height: 115px;
+			background: white;
+			float: left;
+		}
+
+		#footer .f2 .f221 {
+			font-size: 12px;
+			color: #000;
+			line-height: 12px;
+			margin-bottom: 32px;
+		}
+
+		#footer .f2 .f222 {
+			font-size: 11px;
+			color: #757575;
+			margin-bottom: 17px;
+			line-height: 11px;
+		}
+
+		#footer .f2 .f222 .f2221 {
+			font-size: 11px;
+			color: #757575;
+			line-height: 11px;
+		}
+
+		#footer .f2 .f222 .f2221:hover {
+			color: #ff6700;
+		}
+
+		#footer .f3 {
+			width: 242px;
+			height: 115px;
+			float: right;
+			background: white;
+			margin-top: 40px;
+			border-left: 1px solid #e0e0e0;
+			/*background: url(../img/kefu1.png) white no-repeat 60px 80px;*/
+		}
+
+		#footer .f3 .f34 {
+			width: 120px;
+			height: 30px;
+			display: block;
+			margin-left: 60px;
+			margin-top: 23px;
+			background: url(../img/kefu1.png) white no-repeat 0px 0px;
+		}
+
+		#footer .f3 .f34:hover {
+			background: url(../img/kefu2.png) white no-repeat 0px 0px;
+		}
+
+		/*#footer .f3:hover{
+			background: url(../img/kefu2.png) white no-repeat 60px 80px;
+		}*/
+		#footer .f3 .f31 {
+			font-size: 20px;
+			font-weight: 600px;
+			color: #ff6700;
+			line-height: 16px;
+			text-align: center;
+			margin-bottom: 12px;
+		}
+
+		#footer .f3 .f32 {
+			font-size: 11px;
+			color: #616161;
+			line-height: 11px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		#end {
+			width: 1263px;
+			height: 95px;
+			margin: 0 auto;
+			background: url(../img/logo.png) #fafafa no-repeat 9px 30px;
+		}
+
+		#end .end1 {
+			width: 690px;
+			height: 11px;
+			margin-left: 75px;
+			float: left;
+			background: #fafafa;
+			padding-top: 45px
+		}
+
+		#end .end1 .end11 {
+			font-size: 11px;
+			color: #757575;
+			line-height: 11px;
+			padding-right: 6px;
+			padding-left: 6px;
+			border-right: 1px solid #b0b0b0;
+			float: left;
+		}
+
+		#end .end1 .end11:hover {
+			color: #ff6700;
+		}
+
+		#end .end2 {
+			width: 275px;
+			height: 25px;
+			float: right;
+			margin-top: 35px;
+		}
+
+		#end .end2 .end21 {
+			float: left;
+			margin-left: 10px;
+		}
+
+		#end .end3 {
+			width: 810px;
+			height: 11px;
+			float: left;
+			margin-left: 80px;
+			margin-top: 8px;
+			background: #fafafa;
+		}
+
+		#end .end3 .end31 {
+			font-size: 11px;
+			color: #c9b6b6;
+			line-height: 11px;
+		}
+
+		#end .end3 .end311 {
+			font-size: 11px;
+			color: #c9b6b6;
+			line-height: 11px;
+		}
+	</style>
+</head>
+
+<body id="box">
+	<div id="header">
+		<div class="h1">
+			<a href="" class="h11">小米网</a>
+			<a href="" class="h11">MIUI</a>
+			<a href="" class="h11">米聊</a>
+			<a href="" class="h11">游戏</a>
+			<a href="" class="h11">多看阅读</a>
+			<a href="" class="h11">云服务</a>
+			<!-- <a href="" class="h11">问题反馈</a> -->
+			<a href="" class="h11">资质证照</a>
+			<!-- <a href="" class="h11">问题反馈</a> -->
+			<a href="" class="h11">Select Region</a>
+			<div id="box2">
+				<div class="boxx">app下载</div>
+				<div class="boxxx">
+					<img src="../img/1q.png" alt="">
+					<p class="pp">小米商城APP</p>
+				</div>
+			</div>
+		</div>
+		<div class="h2">
+			<a href="" class="h21">登录</a>
+			<a href="" class="h22">注册</a>
+		</div>
+		<div id="h3">
+			<div class="h31">购物车</div>
+			<div class="h32"></div>
+		</div>
+	</div>
+	<div id="banner">
+		<img src="../img/logo.png" alt="小米官网" class="logo">
+		<div class="ba">
+			<a href="" class="lei">小米手机</a>
+			<a href="" class="lei">红米</a>
+			<a href="" class="lei">平板</a>
+			<a href="" class="lei">电视·盒子</a>
+			<a href="" class="lei">路由器</a>
+			<a href="" class="lei">智能硬件</a>
+			<a href="" class="lei">服务</a>
+			<a href="" class="lei">社区</a>
+		</div>
+		<form action="" class="table">
+			<input type="text" class="tr">
+			<span class="ball">手环</span>
+			<span class="baller">小米手机</span>
+			<div class="bian">
+				<a href="" class="ser"></a>
+			</div>
+		</form>
+	</div>
+	<div id="nav">
+		<div class="tu">
+			<div id="mask">
+				<ul id="ul">
+					<li>
+						<img src="../img/tu1.webp" alt="">
+					</li>
+					<li>
+						<img src="../img/tu2.webp" alt="">
+					</li>
+					<li>
+						<img src="../img/tu3.jpg" alt="">
+					</li>
+					<li>
+						<img src="../img/tu4.webp" alt="">
+					</li>
+					<li>
+						<img src="../img/tu5.webp" alt="">
+					</li>
+					<li>
+						<img src="../img/tu1.webp" alt="">
+					</li>
+					<!-- <li>
+						<img src="../img/1.jpg" alt="">
+					</li> -->
+				</ul>
+				<span id="al"></span>
+				<span id="ar"></span>
+				<div id="page">
+					<p style="background-color: rgba(255, 255, 255, 1);" class="ppp"></p>
+					<p class="ppp"></p>
+					<p class="ppp"></p>
+					<p class="ppp"></p>
+					<p class="ppp"></p>
+				</div>
+			</div>
+			<div class="zuo">
+				<p class="zuo2">
+					<a href="" class="z11">手机&nbsp;平板&nbsp;电话卡
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span>
+					</a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">电视&nbsp;盒子
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">路由器&nbsp;智能硬件
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">移动电源&nbsp;插线板
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">耳机&nbsp;印象
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">电池&nbsp;存储卡
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">保护套&nbsp;后盖
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">贴膜&nbsp;其他配件
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">米兔&nbsp;箱包
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+				<p class="zuo1">
+					<a href="" class="z11">箱包&nbsp;其他周边
+						<span><img src="../img/jiantou.png" alt="" class="jt"></span></a>
+				</p>
+			</div>
+
+		</div>
+	</div>
+	<div id="choic">
+		<div class="c1">
+			<div class="c11">
+				<a href="">
+					<img src="../img/dianxin.png" alt="" class="wz">
+					<span class="wen">中国电信</span>
+				</a>
+			</div>
+			<div class="c12">
+				<a href="">
+					<img src="../img/tuangou.png" alt="" class="wz">
+					<span class="wen">中国电信</span>
+				</a>
+			</div>
+			<div class="c13">
+				<a href="">
+					<img src="../img/guanfan.png" alt="" class="wz">
+					<span class="wen">中国电信</span>
+				</a>
+			</div>
+			<div class="c14">
+				<a href="">
+					<img src="../img/yidong.png" alt="" class="wz">
+					<span class="wen">中国电信</span>
+				</a>
+			</div>
+			<div class="c15">
+				<a href="">
+					<img src="../img/chongzhi.png" alt="" class="wz">
+					<span class="wen2">中国电信</span>
+				</a>
+			</div>
+			<div class="c16">
+				<a href="">
+					<img src="../img/fangwei.png" alt="" class="wz">
+					<span class="wen2">中国电信</span>
+				</a>
+			</div>
+		</div>
+		<div class="c2">
+			<a href="">
+				<img src="../img/erji.png" alt="">
+			</a>
+		</div>
+		<div class="c2">
+			<a href="">
+				<img src="../img/erji.png" alt="">
+			</a>
+		</div>
+		<div class="c2">
+			<a href="">
+				<img src="../img/erji.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div id="star">
+		<h1 class="h1">小米明星单品</h1>
+		<!-- <div class="zhy1"> --><a href="" class="zhy1"></a><!-- </div> -->
+		<!-- <div class="zhy2"> --><a href="" class="zhy2"></a><!-- </div> -->
+		<div class="boxing">
+			<div class="stars">
+				<a href="">
+					<img src="../img/ly.png" alt="" class="lys">
+					<h2 class="h2">小米蓝牙耳机</h2>
+					<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+					<h4 class="h4">79元</h4>
+				</a>
+			</div>
+			<div class="stars">
+				<a href="">
+					<img src="../img/ly.png" alt="" class="lys">
+					<h2 class="h2">小米蓝牙耳机</h2>
+					<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+					<h4 class="h4">79元</h4>
+				</a>
+			</div>
+			<div class="stars">
+				<a href="">
+					<img src="../img/ly.png" alt="" class="lys">
+					<h2 class="h2">小米蓝牙耳机</h2>
+					<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+					<h4 class="h4">79元</h4>
+				</a>
+			</div>
+			<div class="stars">
+				<a href="">
+					<img src="../img/ly.png" alt="" class="lys">
+					<h2 class="h2">小米蓝牙耳机</h2>
+					<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+					<h4 class="h4">79元</h4>
+				</a>
+			</div>
+			<div class="stars">
+				<a href="">
+					<img src="../img/ly.png" alt="" class="lys">
+					<h2 class="h2">小米蓝牙耳机</h2>
+					<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+					<h4 class="h4">79元</h4>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="php">
+		<div class="quanbu">
+			<h1 class="h1">智能硬件</h1>
+
+			<a href="" class="look">查看全部</a>
+		</div>
+		<div class="php1">
+			<a href="">
+				<img src="../img/m7.png" alt="" class="m71">
+			</a>
+		</div>
+		<div class="php2">
+			<div class="m9 other">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9 other">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9 other">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9 other2">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9 other2">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9 other2">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+			<div class="m9 other3">
+				<a href="">
+					<img src="../img/m9.png" alt="" class="m91">
+					<h2 class="h2">小米9&nbsp;6GB+128GB</h2>
+					<h3 class="h3">骁龙855&nbsp;索尼4800万</h3>
+					<h4 class="h4">2799元</h4>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div id="dapei">
+		<div class="d1">
+			<h1 class="h1">搭配</h1>
+			<div class="d11">
+				<a href="" class="d12">热门</a>
+				<a href="" class="d12">耳机音响</a>
+				<a href="" class="d12">电源</a>
+				<a href="" class="d12">电池存储卡</a>
+			</div>
+		</div>
+		<div class="d2">
+			<img src="../img/power.png" alt="" class="d21">
+			<img src="../img/pair.png" alt="" class="d22">
+		</div>
+		<div class="d3">
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d33 oa">
+				<div class="d331">
+					<a href="">
+						<img src="../img/xgp.png" alt="" class="d3311">
+						<h2 class="h2">蓝牙小钢炮…</h2>
+						<h3 class="h3">99元</h3>
+					</a>
+				</div>
+				<div class="d331 ob">
+					<a href="">
+						<img src="../img/xgp.png" alt="" class="d3311">
+						<h2 class="h2">蓝牙小钢炮…</h2>
+						<h3 class="h3">99元</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="peijian">
+		<div class="d1">
+			<h1 class="h1">搭配</h1>
+			<div class="d11">
+				<a href="" class="d12">热门</a>
+				<a href="" class="d12">保护套</a>
+				<a href="" class="d12">后盖</a>
+				<a href="" class="d12">其他配件</a>
+			</div>
+		</div>
+		<div class="d2">
+			<img src="../img/power.png" alt="" class="d21">
+			<img src="../img/pair.png" alt="" class="d22">
+		</div>
+		<div class="d3">
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d33 oa">
+				<div class="d331">
+					<a href="">
+						<img src="../img/xgp.png" alt="" class="d3311">
+						<h2 class="h2">蓝牙小钢炮…</h2>
+						<h3 class="h3">99元</h3>
+					</a>
+				</div>
+				<div class="d331 ob">
+					<a href="">
+						<img src="../img/xgp.png" alt="" class="d3311">
+						<h2 class="h2">蓝牙小钢炮…</h2>
+						<h3 class="h3">99元</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="zhoubian">
+		<div class="d1">
+			<h1 class="h1">搭配</h1>
+			<div class="d11">
+				<a href="" class="d12">热门</a>
+				<a href="" class="d12">保护套</a>
+				<a href="" class="d12">后盖</a>
+				<a href="" class="d12">其他配件</a>
+			</div>
+		</div>
+		<div class="d2">
+			<img src="../img/power.png" alt="" class="d21">
+			<img src="../img/pair.png" alt="" class="d22">
+		</div>
+		<div class="d3">
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d31 oa">
+				<a href="">
+					<img src="../img/pow.png" alt="" class="d311">
+					<h2 class="h2">小米移动电源16000mAh</h1>
+						<h3 class="h3">129元</h3>
+						<h4 class="h4">9.9万人评价</h4>
+				</a>
+				<div class="d32"></div>
+			</div>
+			<div class="d33 oa">
+				<div class="d331">
+					<a href="">
+						<img src="../img/xgp.png" alt="" class="d3311">
+						<h2 class="h2">蓝牙小钢炮…</h2>
+						<h3 class="h3">99元</h3>
+					</a>
+				</div>
+				<div class="d331 ob">
+					<a href="">
+						<img src="../img/xgp.png" alt="" class="d3311">
+						<h2 class="h2">蓝牙小钢炮…</h2>
+						<h3 class="h3">99元</h3>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="introduce">
+		<div class="in1">
+			<h1 class="h1">为你推荐</h2>
+				<div class="in12">
+					<a href="" class="rl1"></a>
+					<a href="" class="rl2"></a>
+				</div>
+		</div>
+		<div class="in2">
+			<a href="">
+				<img src="../img/ly.png" alt="" class="lys">
+				<h2 class="h2">小米蓝牙耳机</h2>
+				<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+				<h4 class="h4">79元</h4>
+			</a>
+		</div>
+		<div class="in2">
+			<a href="">
+				<img src="../img/ly.png" alt="" class="lys">
+				<h2 class="h2">小米蓝牙耳机</h2>
+				<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+				<h4 class="h4">79元</h4>
+			</a>
+		</div>
+		<div class="in2">
+			<a href="">
+				<img src="../img/ly.png" alt="" class="lys">
+				<h2 class="h2">小米蓝牙耳机</h2>
+				<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+				<h4 class="h4">79元</h4>
+			</a>
+		</div>
+		<div class="in2">
+			<a href="">
+				<img src="../img/ly.png" alt="" class="lys">
+				<h2 class="h2">小米蓝牙耳机</h2>
+				<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+				<h4 class="h4">79元</h4>
+			</a>
+		</div>
+		<div class="in2">
+			<a href="">
+				<img src="../img/ly.png" alt="" class="lys">
+				<h2 class="h2">小米蓝牙耳机</h2>
+				<h3 class="h3">2015德国IF大奖，高清通话音质</h3>
+				<h4 class="h4">79元</h4>
+			</a>
+		</div>
+	</div>
+	<div id="rp">
+		<div class="rp1">
+			<h1 class="h1">热门推荐</h1>
+		</div>
+		<div class="rp2">
+			<a href="">
+				<img src="../img/dgp.png" alt="" class="rp21">
+				<p class="h1">这小钢炮给我的感觉太震撼了</p>
+				<p class="h2">来自于dp588的评价</p>
+				<div class="rp22">
+					<p class="rp221">小钢炮蓝牙音箱</p>
+					<span class="rp222">99元</span>
+				</div>
+			</a>
+		</div>
+		<div class="rp2">
+			<a href="">
+				<img src="../img/dgp.png" alt="" class="rp21">
+				<p class="h1">这小钢炮给我的感觉太震撼了</p>
+				<p class="h2">来自于dp588的评价</p>
+				<div class="rp22">
+					<p class="rp221">小钢炮蓝牙音箱</p>
+					<span class="rp222">99元</span>
+				</div>
+			</a>
+		</div>
+		<div class="rp2">
+			<a href="">
+				<img src="../img/dgp.png" alt="" class="rp21">
+				<p class="h1">这小钢炮给我的感觉太震撼了</p>
+				<p class="h2">来自于dp588的评价</p>
+				<div class="rp22">
+					<p class="rp221">小钢炮蓝牙音箱</p>
+					<span class="rp222">99元</span>
+				</div>
+			</a>
+		</div>
+		<div class="rp2">
+			<a href="">
+				<img src="../img/dgp.png" alt="" class="rp21">
+				<p class="h1">这小钢炮给我的感觉太震撼了</p>
+				<p class="h2">来自于dp588的评价</p>
+				<div class="rp22">
+					<p class="rp221">小钢炮蓝牙音箱</p>
+					<span class="rp222">99元</span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id="neirong">
+		<div class="nei">
+			<h1 class="nei1">内容</h1>
+		</div>
+		<div class="books">
+			<a href="">
+				<p class="h1">图书</p>
+				<p class="h4">古董局中局4（大结局）</p>
+				<p class="p5">
+					先于纸书，抢先发布，揭开全部悬念，马伯庸《古董局中局》系列大结局
+				</p>
+				<p class="p6">12元</p>
+				<img src="../img/book.png" alt="" class="pic5">
+			</a>
+			<a href="">
+				<div class="lunhuan">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+		<div class="books">
+			<a href="">
+				<p class="h1">图书</p>
+				<p class="h4">古董局中局4（大结局）</p>
+				<p class="p5">
+					先于纸书，抢先发布，揭开全部悬念，马伯庸《古董局中局》系列大结局
+				</p>
+				<p class="p6">12元</p>
+				<img src="../img/book.png" alt="" class="pic5">
+			</a>
+			<a href="">
+				<div class="lunhuan">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+		<div class="books">
+			<a href="">
+				<p class="h1">图书</p>
+				<p class="h4">古董局中局4（大结局）</p>
+				<p class="p5">
+					先于纸书，抢先发布，揭开全部悬念，马伯庸《古董局中局》系列大结局
+				</p>
+				<p class="p6">12元</p>
+				<img src="../img/book.png" alt="" class="pic5">
+			</a>
+			<a href="">
+				<div class="lunhuan">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+		<div class="books">
+			<a href="">
+				<p class="h1">图书</p>
+				<p class="h4">古董局中局4（大结局）</p>
+				<p class="p5">
+					先于纸书，抢先发布，揭开全部悬念，马伯庸《古董局中局》系列大结局
+				</p>
+				<p class="p6">12元</p>
+				<img src="../img/book.png" alt="" class="pic5">
+			</a>
+			<a href="">
+				<div class="lunhuan">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div id="radio">
+		<div class="r1">
+			<h1 class="r11">视频</h1>
+			<a href="" class="all">查看全部</a>
+		</div>
+		<div class="r2">
+			<a href="">
+				<img src="../img/slxq.png" alt="" class="r21">
+			</a>
+			<a href="">
+				<img src="../img/vi2.png" alt="" class="r24">
+			</a>
+			<a href="">
+				<p class="r22">小米CC9</p>
+			</a>
+			<p class="r23">深蓝星球</p>
+		</div>
+		<div class="r2">
+			<a href="">
+				<img src="../img/slxq.png" alt="" class="r21">
+			</a>
+			<a href="">
+				<img src="../img/vi2.png" alt="" class="r24">
+			</a>
+			<a href="">
+				<p class="r22">小米CC9</p>
+			</a>
+			<p class="r23">深蓝星球</p>
+		</div>
+		<div class="r2">
+			<a href="">
+				<img src="../img/slxq.png" alt="" class="r21">
+			</a>
+			<a href="">
+				<img src="../img/vi2.png" alt="" class="r24">
+			</a>
+			<a href="">
+				<p class="r22">小米CC9</p>
+			</a>
+			<p class="r23">深蓝星球</p>
+		</div>
+		<div class="r2">
+			<a href="">
+				<img src="../img/slxq.png" alt="" class="r21">
+			</a>
+			<a href="">
+				<img src="../img/vi2.png" alt="" class="r24">
+			</a>
+			<a href="">
+				<p class="r22">小米CC9</p>
+			</a>
+			<p class="r23">深蓝星球</p>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="f1">
+			<div class="f11">
+				<a href="" class="f111">1小时快修服务</a>
+			</div>
+			<div class="f11">
+				<a href="" class="f111">1小时快修服务</a>
+			</div>
+			<div class="f11">
+				<a href="" class="f111">1小时快修服务</a>
+			</div>
+			<div class="f11">
+				<a href="" class="f111">1小时快修服务</a>
+			</div>
+			<div class="f11">
+				<a href="" class="f111">1小时快修服务</a>
+			</div>
+		</div>
+		<div class="f2">
+			<div class="f21">
+				<h1 class="f221">帮助中心</h1>
+				<p class="f222">
+					<a href="" class="f2221">购物指南</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">支付方式</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">配送方式</a>
+				</p>
+			</div>
+			<div class="f21">
+				<h1 class="f221">帮助中心</h1>
+				<p class="f222">
+					<a href="" class="f2221">购物指南</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">支付方式</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">配送方式</a>
+				</p>
+			</div>
+			<div class="f21">
+				<h1 class="f221">帮助中心</h1>
+				<p class="f222">
+					<a href="" class="f2221">购物指南</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">支付方式</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">配送方式</a>
+				</p>
+			</div>
+			<div class="f21">
+				<h1 class="f221">帮助中心</h1>
+				<p class="f222">
+					<a href="" class="f2221">购物指南</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">支付方式</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">配送方式</a>
+				</p>
+			</div>
+			<div class="f21">
+				<h1 class="f221">帮助中心</h1>
+				<p class="f222">
+					<a href="" class="f2221">购物指南</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">支付方式</a>
+				</p>
+				<p class="f222">
+					<a href="" class="f2221">配送方式</a>
+				</p>
+			</div>
+		</div>
+		<div class="f3">
+			<h1 class="f31">400-100-5678</h1>
+			<p class="f32">周一至周日8:00-18:00</p>
+			<p class="f32">（仅收市话费）</p>
+			<a href="" class="f34"></a>
+		</div>
+	</div>
+	<div id="end">
+		<div class="end1">
+			<a href="" class="end11">小米路游器</a>
+			<a href="" class="end11">小米路游器</a>
+			<a href="" class="end11">小米路游器</a>
+			<a href="" class="end11">小米路游器</a>
+			<a href="" class="end11">小米路游器</a>
+			<a href="" class="end11">小米路游器</a>
+			<a href="" class="end11">小米路游器</a>
+		</div>
+		<div class="end2">
+			<a href="">
+				<img src="../img/xin.png" alt="" class="end21">
+			</a>
+			<a href="">
+				<img src="../img/kexin.png" alt="" class="end21">
+			</a>
+			<a href="">
+				<img src="../img/jiaoyi.png" alt="" class="end21">
+			</a>
+		</div>
+		<div class="end3">
+			<p class="end31">
+				<a href="" class="end311">
+					@mi.com京ICP证110507号&nbsp;京ICP备10046444号&nbsp;京公网安备1101080212535号
+				</a>
+			</p>
+		</div>
+	</div>
+
+	<script>
+
+		var al = document.querySelector("#al");
+		//左面按钮
+		var ar = document.querySelector("#ar");
+		//右面按钮
+		var lunbo = document.querySelector("#ul");
+		//轮播主体
+		var ll = document.querySelector("#mask");
+		//整体
+		var pp = document.querySelectorAll(".ppp");
+		//页码圆圈
+		var i = 0;
+		var timer1;
+		fn();
+		//绑定按钮点击事件
+		ar.onclick = function () {
+			if (i >= 5) {
+				i = 0;
+				lunbo.style.left = 0;
+			}
+			i++;
+			move(lunbo, "right", -1228 * i);
+			fn2();
+		};
+		al.onclick = function () {
+			if (i <= 0) {
+				i = 5;
+				lunbo.style.left = -6140 + "px";
+			}
+			i--;
+			move(lunbo, "left", -1228 * i);
+			fn2();
+			//调用fn2函数
+		};
+		//鼠标在轮播图上 图停  移开 继续
+		ll.onmouseover = function () {
+			clearInterval(timer1);
+		};
+		ll.onmouseout = function () {
+			fn();
+		};
+
+		function fn() {
+			//设置定时器
+			timer1 = setInterval(() => {
+				if (i >= 5) {
+					i = 0;
+					ul.style.left = 0;
+				}
+				i++;
+				move(lunbo, "right", -1228 * i);
+				fn2();
+			}, 4000);//时间4秒一循环
+		}
+
+		function move(ele, dir, end) {//对象，方向，终点位置
+			if (dir == "right") {
+				clearInterval(ele.timer);//清除定时器
+				ele.timer = setInterval(() => {
+					var _left = ele.offsetLeft;//左侧距离//获取当前距离
+
+					var tween = (end - _left) / 10;//减速运动
+					tween = tween > 0 ? Math.ceil(tween) : Math.floor(tween);//三元判断 向上、向下取整
+					var start = _left + tween;
+					if (ele.offsetLeft <= end) {//判断临界条件停止
+						clearInterval(ele.timer);
+						ele.style.left = end + "px";
+					}
+					ele.style.left = start + 'px';
+				}, 30);//图片轮播速度
+			} else if (dir == "left") {
+				clearInterval(ele.timer);
+				ele.timer = setInterval(() => {
+					var _right = ele.offsetLeft;
+					var tween1 = (end - _right) / 10;
+					tween1 = tween1 > 0 ? Math.ceil(tween1) : Math.floor(tween1);
+					var start1 = _right + tween1;
+					// ele.style.left = _right + 10 + "px";
+					if (ele.offsetLeft >= end) {
+						clearInterval(ele.timer);
+						ele.style.left = end + "px";
+					}
+					ele.style.left = start1 + 'px';
+				}, 30);
+			}
+		}
+		for (let k = 0; k < pp.length; k++) {
+			pp[k].onclick = function () {//页码绑定点击事件
+				move(lunbo, k > i ? "right" : "left", -1228 * k);
+				i = k;
+				fn2();
+			};
+		}
+		function fn2() {
+			for (var n = 0; n < pp.length; n++) {
+				pp[n].style.background = "rgba(255, 255, 255, 0.5)";
+			}
+			pp[i === 5 ? 0 : i].style.background = "rgba(255, 255, 255, 1)";
+		}//页码样式设置
+
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/first.css"> -->
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            src: url(../font/iconfont.woff),
+                url(../font/iconfont.woff2),
+                url(../font/iconfont.eot),
+                url(../font/iconfont.svg),
+                url(../font/iconfont.ttf)
+        }
+
+        #box {
+            width: 100%;
+            height: 6487px;
+            background: #fff;
+        }
+
+        #bx {
+            width: 1308px;
+            height: 6487px;
+            /* background: greenyellow; */
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 70px;
+            /* background: pink; */
+            border-bottom: 1px solid #d8dae7;
+        }
+
+        #header .logo1 {
+            width: 85px;
+            height: 25px;
+            /* border: 1px solid #000; */
+            float: left;
+            margin-left: 53px;
+            margin-top: 17px;
+        }
+
+        #header .logo1 img {
+            width: 84px;
+            height: 55px;
+            margin-top: -10px;
+        }
+
+        #header .nav {
+            width: 525px;
+            height: 25px;
+            float: left;
+            margin-left: 40px;
+            margin-top: 22px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        #header .nav .iq {
+            height: 25px;
+            float: left;
+            margin-left: 55px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #header .nav .self {
+            height: 25px;
+            float: left;
+            margin-left: 55px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #header .nav .business {
+            height: 25px;
+            float: left;
+            margin-left: 55px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #header .nav .buy {
+            height: 25px;
+            float: left;
+            margin-left: 55px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+        #header a {
+            color: #000;
+        }
+
+        #header .serch {
+            width: 205px;
+            height: 38px;
+            background: #d8dae7;
+            float: left;
+            margin-left: 280px;
+            margin-top: 22px;
+        }
+
+        #header .serch .text {
+            width: 205px;
+            height: 38px;
+            position: relative;
+            background: #d8dae7;
+            border: none;
+        }
+
+        #header .serch a {
+            position: absolute;
+            right: 145px;
+            top: 30px;
+            font-family: "iconfont";
+            font-size: 21px;
+            color: #000;
+        }
+
+        #header .login {
+            width: 22px;
+            height: 22px;
+            float: right;
+            margin-right: 45px;
+            margin-top: 30px;
+        }
+
+        #header .login a {
+            font-family: "iconfont";
+            font-size: 21px;
+            color: #000;
+            font-weight: 800;
+        }
+
+        #banner {
+            width: 100%;
+            height: 450px;
+            background: #fff;
+        }
+
+        #mask {
+            width: 1349px;
+            height: 450px;
+            margin: 0 auto;
+            position: relative;
+            left: -21px;
+            overflow: hidden;
+        }
+
+        #ul {
+            width: 9443px;
+            height: 450px;
+            position: absolute;
+            left: 0;
+        }
+
+        #ul li {
+            width: 1349px;
+            height: 450px;
+            float: left;
+        }
+
+        #ul li img {
+            width: 1349px;
+            height: 450px;
+        }
+
+        #mask span {
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            top: 50%;
+            margin-top: -26px;
+            display: none;
+        }
+
+        #al {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/left_arrow.svg?v=2);
+            left: 60px;
+        }
+
+        #ar {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/right_arrow.svg?v=2);
+            right: 100px;
+        }
+
+        #ar:hover {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/right_arrowhover.svg?v=2);
+        }
+
+        #al:hover {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/left_arrowhover.svg?v=2);
+        }
+
+        #mask:hover span {
+            display: block;
+        }
+
+        #page {
+            padding: 5px;
+            width: 320px;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin-left: -40px;
+        }
+
+        #page p {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            float: left;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+
+
+
+
+        #select {
+            width: 100%;
+            height: 927px;
+        }
+
+        #select .sele {
+            width: 1182px;
+            height: 927px;
+            /* background: yellow; */
+            margin-left: 63px;
+            /* position: relative; */
+        }
+
+        #select .sele h1 {
+            font-size: 37px;
+            float: left;
+            margin-left: 498px;
+            margin-top: 47px;
+            margin-bottom: 30px;
+        }
+
+        #select .sele .nav {
+            font-size: 20px;
+            width: 100%;
+            height: 38px;
+            border-bottom: 1px solid #e5e5e5e5;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #select .sele .project {
+            width: 100%;
+            height: 622px;
+            margin-top: 55px;
+            /* background: red; */
+        }
+
+        #select .sele .project .b1 {
+            width: 500px;
+            height: 620px;
+            float: left;
+            background: #f1f2f6;
+            border: 1px solid #f1f2f6;
+            text-align: center;
+            position: relative;
+            /* top: 0; */
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        #select .sele .project .b1:hover {
+            box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.25);
+            /* top: -5px; */
+            transition: 0.5s;
+            z-index: 998;
+        }
+
+        #select .sele .project .b1 a {
+            width: 500px;
+            height: 460px;
+            float: left;
+            margin-top: 20px;
+            transition: 0.5s;
+
+        }
+
+        #select .sele .project .b1 img {
+            width: 460px;
+            height: 460px;
+            margin: 0px 20px;
+        }
+
+        #select .sele .project .b1 a:hover {
+            /* position: relative; */
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        #select .sele .project .b1 .intro {
+            font-size: 18px;
+            color: #000;
+            line-height: 18px;
+            position: absolute;
+            bottom: 70px;
+            left: 63px;
+        }
+
+        #select .sele .project .b1 .num {
+            font-size: 10px;
+            color: #555555;
+            /* margin-top: 15px; */
+            position: absolute;
+            bottom: 45px;
+            left: 63px;
+        }
+
+        #select .sele .project .b1 .blue {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: transparent;
+            bottom: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+
+        #select .sele .project .b1:hover .blue {
+            background-color: #0c5ca8;
+        }
+
+        #select .sele .project .righttop {
+            width: 680px;
+            height: 311px;
+            float: right;
+            background: #d8dae7;
+        }
+
+        #select .sele .project .righttop .x1 {
+            width: 340px;
+            /* background: burlywood; */
+            height: 311px;
+            float: left;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        #select .sele .project .righttop .x1:hover {
+            box-shadow: 0px 15px 24px rgba(0, 0, 0, 0.25);
+            transition: 0.5s;
+            z-index: 998;
+        }
+
+        #select .sele .project .righttop .x1 a {
+            width: 340px;
+            height: 165px;
+            float: left;
+            margin-top: 50px;
+            transition: 0.5s;
+        }
+
+        #select .sele .project .righttop .x1 img {
+            width: 165px;
+            height: 165px;
+            margin: 0px 88px;
+        }
+
+        #select .sele .project .righttop .x1:hover a {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        #select .sele .project .righttop .x1 .intro {
+            font-size: 18px;
+            color: #000;
+            line-height: 18px;
+            position: absolute;
+            bottom: 60px;
+            left: 52px;
+        }
+
+        #select .sele .project .righttop .x1 .num {
+            font-size: 10px;
+            color: #555555;
+            position: absolute;
+            bottom: 35px;
+            left: 52px;
+        }
+
+        #select .sele .project .righttop .x1 .blue {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: transparent;
+            bottom: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+
+        #select .sele .project .righttop .x1:hover .blue {
+            background-color: #0c5ca8;
+        }
+
+        #star_banner {
+            width: 100%;
+            height: 770px;
+            background: #fff;
+        }
+
+        #mask2 {
+            width: 1349px;
+            height: 770px;
+            margin: 0 auto;
+            position: relative;
+            left: -21px;
+            overflow: hidden;
+        }
+
+        #ul2 {
+            width: 9443px;
+            height: 770px;
+            position: absolute;
+            left: 0;
+        }
+
+        #ul2 li {
+            width: 1349px;
+            height: 770px;
+            float: left;
+        }
+
+        #ul2 li img {
+            width: 1110px;
+            height: 620px;
+            margin-left: 120px;
+        }
+
+        #mask2 span {
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            top: 50%;
+            margin-top: -26px;
+            display: none;
+        }
+
+        #bl {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/left_arrow.svg?v=2);
+            left: 60px;
+        }
+
+        #br {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/right_arrow.svg?v=2);
+            right: 60px;
+        }
+
+        #br:hover {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/right_arrowhover.svg?v=2);
+        }
+
+        #bl:hover {
+            background: url(https://static.zcool.cn/git_z/z/widget/slider/images/svg/left_arrowhover.svg?v=2);
+        }
+
+        #mask2:hover span {
+            display: block;
+        }
+
+        #page2 {
+            padding: 5px;
+            width: 320px;
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            margin-left: -40px;
+        }
+
+        #page2 p {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            float: left;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        #seller {
+            width: 100%;
+            height: 890px;
+            background: #f6f7f9;
+        }
+
+        #seller .sell {
+            width: 1182px;
+            height: 890px;
+            margin: 0 auto;
+        }
+
+        #seller .sell h1 {
+            font-size: 37px;
+            float: left;
+            margin-left: 498px;
+            margin-top: 47px;
+            margin-bottom: 30px;
+        }
+
+        #seller .sell .nav {
+            font-size: 20px;
+            width: 100%;
+            height: 38px;
+            border-bottom: 1px solid #e5e5e5e5;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #seller .sell .all {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #seller .sell .all .ref {
+            text-align: center;
+            width: 367px;
+            height: 575px;
+            float: left;
+            margin-top: 55px;
+            background: #fff;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+            transition: 1s;
+            position: relative;
+        }
+
+        #seller .sell .all .ref:hover {
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+            transition: 1s;
+        }
+
+        #seller .sell .all .ref span {
+            width: 44px;
+            height: 53px;
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+
+        #seller .sell .all .ref .b2 {
+            width: 344px;
+            height: 344px;
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            transition: 0.5s;
+        }
+
+        #seller .sell .all .ref:hover .b2 {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        #seller .sell .all .ref .name {
+            font-size: 18px;
+            line-height: 18px;
+            position: absolute;
+            bottom: 155px;
+            left: 85px;
+        }
+
+        #seller .sell .all .ref .card {
+            font-size: 10px;
+            color: #111111;
+            position: absolute;
+            bottom: 128px;
+            left: 138px;
+        }
+
+        #seller .sell .all .ref .more {
+            width: 170px;
+            height: 50px;
+            border: 1px solid #0c5ca8;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 40px;
+            left: 97px;
+            line-height: 50px;
+            text-align: center;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+
+        #seller .sell .all .ref .more:hover {
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+            transition: 0.5s;
+        }
+
+        #party {
+            width: 100%;
+            height: 555px;
+            /* background: brown; */
+        }
+
+        #party .par {
+            width: 1182px;
+            height: 555px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #party .par .family {
+            width: 612px;
+            height: 378px;
+            overflow: hidden;
+            /* position: relative; */
+        }
+
+        #party .par .family a {
+            float: left;
+            width: 612px;
+            height: 378px;
+            display: block;
+            position: relative;
+            /* z-index: 99999; */
+
+        }
+
+        #party .par .family img {
+            width: 612px;
+            height: 377px;
+            transition: 0.5s;
+        }
+
+        #party .par .family img:hover {
+            position: absolute;
+            transform: scale(1.1);
+            transition: 0.5s;
+            z-index: 998;
+        }
+
+        #party .par .family .blue {
+            position: absolute;
+            bottom: 172px;
+            left: 0;
+            width: 612px;
+            height: 5px;
+            background-color: transparent;
+            transition: all 0.8s;
+            /* z-index: 998; */
+        }
+
+        #party .par .family:hover .blue {
+            background-color: #0c5ca8;
+            position: absolute;
+            bottom: 172px;
+            left: 0;
+            transition: all 0.8s;
+            z-index: 999;
+        }
+
+        #party .par .active {
+            width: 295px;
+            height: 168px;
+            position: absolute;
+            right: 120px;
+            top: 0;
+        }
+
+        #party .par .active h2 {
+            font-size: 33px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+            line-height: 33px;
+        }
+
+        #party .par .active .intro {
+            font-size: 14px;
+            color: #444444;
+            line-height: 22px;
+        }
+
+        #party .par .shopping {
+            width: 550px;
+            height: 122px;
+            position: absolute;
+            left: 0px;
+            top: 432px;
+        }
+
+        #party .par .shopping h2 {
+            font-size: 33px;
+            margin-top: 22px;
+            margin-bottom: 22px;
+            line-height: 33px;
+        }
+
+        #party .par .shopping .intro {
+            width: 370px;
+            font-size: 14px;
+            color: #444444;
+            line-height: 22px;
+        }
+
+        #party .par .shopping .blue {
+            width: 48px;
+            height: 8px;
+            background: #0c5ca8;
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+        }
+
+        #party .par .high {
+            width: 612px;
+            height: 378px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            /* z-index: 501; */
+            /* position: relative; */
+        }
+
+        #party .par .high a {
+            width: 612px;
+            height: 377px;
+            display: block;
+            /* overflow: hidden; */
+        }
+
+        #party .par .high img {
+            width: 612px;
+            height: 377px;
+            transition: 0.5s;
+            z-index: 501px;
+        }
+
+        #party .par .high img:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+            z-index: 998;
+        }
+
+        #party .par .high .blue {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            background-color: transparent;
+            bottom: 0;
+            left: 0;
+            transition: all 0.5s;
+        }
+
+        #party .par .high:hover .blue {
+            background-color: #0c5ca8;
+        }
+
+        #history {
+            width: 100%;
+            height: 1052px;
+            background: #e5e5e5;
+            position: relative;
+            text-align: center;
+        }
+
+        #history h1 {
+            font-size: 37px;
+            line-height: 37px;
+            margin-top: 80px;
+        }
+
+        #history .story {
+            font-size: 12px;
+            color: #444;
+            width: 580px;
+            line-height: 22px;
+            margin-left: 387px;
+            padding-top: 28px;
+        }
+
+        #history .vidio {
+            width: 100%;
+            height: 872px;
+            /* background: red; */
+        }
+        #history .vidio video{
+            width: 981px;
+            height: 550px;
+            margin: 150px auto;
+        }
+
+        #news {
+            width: 100%;
+            height: 721px;
+            background: #fff;
+            text-align: center;
+        }
+
+        #news h1 {
+            font-size: 37px;
+            padding-top: 60px;
+        }
+
+        #news .imp_news {
+            width: 1182px;
+            height: 552px;
+            margin: 0 auto;
+            margin-top: 60px;
+            /* background: rgb(209, 11, 11); */
+        }
+
+        #news .imp_news .left {
+            width: 640px;
+            height: 552px;
+            float: left;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        #news .imp_news .left a {
+            display: block;
+            float: left;
+            ;
+            width: 640px;
+            height: 360px;
+            overflow: hidden;
+        }
+
+        #news .imp_news .left img {
+            width: 640px;
+            height: 360px;
+            transition: 0.8s;
+        }
+
+        #news .imp_news .left a :hover {
+            transform: scale(1.1);
+            transition: 0.8s;
+        }
+
+        #news .imp_news .left .five_g {
+            width: 640px;
+            height: 192px;
+            float: left;
+            position: relative;
+        }
+
+        #news .imp_news .left .five_g h1 {
+            font-size: 30px;
+            line-height: 30px;
+            height: 35px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            /* margin-top: -10px; */
+            padding: 0;
+            margin-top: 30px;
+        }
+
+        #news .imp_news .left .five_g .intro {
+            font-size: 16px;
+            /* color: #666; */
+            line-height: 24px;
+            margin-top: 35px;
+            text-align: left;
+        }
+
+        #news .imp_news .left:hover {
+            color: #0c5ca8;
+        }
+
+        #news .imp_news .left:hover .intro {
+            color: #0c5ca8;
+        }
+
+        #news .imp_news .left .five_g .blue {
+            width: 100%;
+            height: 2px;
+            background: #c7d3d9;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        #news .imp_news .left .five_g .blue .water {
+            width: 10%;
+            height: 2px;
+            background: #0c5ca8;
+            display: block;
+            /* position: absolute; */
+        }
+
+        #news .imp_news .left .five_g .blue .water:hover {
+            width: 100%;
+            background: #0c5ca8;
+            transition: 0.8s;
+        }
+
+        #news .imp_news .right {
+            width: 440px;
+            height: 552px;
+            float: right;
+            background: #fff;
+        }
+
+        #news .imp_news .right .mes {
+            width: 440px;
+            height: 184px;
+            float: right;
+            /* background: green; */
+            position: relative;
+        }
+
+        #news .imp_news .right .mes .more {
+            width: 440px;
+            height: 16px;
+            background: #fff;
+            position: relative;
+        }
+
+        #news .imp_news .right .mes .more span {
+            display: block;
+            width: 57px;
+            height: 8px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #0c5ca8;
+        }
+
+        #news .imp_news .right .mes .more a {
+            font-size: 16px;
+            color: #0c5ca8;
+            line-height: 16px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #news .imp_news .right .mes h1 {
+            font-size: 18px;
+            line-height: 30px;
+            margin-top: 30px;
+            padding: 0;
+        }
+
+        #news .imp_news .right .mes .think {
+            font-size: 12px;
+            color: #000;
+            line-height: 24px;
+            margin-top: 10px;
+            text-align: start;
+        }
+
+        #news .imp_news .right .mes:hover .think {
+            color: #0c5ca8;
+        }
+
+        #news .imp_news .right .mes:hover h1 {
+            color: #0c5ca8;
+        }
+
+        #news .imp_news .right .mes .line {
+            width: 100%;
+            height: 2px;
+            background: #c7d3d9;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        #news .imp_news .right .mes .line .water {
+            width: 10%;
+            height: 2px;
+            background: #0c5ca8;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        #news .imp_news .right .mes .line.water:hover {
+            width: 100%;
+            background: #0c5ca8;
+            transition: 0.5s;
+        }
+
+        #link {
+            width: 100%;
+            height: 455px;
+            /* background: #0c5ca8; */
+        }
+
+        #link .link_bus {
+            width: 1182px;
+            height: 455px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        #link .link_bus h1 {
+            font-size: 38px;
+            line-height: 38px;
+            margin-top: 105px;
+            float: left;
+            margin-left: 522px;
+        }
+
+        #link .link_bus .all_logo {
+            width: 1182px;
+            height: 185px;
+            margin-top: 60px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #link .link_bus .all_logo .logo {
+            width: 160px;
+            background: url(../img/six.png);
+        }
+
+        #link .link_bus .all_logo .logo a {
+            display: inline-block;
+            width: 100%;
+            height: 195px;
+            background: url(../img/six.png) top center no-repeat;
+            background-size: 100%;
+            text-align: center;
+            /* padding-top: 25%; */
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+
+        #link .link_bus .all_logo .logo:hover a {
+            /* transition: 0.8s; */
+            background: url(../img/six_shadow.png) top center no-repeat;
+        }
+
+        #link .link_bus .all_logo .logo img {
+            width: 160px;
+            height: 90px;
+            margin-top: 45px;
+        }
+
+        #link .link_bus .all_logo .logo img:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        #footer {
+            width: 100%;
+            height: 461px;
+        }
+
+        #footer .kinds {
+            width: 1182px;
+            height: 460px;
+            border-bottom: 1px solid #e5e5e5;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #footer .kinds .title {
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 18px;
+            margin-top: 30px;
+            margin-bottom: 26px;
+        }
+
+        #footer .kinds .things {
+            font-size: 16px;
+            line-height: 16px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        #footer .kinds .things a {
+            color: #444;
+        }
+
+        #footer .kinds .things a:hover {
+            text-decoration-line: underline;
+        }
+
+        #bottom {
+            width: 100%;
+            height: 60px;
+            /* background: red; */
+        }
+
+        #bottom .bottom {
+            width: 1182px;
+            height: 60px;
+            /* background: yellow; */
+            margin: 0 auto;
+        }
+
+        #bottom .bottom .left {
+            width: 400px;
+            height: 16px;
+            float: left;
+            margin-top: 22px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .left a {
+            font-size: 12px;
+            display: inline-block;
+            /* width: 48px; */
+            height: 16px;
+            /* line-height: 16px; */
+            color: #444;
+        }
+
+        #bottom .bottom .left a :hover {
+            color: #0c5ca8;
+        }
+
+        #bottom .bottom .left i {
+            padding: 0 5px;
+        }
+
+        #bottom .bottom .middle {
+            width: 402px;
+            height: 16px;
+            float: left;
+            margin-top: 22px;
+            line-height: 16px;
+            margin-left: 20px;
+            color: #444;
+        }
+
+        #bottom .bottom .middle span {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .middle i {
+            padding: 0 5px;
+        }
+
+        #bottom .bottom .right {
+            width: 235px;
+            height: 16px;
+            float: right;
+            margin-top: 22px;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .right span {
+            font-size: 12px;
+            color: #444;
+            display: inline-block;
+            line-height: 16px;
+        }
+
+        #bottom .bottom .right a {
+            color: #0c5ca8;
+        }
+    </style>
+</head>
+
+<body id="box">
+    <div id="bx">
+        <div id="header">
+            <div class="logo1">
+                <a href="">
+                    <img src="../img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="nav">
+                <div class="iq">
+                    <a href="">
+                        <span>智慧家庭</span>
+                    </a>
+                </div>
+                <div class="self">
+                    <a href="">
+                        <span>个人与家用产品</span>
+                    </a>
+                </div>
+                <div class="business">
+                    <a href="">
+                        <span>商业解决方案</span>
+                    </a>
+                </div>
+                <div class="buy">
+                    <a href="">
+                        <span>购买与服务</span>
+                    </a>
+                </div>
+            </div>
+            <div class="serch">
+                <input type="text" class="text">
+                <a href="">
+                    &#xe602;
+                </a>
+            </div>
+            <div class="login">
+                <a href="">
+                    &#xe74a;
+                </a>
+            </div>
+        </div>
+        <div id="banner">
+            <div id="mask">
+                <ul id="ul">
+                    <li>
+                        <img src="../img/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/4.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/5.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/6.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/1.jpg" alt="">
+                    </li>
+                </ul>
+                <span id="al"></span>
+                <span id="ar"></span>
+                <div id="page">
+                    <p style="background-color: rgba(255, 255, 255, 1);" class="pp"></p>
+                    <p class="pp"></p>
+                    <p class="pp"></p>
+                    <p class="pp"></p>
+                    <p class="pp"></p>
+                    <p class="pp"></p>
+                </div>
+            </div>
+        </div>
+        <div id="select">
+            <div class="sele">
+                <h1>心选精品</h1>
+                <ul class="nav">
+                    <li>智慧家电</li>
+                    <li>人气爆款</li>
+                    <li>颜值控</li>
+                    <li>黑科技</li>
+                    <li>送礼“家”品</li>
+                    <li>成套臻选</li>
+                </ul>
+                <div class="project">
+                    <div class="b1">
+                        <a href="">
+                            <img src="../img/b1.png" alt="">
+                        </a>
+                        <p class="intro">611升全空间保鲜飨宴系列风冷变频对开门冰箱</p>
+                        <p class="num">BCD-611WDIEU1</p>
+                        <p class="blue"></p>
+                    </div>
+                    <div class="righttop">
+                        <div class="x1">
+                            <a href="">
+                                <img src="../img/x1.png" alt="">
+                            </a>
+                            <p class="intro">10.0公斤水晶直驱变频洗衣机</p>
+                            <p class="num">XQG100-B14736U1 SN</p>
+                            <p class="blue"></p>
+                        </div>
+                        <div class="x1">
+                            <a href="">
+                                <img src="../img/x1.png" alt="">
+                            </a>
+                            <p class="intro">10.0公斤水晶直驱变频洗衣机</p>
+                            <p class="num">XQG100-B14736U1 SN</p>
+                            <p class="blue"></p>
+                        </div>
+                    </div>
+                    <div class="righttop">
+                        <div class="x1">
+                            <a href="">
+                                <img src="../img/x1.png" alt="">
+                            </a>
+                            <p class="intro">10.0公斤水晶直驱变频洗衣机</p>
+                            <p class="num">XQG100-B14736U1 SN</p>
+                            <p class="blue"></p>
+                        </div>
+                        <div class="x1">
+                            <a href="">
+                                <img src="../img/x1.png" alt="">
+                            </a>
+                            <p class="intro">10.0公斤水晶直驱变频洗衣机</p>
+                            <p class="num">XQG100-B14736U1 SN</p>
+                            <p class="blue"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="star_banner">
+            <div id="mask2">
+                <ul id="ul2">
+                    <li>
+                        <img src="../img/7.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/8.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/9.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/10.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/8.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/10.png" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/7.png" alt="">
+                    </li>
+                </ul>
+                <span id="bl"></span>
+                <span id="br"></span>
+                <div id="page2">
+                    <p style="background-color: rgba(255, 255, 255, 1);" class="ppp"></p>
+                    <p class="ppp"></p>
+                    <p class="ppp"></p>
+                    <p class="ppp"></p>
+                    <p class="ppp"></p>
+                    <p class="ppp"></p>
+                </div>
+            </div>
+        </div>
+        <div id="seller">
+            <div class="sell">
+                <h1>畅销排行</h1>
+                <ul class="nav">
+                    <li>冰箱</li>
+                    <li>洗衣机</li>
+                    <li>空调</li>
+                    <li>热水器</li>
+                    <li>电视</li>
+                    <li>油烟机</li>
+                    <li>燃气灶</li>
+                </ul>
+                <div class="all">
+                    <div class="ref">
+                        <span>
+                            <img src="../img/first.png" alt="">
+                        </span>
+                        <a href="">
+                            <img src="../img/b2.png" alt="" class="b2">
+                        </a>
+                        <p class="name">160升直冷定频两门冰箱</p>
+                        <p class="card">BCD-160TMPQ</p>
+                        <p class="more">了解更多</p>
+                    </div>
+                    <div class="ref">
+                        <span>
+                            <img src="../img/second.png" alt="">
+                        </span>
+                        <a href="">
+                            <img src="../img/b3.png" alt="" class="b2">
+                        </a>
+                        <p class="name">216升风冷定频三门冰箱</p>
+                        <p class="card">BCD-216WMPT</p>
+                        <p class="more">了解更多</p>
+                    </div>
+                    <div class="ref">
+                        <span>
+                            <img src="../img/third.png" alt="">
+                        </span>
+                        <a href="">
+                            <img src="../img/b4.png" alt="" class="b2">
+                        </a>
+                        <p class="name">527升风冷变频对开门冰箱</p>
+                        <p class="card">BCD-527WDPC</p>
+                        <p class="more">了解更多</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="party">
+            <div class="par">
+                <div class="family">
+                    <a href="">
+                        <img src="../img/p1.jpg" alt="">
+                    </a>
+                    <p class="blue"></p>
+                </div>
+                <div class="active">
+                    <h2>活动集结地</h2>
+                    <p class="intro">玩转好家电，超值不败家！家电活动，限时抢疯狂购！现在下手还不晚！</p>
+                </div>
+                <div class="shopping">
+                    <h2>全屋购</h2>
+                    <p class="intro">旗舰品质，一站购齐！当你踏进家门的一刻，生活变得更智慧，一键开启空调、电视、扫地机器人，回家即是安心。</p>
+                    <p class="blue"></p>
+                </div>
+                <div class="high">
+                    <a href="">
+                        <img src="../img/p2.jpg" alt="">
+                    </a>
+                    <p class="blue"></p>
+                </div>
+            </div>
+
+        </div>
+        <div id="history">
+            <h1>品牌故事</h1>
+            <p class="story">
+                三十多年来，海尔与时俱进，从产品品牌到平台品牌，始终站在时代与行业发展前列。物联网时代，
+                海尔生态品牌将持续为全球用户创造美好生活体验，成为全球生态品牌引领者。
+            </p>
+            <div class="vidio">
+                <video src="../r1.mp4" controls></video>
+            </div>
+        </div>
+        <div id="news">
+            <h1>品牌资讯</h1>
+            <div class="imp_news">
+                <div class="left">
+                    <a href="">
+                        <img src="../img/p3.jpg" alt="">
+                    </a>
+                    <div class="five_g">
+                        <h1>没有场景便没有5G：“海尔智家”开启场景生态家庭革命</h1>
+                        <p class="intro">
+                            9月21日，来自瑞士洛桑国际管理发展学院的创新管理学教授比尔·费舍尔，
+                            在“第三届人单合一模式国际论坛”上，站在全球视角，指出“万物互联”时代发展又一转折点。
+                        </p>
+                        <div class="blue">
+                            <span class="water"></span>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="mes">
+                        <div class="more">
+                            <span></span>
+                            <a href="">更多</a>
+                        </div>
+                        <h1>人均消费25万！海尔智家001号开业两周成交1500万</h1>
+                        <p class="think">
+                            “以前，装修能跑遍半个城，现在在这里能一次性配齐，虽然消费高点，
+                            但这是一整套智慧生活方案，而且都是为我定制的...
+                        </p>
+                        <div class="line">
+                            <span class="water"></span>
+                        </div>
+                    </div>
+                    <div class="mes">
+                        <h1>人均消费25万！海尔智家001号开业两周成交1500万</h1>
+                        <p class="think">
+                            “以前，装修能跑遍半个城，现在在这里能一次性配齐，虽然消费高点，
+                            但这是一整套智慧生活方案，而且都是为我定制的...
+                        </p>
+                        <div class="line">
+                            <span class="water"></span>
+                        </div>
+                    </div>
+                    <div class="mes">
+                        <h1>人均消费25万！海尔智家001号开业两周成交1500万</h1>
+                        <p class="think">
+                            “以前，装修能跑遍半个城，现在在这里能一次性配齐，虽然消费高点，
+                            但这是一整套智慧生活方案，而且都是为我定制的...
+                        </p>
+                        <div class="line">
+                            <span class="water"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="link">
+            <div class="link_bus">
+                <h1>品牌链接</h1>
+                <div class="all_logo">
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                    <div class="logo">
+                        <a href="">
+                            <img src="../img/leader.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="kinds">
+                <ul>
+                    <li class="title">智慧家庭</li>
+                    <li class="things">
+                        <a href="">智慧首页</a>
+                    </li>
+                    <li class="things">
+                        <a href="">智家方案</a>
+                    </li>
+                    <li class="things">
+                        <a href="">智慧家电</a>
+                    </li>
+                    <li class="things">
+                        <a href="">生活资讯</a>
+                    </li>
+                    <li class="things">
+                        <a href="">智慧体验店</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title">个人与家用产品 </li>
+                    <li class="things">
+                        <a href="">冰箱</a>
+                    </li>
+                    <li class="things">
+                        <a href="">冷柜</a>
+                    </li>
+                    <li class="things">
+                        <a href="">冰吧</a>
+                    </li>
+                    <li class="things">
+                        <a href="">酒柜</a>
+                    </li>
+                    <li class="things">
+                        <a href="">洗衣机</a>
+                    </li>
+                    <li class="things">
+                        <a href="">空调</a>
+                    </li>
+                    <li class="things">
+                        <a href="">电视</a>
+                    </li>
+                    <li class="things">
+                        <a href="">热水器</a>
+                    </li>
+                    <li class="things">
+                        <a href="">厨房电器</a>
+                    </li>
+                    <li class="things">
+                        <a href="">电脑及外设</a>
+                    </li>
+                    <li class="things">
+                        <a href="">小家电</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title">商业解决方案</li>
+                    <li class="things">
+                        <a href="">中央空调</a>
+                    </li>
+                    <li class="things">
+                        <a href="">商用冷柜</a>
+                    </li>
+                    <li class="things">
+                        <a href="">商用洗涤</a>
+                    </li>
+                    <li class="things">
+                        <a href="">商用电视</a>
+                    </li>
+                    <li class="things">
+                        <a href="">商用电脑</a>
+                    </li>
+                    <li class="things">
+                        <a href="">U-home</a>
+                    </li>
+                    <li class="things">
+                        <a href="">商用净水设备</a>
+                    </li>
+                    <li class="things">
+                        <a href="">商用热泵</a>
+                    </li>
+
+                </ul>
+                <ul>
+                    <li class="title">购买与服务</li>
+                    <li class="things">
+                        <a href="">购买渠道</a>
+                    </li>
+                    <li class="things">
+                        <a href="">售后服务</a>
+                    </li>
+                    <li class="things">
+                        <a href="">会员尊享</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title">关于海尔</li>
+                    <li class="things">
+                        <a href="">海尔集团</a>
+                    </li>
+                    <li class="things">
+                        <a href="">海尔品牌</a>
+                    </li>
+                    <li class="things">
+                        <a href="">投资者关系</a>
+                    </li>
+                    <li class="things">
+                        <a href="">新闻资讯</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="title">友情链接</li>
+                    <li class="things">
+                        <a href="">顺逛</a>
+                    </li>
+                    <li class="things">
+                        <a href="">智慧生活体验馆</a>
+                    </li>
+                    <li class="things">
+                        <a href="">创客实验室</a>
+                    </li>
+                    <li class="things">
+                        <a href="">COSMOPlat平台</a>
+                    </li>
+                    <li class="things">
+                        <a href="">海尔创意平台</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom">
+            <div class="bottom">
+                <div class="left">
+                    <a href="">关于海尔</a>
+                    <i>|</i>
+                    <a href="">法律声明</a>
+                    <i>|</i>
+                    <a href="">联系我们</a>
+                    <i>|</i>
+                    <a href="">帮助中心</a>
+                    <i>|</i>
+                    <a href="">海尔门店</a>
+                </div>
+                <div class="middle">
+                    <span>鲁ICP备09096283</span>
+                    <i>|</i>
+                    <span>Copyright ©2019 海尔集团 版权所有</span>
+                </div>
+                <div class="right">
+                    <span>Haier 全球网站群 · </span>
+                    <a href="">中国</a>
+                    <span>关注海尔</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var al = document.querySelector("#al");
+        //左面按钮
+        var ar = document.querySelector("#ar");
+        //右面按钮
+        var lunbo = document.querySelector("#ul");
+        //轮播主体
+        var ll = document.querySelector("#mask");
+        //整体
+        var pp = document.querySelectorAll(".pp");
+        //页码圆圈
+        var i = 0;
+        var timer1;
+        fn();
+        //绑定按钮点击事件
+        ar.onclick = function () {
+            if (i >= 6) {
+                i = 0;
+                lunbo.style.left = 0;
+            }
+            i++;
+            move(lunbo, "right", -1349 * i);
+            fn2();
+        };
+        al.onclick = function () {
+            if (i <= 0) {
+                i = 6;
+                lunbo.style.left = -8094 + "px";
+            }
+            i--;
+            move(lunbo, "left", -1349 * i);
+            fn2();
+            //调用fn2函数
+        };
+        //鼠标在轮播图上 图停  移开 继续
+        ll.onmouseover = function () {
+            clearInterval(timer1);
+        };
+        ll.onmouseout = function () {
+            fn();
+        };
+
+        function fn() {
+            //设置定时器
+            timer1 = setInterval(() => {
+                if (i >= 6) {
+                    i = 0;
+                    ul.style.left = 0;
+                }
+                i++;
+                move(lunbo, "right", -1349 * i);
+                fn2();
+            }, 4000);//时间4秒一循环
+        }
+
+        function move(ele, dir, end) {//对象，方向，终点位置
+            if (dir == "right") {
+                clearInterval(ele.timer);//清除定时器
+                ele.timer = setInterval(() => {
+                    var _left = ele.offsetLeft;//左侧距离//获取当前距离
+
+                    var tween = (end - _left) / 10;//减速运动
+                    tween = tween > 0 ? Math.ceil(tween) : Math.floor(tween);//三元判断 向上、向下取整
+                    var start = _left + tween;
+                    if (ele.offsetLeft <= end) {//判断临界条件停止
+                        clearInterval(ele.timer);
+                        ele.style.left = end + "px";
+                    }
+                    ele.style.left = start + 'px';
+                }, 30);//图片轮播速度
+            } else if (dir == "left") {
+                clearInterval(ele.timer);
+                ele.timer = setInterval(() => {
+                    var _right = ele.offsetLeft;
+                    var tween1 = (end - _right) / 10;
+                    tween1 = tween1 > 0 ? Math.ceil(tween1) : Math.floor(tween1);
+                    var start1 = _right + tween1;
+                    // ele.style.left = _right + 10 + "px";
+                    if (ele.offsetLeft >= end) {
+                        clearInterval(ele.timer);
+                        ele.style.left = end + "px";
+                    }
+                    ele.style.left = start1 + 'px';
+                }, 30);
+            }
+        }
+        for (let k = 0; k < pp.length; k++) {
+            pp[k].onclick = function () {//页码绑定点击事件
+                move(lunbo, k > i ? "right" : "left", -1349 * k);
+                i = k;
+                fn2();
+            };
+        }
+        function fn2() {
+            for (var n = 0; n < pp.length; n++) {
+                pp[n].style.background = "rgba(255, 255, 255, 0.5)";
+            }
+            pp[i === 6 ? 0 : i].style.background = "rgba(255, 255, 255, 1)";
+        }//页码样式设置
+
+
+
+        var bl = document.getElementById("bl");
+        //左面按钮
+        var br = document.getElementById("br");
+        //右面按钮
+        var lunbo2 = document.getElementById("ul2");
+        //轮播主体
+        var lll = document.getElementById("mask2");
+        //整体
+        var ppp = document.getElementsByClassName("ppp");
+        //页码圆圈
+        var ia = 0;
+        var timer2;
+        fn1();
+        //绑定按钮点击事件
+        br.onclick = function () {
+            if (ia >= 6) {
+                ia = 0;
+                lunbo2.style.left = 0;
+            }
+            ia++;
+            move(lunbo2, "right", -1349 * ia);
+            fn21();
+        };
+        bl.onclick = function () {
+            if (ia <= 0) {
+                ia = 6;
+                lunbo2.style.left = -8094 + "px";
+            }
+            ia--;
+            move(lunbo2, "left", -1349 * ia);
+            fn21();
+            //调用fn2函数
+        };
+        //鼠标在轮播图上 图停  移开 继续
+        lll.onmouseover = function () {
+            clearInterval(timer2);
+        };
+        lll.onmouseout = function () {
+            fn1();
+        };
+
+        function fn1() {
+            //设置定时器
+            timer2 = setInterval(() => {
+                if (ia >= 6) {
+                    ia = 0;
+                    lunbo2.style.left = 0;
+                }
+                ia++;
+                move(lunbo2, "right", -1349 * ia);
+                fn21();
+            }, 4000);//时间4秒一循环
+        }
+
+        function move(ele, dir, end) {//对象，方向，终点位置
+            if (dir == "right") {
+                clearInterval(ele.timer);//清除定时器
+                ele.timer = setInterval(() => {
+                    var _left = ele.offsetLeft;//左侧距离//获取当前距离
+
+                    var tween = (end - _left) / 10;//减速运动
+                    tween = tween > 0 ? Math.ceil(tween) : Math.floor(tween);//三元判断 向上、向下取整
+                    var start = _left + tween;
+                    if (ele.offsetLeft <= end) {//判断临界条件停止
+                        clearInterval(ele.timer);
+                        ele.style.left = end + "px";
+                    }
+                    ele.style.left = start + 'px';
+                }, 30);//图片轮播速度
+            } else if (dir == "left") {
+                clearInterval(ele.timer);
+                ele.timer = setInterval(() => {
+                    var _right = ele.offsetLeft;
+                    var tween1 = (end - _right) / 10;
+                    tween1 = tween1 > 0 ? Math.ceil(tween1) : Math.floor(tween1);
+                    var start1 = _right + tween1;
+                    // ele.style.left = _right + 10 + "px";
+                    if (ele.offsetLeft >= end) {
+                        clearInterval(ele.timer);
+                        ele.style.left = end + "px";
+                    }
+                    ele.style.left = start1 + 'px';
+                }, 30);
+            }
+        }
+        for (let kk = 0; kk < ppp.length; kk++) {
+            ppp[kk].onclick = function () {//页码绑定点击事件
+                move(lunbo2, kk > ia ? "right" : "left", -1349 * kk);
+                ia = kk;
+                fn21();
+            };
+        }
+        function fn21() {
+            for (var nn = 0; nn < ppp.length; nn++) {
+                ppp[nn].style.background = "rgba(255, 255, 255, 0.5)";
+            }
+            ppp[ia === 6 ? 0 : ia].style.background = "rgba(255, 255, 255, 1)";
+        }//页码样式设置
+
+
+
+    </script>
+</body>
+
+</html>
