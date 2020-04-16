@@ -1,0 +1,219 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
+<%@ include file="/common/common.jsp" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>麻辣速递管理系统 </title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="${path}/common/front/css/system/global.css" media="all">
+    <style type="text/css">
+        .layui-tab-title li {
+            line-height: 37px;
+        }
+        <%--.logo {--%>
+            <%--background: url(${path}/common/front/images/logo1.png) no-repeat 0 center;--%>
+            <%--background-size: 15%;--%>
+            <%--padding-left: 30px;--%>
+        <%--}--%>
+
+        .fa-bars, .fa-life-bouy {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="layui-layout layui-layout-admin" style="border-bottom: solid 5px #393D49;">
+    <div class="layui-header header header-demo">
+        <div class="layui-main">
+            <div class="admin-login-box">
+                <a class="logo" style="left: 0;" href="">
+                    <span style="font-size: 20px;">麻辣速递管理系统</span>
+                </a>
+                <div class="admin-side-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+                <div class="admin-side-full">
+                    <i class="fa fa-life-bouy" aria-hidden="true"></i>
+                </div>
+            </div>
+            <ul class="layui-nav admin-header-item">
+                <li class="layui-nav-item" style="color: #999">
+                    日期：${homeDate}
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;" class="admin-header-user">
+                        <span>${compellation}</span>
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;"><i class="fa fa-gear" aria-hidden="true"></i> 设置</a>
+                        </dd>
+                        <dd>
+                            <a href="${path}/system/pullOut.do"><i class="fa fa-sign-out"
+                                                                               aria-hidden="true"></i> 注销</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+            <ul class="layui-nav admin-header-item-mobile">
+                <li class="layui-nav-item">
+                    <a href="${path}/common/front/admin_login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-side layui-bg-black" id="admin-side">
+        <div class="layui-side-scroll" id="admin-navbar-side" lay-filter="side"></div>
+    </div>
+    <div class="layui-body" style="bottom: 0;border-left: solid 2px #393D49;" id="admin-body">
+        <div class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">
+                    <i class="fa fa-dashboard" aria-hidden="true"></i>
+                    <cite>首页</cite>
+                </li>
+            </ul>
+            <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
+                <div class="layui-tab-item layui-show">
+                    <iframe src=""></iframe>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-tree-mobile layui-hide">
+        <i class="layui-icon">&#xe602;</i>
+    </div>
+    <div class="site-mobile-shade"></div>
+</div>
+
+
+<script>
+
+    var tab;
+
+    layui.config({
+        base: '${path}system/js/navbar/',
+        version:new Date().getTime()
+    }).use(['element', 'layer', 'navbar', 'tab'], function () {
+        var element = layui.element,
+            $ = layui.jquery,
+            layer = layui.layer,
+            navbar = layui.navbar();
+        tab = layui.tab({
+            elem: '.admin-nav-card' //设置选项卡容器
+            ,
+            //maxSetting: {
+            //	max: 5,
+            //	tipMsg: '只能开5个哇，不能再开了。真的。'
+            //},
+            contextMenu: true
+        });
+        //iframe自适应
+        $(window).on('resize', function () {
+            var $content = $('.admin-nav-card .layui-tab-content');
+            $content.height($(this).height() - 147);
+            $content.find('iframe').each(function () {
+                $(this).height($content.height());
+            });
+        }).resize();
+
+
+        //拉取菜单数据
+        var navs = [];
+        $.ajax({
+            url: "${path}/system/getAuthority.do",
+            async: false,
+            type: "post",
+            success: function (data) {
+                navs = data.navJSONArray;
+            }
+        });
+
+        //设置navbar
+        navbar.set({
+            spreadOne: true,
+            elem: '#admin-navbar-side',
+            cached: true,
+            data: navs
+            //url:""
+            /*cached:true,
+             url: 'datas/nav.json'*/
+        });
+        //渲染navbar
+        navbar.render();
+        //监听点击事件
+        navbar.on('click(side)', function (data) {
+            tab.tabAdd(data.field);
+        });
+
+        $('.admin-side-toggle').on('click', function () {
+            var sideWidth = $('#admin-side').width();
+            if (sideWidth === 200) {
+                $('#admin-body').animate({
+                    left: '0'
+                }); //admin-footer
+                $('#admin-footer').animate({
+                    left: '0'
+                });
+                $('#admin-side').animate({
+                    width: '0'
+                });
+            } else {
+                $('#admin-body').animate({
+                    left: '200px'
+                });
+                $('#admin-footer').animate({
+                    left: '200px'
+                });
+                $('#admin-side').animate({
+                    width: '200px'
+                });
+            }
+        });
+        $('.admin-side-full').on('click', function () {
+            var docElm = document.documentElement;
+            //W3C
+            if (docElm.requestFullscreen) {
+                docElm.requestFullscreen();
+            }
+            //FireFox
+            else if (docElm.mozRequestFullScreen) {
+                docElm.mozRequestFullScreen();
+            }
+            //Chrome等
+            else if (docElm.webkitRequestFullScreen) {
+                docElm.webkitRequestFullScreen();
+            }
+            //IE11
+            else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+            layer.msg('按Esc即可退出全屏');
+        });
+
+        //手机设备的简单适配
+        var treeMobile = $('.site-tree-mobile'),
+            shadeMobile = $('.site-mobile-shade');
+        treeMobile.on('click', function () {
+            $('body').addClass('site-mobile');
+        });
+        shadeMobile.on('click', function () {
+            $('body').removeClass('site-mobile');
+        });
+    });
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.business.SysRoleBusinessMapper">
+    <select id="findSysRoleByUserid" parameterType="java.util.HashMap"
+            resultType="java.util.HashMap">
+    SELECT r.id,r.name
+    FROM sys_role r
+    INNER JOIN sys_user_role s ON s.sys_role_id=r.id
+    WHERE s.sys_user_id=#{userid,jdbcType=BIGINT}
+
+    </select>
+  <select id="findSysRoleBySellerId" parameterType="java.util.HashMap"
+          resultType="java.util.HashMap">
+    SELECT r.id,r.name
+    FROM sys_role r
+    INNER JOIN mall_seller_role s ON s.sys_role_id=r.id
+    WHERE s.seller_id=#{sellerId,jdbcType=BIGINT}
+
+  </select>
+
+
+</mapper>

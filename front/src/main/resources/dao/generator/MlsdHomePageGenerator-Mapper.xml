@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.generator.MlsdHomePageGeneratorMapper">
+  <resultMap id="MlsdHomePageMap" type="com.hd.entity.generator.MlsdHomePage" >
+ 	      	  <id column="id" property="id" jdbcType="BIGINT" />
+	            	  <result column="banner_1" property="banner1" jdbcType="VARCHAR" />
+	            	  <result column="banner_2_1" property="banner21" jdbcType="VARCHAR" />
+	            	  <result column="banner_2_2" property="banner22" jdbcType="VARCHAR" />
+	            	  <result column="banner_2_3" property="banner23" jdbcType="VARCHAR" />
+	            	  <result column="banner_3_1" property="banner31" jdbcType="VARCHAR" />
+	            	  <result column="banner_3_2" property="banner32" jdbcType="VARCHAR" />
+	            	  <result column="introduce_text_img_url" property="introduceTextImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="introduce_product_img_url" property="introduceProductImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="introduce_intro_img_url" property="introduceIntroImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="profit_img_url" property="profitImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="profit_text_img_url" property="profitTextImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_1" property="shopSign1" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_2" property="shopSign2" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_3" property="shopSign3" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_4" property="shopSign4" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_background_1" property="shopSignBackground1" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_background_2" property="shopSignBackground2" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_background_3" property="shopSignBackground3" jdbcType="VARCHAR" />
+	            	  <result column="shop_sign_background_4" property="shopSignBackground4" jdbcType="VARCHAR" />
+	        </resultMap>
+  
+  <!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+				 <when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+ <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+					#{listItem}
+                  </foreach>
+                </when>
+				<when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+    <sql id="Base_Column_List">
+	        	    id
+	  	  	   ,  banner_1
+	  	  	   ,  banner_2_1
+	  	  	   ,  banner_2_2
+	  	  	   ,  banner_2_3
+	  	  	   ,  banner_3_1
+	  	  	   ,  banner_3_2
+	  	  	   ,  introduce_text_img_url
+	  	  	   ,  introduce_product_img_url
+	  	  	   ,  introduce_intro_img_url
+	  	  	   ,  profit_img_url
+	  	  	   ,  profit_text_img_url
+	  	  	   ,  shop_sign_1
+	  	  	   ,  shop_sign_2
+	  	  	   ,  shop_sign_3
+	  	  	   ,  shop_sign_4
+	  	  	   ,  shop_sign_background_1
+	  	  	   ,  shop_sign_background_2
+	  	  	   ,  shop_sign_background_3
+	  	  	   ,  shop_sign_background_4
+	  	    </sql>
+
+
+  <!-- 增 -->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hd.entity.generator.MlsdHomePage" >
+    insert into mlsd_home_page
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner_1
+		          	       , banner_2_1
+		          	       , banner_2_2
+		          	       , banner_2_3
+		          	       , banner_3_1
+		          	       , banner_3_2
+		          	       , introduce_text_img_url
+		          	       , introduce_product_img_url
+		          	       , introduce_intro_img_url
+		          	       , profit_img_url
+		          	       , profit_text_img_url
+		          	       , shop_sign_1
+		          	       , shop_sign_2
+		          	       , shop_sign_3
+		          	       , shop_sign_4
+		          	       , shop_sign_background_1
+		          	       , shop_sign_background_2
+		          	       , shop_sign_background_3
+		          	       , shop_sign_background_4
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		  #{id,jdbcType=BIGINT}
+		      		 , #{banner1,jdbcType=VARCHAR}
+		      		 , #{banner21,jdbcType=VARCHAR}
+		      		 , #{banner22,jdbcType=VARCHAR}
+		      		 , #{banner23,jdbcType=VARCHAR}
+		      		 , #{banner31,jdbcType=VARCHAR}
+		      		 , #{banner32,jdbcType=VARCHAR}
+		      		 , #{introduceTextImgUrl,jdbcType=VARCHAR}
+		      		 , #{introduceProductImgUrl,jdbcType=VARCHAR}
+		      		 , #{introduceIntroImgUrl,jdbcType=VARCHAR}
+		      		 , #{profitImgUrl,jdbcType=VARCHAR}
+		      		 , #{profitTextImgUrl,jdbcType=VARCHAR}
+		      		 , #{shopSign1,jdbcType=VARCHAR}
+		      		 , #{shopSign2,jdbcType=VARCHAR}
+		      		 , #{shopSign3,jdbcType=VARCHAR}
+		      		 , #{shopSign4,jdbcType=VARCHAR}
+		      		 , #{shopSignBackground1,jdbcType=VARCHAR}
+		      		 , #{shopSignBackground2,jdbcType=VARCHAR}
+		      		 , #{shopSignBackground3,jdbcType=VARCHAR}
+		      		 , #{shopSignBackground4,jdbcType=VARCHAR}
+		          </trim>
+  </insert>
+
+  <!-- 替换 -->
+  <insert id="replaceSelective" parameterType="com.hd.entity.generator.MlsdHomePage" >
+     replace into mlsd_home_page
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner_1
+		          	       , banner_2_1
+		          	       , banner_2_2
+		          	       , banner_2_3
+		          	       , banner_3_1
+		          	       , banner_3_2
+		          	       , introduce_text_img_url
+		          	       , introduce_product_img_url
+		          	       , introduce_intro_img_url
+		          	       , profit_img_url
+		          	       , profit_text_img_url
+		          	       , shop_sign_1
+		          	       , shop_sign_2
+		          	       , shop_sign_3
+		          	       , shop_sign_4
+		          	       , shop_sign_background_1
+		          	       , shop_sign_background_2
+		          	       , shop_sign_background_3
+		          	       , shop_sign_background_4
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		 		 				#{id,jdbcType=BIGINT}
+		  		 ,		 				#{banner1,jdbcType=VARCHAR}
+		  		 ,		 				#{banner21,jdbcType=VARCHAR}
+		  		 ,		 				#{banner22,jdbcType=VARCHAR}
+		  		 ,		 				#{banner23,jdbcType=VARCHAR}
+		  		 ,		 				#{banner31,jdbcType=VARCHAR}
+		  		 ,		 				#{banner32,jdbcType=VARCHAR}
+		  		 ,		 				#{introduceTextImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{introduceProductImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{introduceIntroImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{profitImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{profitTextImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSign1,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSign2,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSign3,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSign4,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSignBackground1,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSignBackground2,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSignBackground3,jdbcType=VARCHAR}
+		  		 ,		 				#{shopSignBackground4,jdbcType=VARCHAR}
+		      </trim>
+  </insert>
+  
+  <!-- 删 -->
+  <delete id="deleteByExample" parameterType="com.hd.entity.generator.MlsdHomePageExample" >
+    delete from mlsd_home_page 
+	<if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  
+  <delete id="deleteByPrimaryKey" parameterType="com.hd.entity.generator.MlsdHomePageKey" >
+    delete from mlsd_home_page where id = 
+	    	     		  #{id,jdbcType=BIGINT}
+		 		      	          	          	          	          	          	          	          	          	          	          	          	          	          	          	          	          	          	          	          	 	
+  </delete>
+  
+  <!-- 改 -->
+  <update id="updateAllByExample">
+    update mlsd_home_page
+    <set>
+	    		<if test="record.id !=null">
+        id = #{record.id,jdbcType=BIGINT},
+		 </if>
+				<if test="record.banner1 !=null">
+        banner_1 = #{record.banner1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.banner21 !=null">
+        banner_2_1 = #{record.banner21,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.banner22 !=null">
+        banner_2_2 = #{record.banner22,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.banner23 !=null">
+        banner_2_3 = #{record.banner23,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.banner31 !=null">
+        banner_3_1 = #{record.banner31,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.banner32 !=null">
+        banner_3_2 = #{record.banner32,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.introduceTextImgUrl !=null">
+        introduce_text_img_url = #{record.introduceTextImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.introduceProductImgUrl !=null">
+        introduce_product_img_url = #{record.introduceProductImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.introduceIntroImgUrl !=null">
+        introduce_intro_img_url = #{record.introduceIntroImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.profitImgUrl !=null">
+        profit_img_url = #{record.profitImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.profitTextImgUrl !=null">
+        profit_text_img_url = #{record.profitTextImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSign1 !=null">
+        shop_sign_1 = #{record.shopSign1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSign2 !=null">
+        shop_sign_2 = #{record.shopSign2,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSign3 !=null">
+        shop_sign_3 = #{record.shopSign3,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSign4 !=null">
+        shop_sign_4 = #{record.shopSign4,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSignBackground1 !=null">
+        shop_sign_background_1 = #{record.shopSignBackground1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSignBackground2 !=null">
+        shop_sign_background_2 = #{record.shopSignBackground2,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSignBackground3 !=null">
+        shop_sign_background_3 = #{record.shopSignBackground3,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.shopSignBackground4 !=null">
+        shop_sign_background_4 = #{record.shopSignBackground4,jdbcType=VARCHAR},
+		 </if>
+		    </set>
+	<if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.hd.entity.generator.MlsdHomePage" >
+    update mlsd_home_page
+    <set>
+	      <if test="id !=null">
+      id = #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="banner1 !=null">
+      banner_1 = #{banner1,jdbcType=VARCHAR},
+      </if>
+	      <if test="banner21 !=null">
+      banner_2_1 = #{banner21,jdbcType=VARCHAR},
+      </if>
+	      <if test="banner22 !=null">
+      banner_2_2 = #{banner22,jdbcType=VARCHAR},
+      </if>
+	      <if test="banner23 !=null">
+      banner_2_3 = #{banner23,jdbcType=VARCHAR},
+      </if>
+	      <if test="banner31 !=null">
+      banner_3_1 = #{banner31,jdbcType=VARCHAR},
+      </if>
+	      <if test="banner32 !=null">
+      banner_3_2 = #{banner32,jdbcType=VARCHAR},
+      </if>
+	      <if test="introduceTextImgUrl !=null">
+      introduce_text_img_url = #{introduceTextImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="introduceProductImgUrl !=null">
+      introduce_product_img_url = #{introduceProductImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="introduceIntroImgUrl !=null">
+      introduce_intro_img_url = #{introduceIntroImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="profitImgUrl !=null">
+      profit_img_url = #{profitImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="profitTextImgUrl !=null">
+      profit_text_img_url = #{profitTextImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSign1 !=null">
+      shop_sign_1 = #{shopSign1,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSign2 !=null">
+      shop_sign_2 = #{shopSign2,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSign3 !=null">
+      shop_sign_3 = #{shopSign3,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSign4 !=null">
+      shop_sign_4 = #{shopSign4,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSignBackground1 !=null">
+      shop_sign_background_1 = #{shopSignBackground1,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSignBackground2 !=null">
+      shop_sign_background_2 = #{shopSignBackground2,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSignBackground3 !=null">
+      shop_sign_background_3 = #{shopSignBackground3,jdbcType=VARCHAR},
+      </if>
+	      <if test="shopSignBackground4 !=null">
+      shop_sign_background_4 = #{shopSignBackground4,jdbcType=VARCHAR},
+      </if>
+	    </set>
+    where 
+		      id = #{id,jdbcType=BIGINT}
+																																								  </update>
+
+  
+  
+  <!-- 查1 -->
+  <select id="countByExample" parameterType="com.hd.entity.generator.MlsdHomePageExample" resultType="java.lang.Integer">
+    select count(*) from mlsd_home_page
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 查2 -->
+  <select id="selectByExample" parameterType="com.hd.entity.generator.MlsdHomePageExample" resultMap="MlsdHomePageMap">
+    select  
+	<if test="distinct">
+         distinct
+     </if> 
+	 <if test="columnName != null">
+            ${columnName.quereyColumnNameStr}
+     </if>
+	 <if test="columnName == null">
+			<include refid="Base_Column_List" />
+	 </if>
+	from mlsd_home_page 
+   <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+	<if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  
+   <!-- 查3 -->
+  <select id="selectByPrimaryKey" resultMap="MlsdHomePageMap" parameterType="com.hd.entity.generator.MlsdHomePage" >
+    select 
+	    	 id
+			, banner_1
+			, banner_2_1
+			, banner_2_2
+			, banner_2_3
+			, banner_3_1
+			, banner_3_2
+			, introduce_text_img_url
+			, introduce_product_img_url
+			, introduce_intro_img_url
+			, profit_img_url
+			, profit_text_img_url
+			, shop_sign_1
+			, shop_sign_2
+			, shop_sign_3
+			, shop_sign_4
+			, shop_sign_background_1
+			, shop_sign_background_2
+			, shop_sign_background_3
+			, shop_sign_background_4
+		    from mlsd_home_page where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!-- 查4 -->
+  <select id="selectUnDelByPrimaryKey" resultMap="MlsdHomePageMap" parameterType="com.hd.entity.generator.MlsdHomePage" >
+    select 
+	    	 id
+			, banner_1
+			, banner_2_1
+			, banner_2_2
+			, banner_2_3
+			, banner_3_1
+			, banner_3_2
+			, introduce_text_img_url
+			, introduce_product_img_url
+			, introduce_intro_img_url
+			, profit_img_url
+			, profit_text_img_url
+			, shop_sign_1
+			, shop_sign_2
+			, shop_sign_3
+			, shop_sign_4
+			, shop_sign_background_1
+			, shop_sign_background_2
+			, shop_sign_background_3
+			, shop_sign_background_4
+		    from mlsd_home_page where id = #{id,jdbcType=BIGINT}
+																																										
+  </select>
+  
+</mapper>

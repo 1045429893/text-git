@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.business.SysAuthorityBusinessMapper">
+    <select id="findSysAuthorityByRoleId" parameterType="java.util.HashMap"
+            resultType="java.util.HashMap">
+    SELECT r.id,r.name
+    FROM sys_authority r
+    INNER JOIN sys_role_authority s ON s.sys_authority_id=r.id
+    WHERE s.sys_role_id=#{roleId,jdbcType=BIGINT}
+
+    </select>
+
+
+
+</mapper>

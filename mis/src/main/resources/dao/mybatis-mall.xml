@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <mappers>
+        <mapper resource="dao/generator/SysAuthorityGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/SysAuthorityResourcesGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/SysResourcesGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/SysRoleAuthorityGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/SysRoleGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/SysUserInfoGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/SysUserRoleGenerator-Mapper.xml"/>
+
+
+        <mapper resource="dao/generator/MlsdBrandCultureGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdCompanyProfileGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdContactMessageGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdContactUsGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdHomePageGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdIntendedUsersGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdItemAdvantageGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdJoinInvestmentGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdOnlineServiceGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdProductPresentationGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdStoreDisplayGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdStrengthGenerator-Mapper.xml"/>
+
+        <mapper resource="dao/generator/MlsdMobileBrandCultureGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileContactUsGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileHomePageGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileItemAdvantageGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileJoinInvestmentGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileProductPresentationGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileStoreDisplayGenerator-Mapper.xml"/>
+        <mapper resource="dao/generator/MlsdMobileStrengthGenerator-Mapper.xml"/>
+
+        <!--business-->
+        <mapper resource="dao/business/SysAuthorityBusiness-Mapper.xml"/>
+        <mapper resource="dao/business/SysRoleBusiness-Mapper.xml"/>
+
+
+    </mappers>
+</configuration>

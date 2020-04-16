@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.generator.MlsdJoinInvestmentGeneratorMapper">
+  <resultMap id="MlsdJoinInvestmentMap" type="com.hd.entity.generator.MlsdJoinInvestment" >
+ 	      	  <id column="id" property="id" jdbcType="BIGINT" />
+	            	  <result column="banner_1" property="banner1" jdbcType="VARCHAR" />
+	            	  <result column="partnership_img_url_1" property="partnershipImgUrl1" jdbcType="VARCHAR" />
+	            	  <result column="partnership_img_url_2" property="partnershipImgUrl2" jdbcType="VARCHAR" />
+	            	  <result column="partnership_img_url_3" property="partnershipImgUrl3" jdbcType="VARCHAR" />
+	            	  <result column="img_url_1" property="imgUrl1" jdbcType="VARCHAR" />
+	            	  <result column="img_url_2" property="imgUrl2" jdbcType="VARCHAR" />
+	            	  <result column="img_url_3" property="imgUrl3" jdbcType="VARCHAR" />
+	            	  <result column="img_url_4" property="imgUrl4" jdbcType="VARCHAR" />
+	            	  <result column="img_url_5" property="imgUrl5" jdbcType="VARCHAR" />
+	            	  <result column="img_url_6" property="imgUrl6" jdbcType="VARCHAR" />
+	            	  <result column="img_url_7" property="imgUrl7" jdbcType="VARCHAR" />
+	            	  <result column="img_url_8" property="imgUrl8" jdbcType="VARCHAR" />
+	            	  <result column="partnership_img_url" property="partnershipImgUrl" jdbcType="VARCHAR" />
+	        </resultMap>
+  
+  <!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+				 <when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+ <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+					#{listItem}
+                  </foreach>
+                </when>
+				<when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+    <sql id="Base_Column_List">
+	        	    id
+	  	  	   ,  banner_1
+	  	  	   ,  partnership_img_url_1
+	  	  	   ,  partnership_img_url_2
+	  	  	   ,  partnership_img_url_3
+	  	  	   ,  img_url_1
+	  	  	   ,  img_url_2
+	  	  	   ,  img_url_3
+	  	  	   ,  img_url_4
+	  	  	   ,  img_url_5
+	  	  	   ,  img_url_6
+	  	  	   ,  img_url_7
+	  	  	   ,  img_url_8
+	  	  	   ,  partnership_img_url
+	  	    </sql>
+
+
+  <!-- 增 -->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hd.entity.generator.MlsdJoinInvestment" >
+    insert into mlsd_join_investment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner_1
+		          	       , partnership_img_url_1
+		          	       , partnership_img_url_2
+		          	       , partnership_img_url_3
+		          	       , img_url_1
+		          	       , img_url_2
+		          	       , img_url_3
+		          	       , img_url_4
+		          	       , img_url_5
+		          	       , img_url_6
+		          	       , img_url_7
+		          	       , img_url_8
+		          	       , partnership_img_url
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		  #{id,jdbcType=BIGINT}
+		      		 , #{banner1,jdbcType=VARCHAR}
+		      		 , #{partnershipImgUrl1,jdbcType=VARCHAR}
+		      		 , #{partnershipImgUrl2,jdbcType=VARCHAR}
+		      		 , #{partnershipImgUrl3,jdbcType=VARCHAR}
+		      		 , #{imgUrl1,jdbcType=VARCHAR}
+		      		 , #{imgUrl2,jdbcType=VARCHAR}
+		      		 , #{imgUrl3,jdbcType=VARCHAR}
+		      		 , #{imgUrl4,jdbcType=VARCHAR}
+		      		 , #{imgUrl5,jdbcType=VARCHAR}
+		      		 , #{imgUrl6,jdbcType=VARCHAR}
+		      		 , #{imgUrl7,jdbcType=VARCHAR}
+		      		 , #{imgUrl8,jdbcType=VARCHAR}
+		      		 , #{partnershipImgUrl,jdbcType=VARCHAR}
+		          </trim>
+  </insert>
+
+  <!-- 替换 -->
+  <insert id="replaceSelective" parameterType="com.hd.entity.generator.MlsdJoinInvestment" >
+     replace into mlsd_join_investment
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner_1
+		          	       , partnership_img_url_1
+		          	       , partnership_img_url_2
+		          	       , partnership_img_url_3
+		          	       , img_url_1
+		          	       , img_url_2
+		          	       , img_url_3
+		          	       , img_url_4
+		          	       , img_url_5
+		          	       , img_url_6
+		          	       , img_url_7
+		          	       , img_url_8
+		          	       , partnership_img_url
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		 		 				#{id,jdbcType=BIGINT}
+		  		 ,		 				#{banner1,jdbcType=VARCHAR}
+		  		 ,		 				#{partnershipImgUrl1,jdbcType=VARCHAR}
+		  		 ,		 				#{partnershipImgUrl2,jdbcType=VARCHAR}
+		  		 ,		 				#{partnershipImgUrl3,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl1,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl2,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl3,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl4,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl5,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl6,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl7,jdbcType=VARCHAR}
+		  		 ,		 				#{imgUrl8,jdbcType=VARCHAR}
+		  		 ,		 				#{partnershipImgUrl,jdbcType=VARCHAR}
+		      </trim>
+  </insert>
+  
+  <!-- 删 -->
+  <delete id="deleteByExample" parameterType="com.hd.entity.generator.MlsdJoinInvestmentExample" >
+    delete from mlsd_join_investment 
+	<if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  
+  <delete id="deleteByPrimaryKey" parameterType="com.hd.entity.generator.MlsdJoinInvestmentKey" >
+    delete from mlsd_join_investment where id = 
+	    	     		  #{id,jdbcType=BIGINT}
+		 		      	          	          	          	          	          	          	          	          	          	          	          	          	          	 	
+  </delete>
+  
+  <!-- 改 -->
+  <update id="updateAllByExample">
+    update mlsd_join_investment
+    <set>
+	    		<if test="record.id !=null">
+        id = #{record.id,jdbcType=BIGINT},
+		 </if>
+				<if test="record.banner1 !=null">
+        banner_1 = #{record.banner1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.partnershipImgUrl1 !=null">
+        partnership_img_url_1 = #{record.partnershipImgUrl1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.partnershipImgUrl2 !=null">
+        partnership_img_url_2 = #{record.partnershipImgUrl2,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.partnershipImgUrl3 !=null">
+        partnership_img_url_3 = #{record.partnershipImgUrl3,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl1 !=null">
+        img_url_1 = #{record.imgUrl1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl2 !=null">
+        img_url_2 = #{record.imgUrl2,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl3 !=null">
+        img_url_3 = #{record.imgUrl3,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl4 !=null">
+        img_url_4 = #{record.imgUrl4,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl5 !=null">
+        img_url_5 = #{record.imgUrl5,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl6 !=null">
+        img_url_6 = #{record.imgUrl6,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl7 !=null">
+        img_url_7 = #{record.imgUrl7,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.imgUrl8 !=null">
+        img_url_8 = #{record.imgUrl8,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.partnershipImgUrl !=null">
+        partnership_img_url = #{record.partnershipImgUrl,jdbcType=VARCHAR},
+		 </if>
+		    </set>
+	<if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.hd.entity.generator.MlsdJoinInvestment" >
+    update mlsd_join_investment
+    <set>
+	      <if test="id !=null">
+      id = #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="banner1 !=null">
+      banner_1 = #{banner1,jdbcType=VARCHAR},
+      </if>
+	      <if test="partnershipImgUrl1 !=null">
+      partnership_img_url_1 = #{partnershipImgUrl1,jdbcType=VARCHAR},
+      </if>
+	      <if test="partnershipImgUrl2 !=null">
+      partnership_img_url_2 = #{partnershipImgUrl2,jdbcType=VARCHAR},
+      </if>
+	      <if test="partnershipImgUrl3 !=null">
+      partnership_img_url_3 = #{partnershipImgUrl3,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl1 !=null">
+      img_url_1 = #{imgUrl1,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl2 !=null">
+      img_url_2 = #{imgUrl2,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl3 !=null">
+      img_url_3 = #{imgUrl3,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl4 !=null">
+      img_url_4 = #{imgUrl4,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl5 !=null">
+      img_url_5 = #{imgUrl5,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl6 !=null">
+      img_url_6 = #{imgUrl6,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl7 !=null">
+      img_url_7 = #{imgUrl7,jdbcType=VARCHAR},
+      </if>
+	      <if test="imgUrl8 !=null">
+      img_url_8 = #{imgUrl8,jdbcType=VARCHAR},
+      </if>
+	      <if test="partnershipImgUrl !=null">
+      partnership_img_url = #{partnershipImgUrl,jdbcType=VARCHAR},
+      </if>
+	    </set>
+    where 
+		      id = #{id,jdbcType=BIGINT}
+																												  </update>
+
+  
+  
+  <!-- 查1 -->
+  <select id="countByExample" parameterType="com.hd.entity.generator.MlsdJoinInvestmentExample" resultType="java.lang.Integer">
+    select count(*) from mlsd_join_investment
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 查2 -->
+  <select id="selectByExample" parameterType="com.hd.entity.generator.MlsdJoinInvestmentExample" resultMap="MlsdJoinInvestmentMap">
+    select  
+	<if test="distinct">
+         distinct
+     </if> 
+	 <if test="columnName != null">
+            ${columnName.quereyColumnNameStr}
+     </if>
+	 <if test="columnName == null">
+			<include refid="Base_Column_List" />
+	 </if>
+	from mlsd_join_investment 
+   <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+	<if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  
+   <!-- 查3 -->
+  <select id="selectByPrimaryKey" resultMap="MlsdJoinInvestmentMap" parameterType="com.hd.entity.generator.MlsdJoinInvestment" >
+    select 
+	    	 id
+			, banner_1
+			, partnership_img_url_1
+			, partnership_img_url_2
+			, partnership_img_url_3
+			, img_url_1
+			, img_url_2
+			, img_url_3
+			, img_url_4
+			, img_url_5
+			, img_url_6
+			, img_url_7
+			, img_url_8
+			, partnership_img_url
+		    from mlsd_join_investment where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!-- 查4 -->
+  <select id="selectUnDelByPrimaryKey" resultMap="MlsdJoinInvestmentMap" parameterType="com.hd.entity.generator.MlsdJoinInvestment" >
+    select 
+	    	 id
+			, banner_1
+			, partnership_img_url_1
+			, partnership_img_url_2
+			, partnership_img_url_3
+			, img_url_1
+			, img_url_2
+			, img_url_3
+			, img_url_4
+			, img_url_5
+			, img_url_6
+			, img_url_7
+			, img_url_8
+			, partnership_img_url
+		    from mlsd_join_investment where id = #{id,jdbcType=BIGINT}
+																														
+  </select>
+  
+</mapper>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>打印发货单</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="css/seller/seller.css" media="all" />
+    <style type="text/css">
+        .seller-order-h2 span{ display: inline-block; }
+        .seller-order-h2 .order-grounp-btn{ float: right; }
+        .order-grounp-btn button{ width: 63px;  margin-right: 10px; }
+        .order-grounp-btn button i{ margin-right: 4px; }
+    </style>
+</head>
+
+<body>
+    <div class="seller-o-wrapper">
+        <div class="seller-order-details">
+            <h2 class="seller-order-h2 clearfix"><span>打印发货单</span> <div class="order-grounp-btn"><button><i class="fa fa-times"></i>关闭</button><button> <i class="fa fa-print"></i>打印</button></div> </h2>
+        </div>
+        <div class="refund-s-details">
+            <h4 class=" refund-table-h4" style="text-align: center; font-size: 23px; padding:10px 0;">雪托帮商城发货单</h4>
+            <table class="layui-table seller-s-table">
+                <thead>
+                    <tr>
+                        <th>商品编号</th>
+                        <th>商品名称</th>
+                        <th>单价</th>
+                        <th>商品颜色</th>
+                        <th>商品规格</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0000000001</td>
+                        <td>Nike 耐克官方 NIKE TANJUN RACER 男子跑步鞋</td>
+                        <td>¥519.00</td>
+                        <td>黑色</td>
+                        <td>43</td>
+                        <td>1</td>
+                        <td>¥519.00</td>
+                    </tr>
+                    <tr>
+                        <td>0000000001</td>
+                        <td>Nike 耐克官方 NIKE TANJUN RACER 男子跑步鞋</td>
+                        <td>¥519.00</td>
+                        <td>黑色</td>
+                        <td>43</td>
+                        <td>1</td>
+                        <td>¥519.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="refund-s-total">商品总价： ¥1038.00&nbsp;&nbsp;&nbsp;&nbsp;运费： ¥0.00&nbsp;&nbsp;&nbsp;&nbsp;优惠金额：¥100.00&nbsp;&nbsp;&nbsp;&nbsp;订单总金额：¥1457.00</p>
+        </div>
+        <div class="server-ticket-infor" >
+            <table class="layui-table" >
+                <tr style="height: 30px; ">
+                    <td width="340">订单提交时间：2017-07-19 15:43:23</td>
+                    <td>收货人姓名：韦小宝</td>
+                </tr>
+                <tr>
+                    <td>订单编号：201707196398345</td>
+                    <td>收货人手机号码：13111111111</td>
+                </tr>
+                <tr>
+                    <td>支付方式：支付宝</td>
+                    <td>收货地址：北京 北京市 东城区 景山前街4号紫禁城敬事房</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

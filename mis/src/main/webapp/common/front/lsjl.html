@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>历史记录</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="/common/front/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/common/front/font/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/common/front/css/system/btable.css" />
+</head>
+
+<body style=" background-color: gainsboro;">
+    <div style="margin:0px; background-color: white;">
+        <blockquote class="layui-elem-quote">
+            <form accept-charset="UTF-8" action="search.html" method="get" style="">
+                <div style="margin-top: 20px;">
+                    <label style="line-height: 30px; display: inline-block;">手机号：</label>
+                    <input autocomplete="off" class="search-query span2" name="" placeholder="" value="" type="text" style="line-height: 28px; position: relative; top:2px; padding-left: 2px;">
+                    <div class="layui-form-pane" style=" display: inline-block;">
+                        <label class="layui-form-label">时间选取</label>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" placeholder="生效日期" id="LAY_demorange_s">
+                        </div>
+                        <div class="layui-input-inline">
+                            <input class="layui-input" placeholder="截止日期" id="LAY_demorange_e">
+                        </div>
+                    </div>
+                    <button class="layui-btn layui-btn-small" name="button" type="submit" id="search"><i class="layui-icon">&#xe615;</i> 查询
+                    </button>
+                </div>
+            </form>
+        </blockquote>
+        <div id="content" style="width: 100%;height: 533px;">
+            <table class="layui-table" lay-data="{height:315, url:'/common/front/datas/test.json', page:true, id:'test'}" lay-filter="test">
+                <thead>
+                <tr>
+                    <th lay-data="{field:'id', width:80, sort: true}">手机号</th>
+                    <th lay-data="{field:'username', width:80}">发送时间</th>
+                    <th lay-data="{field:'sex', width:80, sort: true}">短信内容</th>
+                </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+    <script type="text/javascript" src="/common/front/layui/layui.js"></script>
+    <script>
+        layui.use('table', function() {
+            var table = layui.table;
+        });
+        layui.use('layer', function() {
+            var $ = layui.jquery,
+                layer = layui.layer;
+
+            $('#add').on('click', function() {
+                layer.open({
+                    title: '添加',
+                    maxmin: true,
+                    type: 2,
+                    skin: 'layui-layer-rim',
+                    content: 'other/temp/edit-form.html',
+                    area: ['500px', '450px'], //宽高
+                    btn: [ '关闭'],
+                    shade: false,
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.generator.MlsdMobileStrengthGeneratorMapper">
+  <resultMap id="MlsdMobileStrengthMap" type="com.hd.entity.generator.MlsdMobileStrength" >
+ 	      	  <id column="id" property="id" jdbcType="BIGINT" />
+	            	  <result column="strength_img_url_1" property="strengthImgUrl1" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_2" property="strengthImgUrl2" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_3" property="strengthImgUrl3" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_4" property="strengthImgUrl4" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_5" property="strengthImgUrl5" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_6" property="strengthImgUrl6" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_7" property="strengthImgUrl7" jdbcType="VARCHAR" />
+	            	  <result column="strength_img_url_8" property="strengthImgUrl8" jdbcType="VARCHAR" />
+	        </resultMap>
+  
+  <!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+				 <when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+ <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+					#{listItem}
+                  </foreach>
+                </when>
+				<when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+    <sql id="Base_Column_List">
+	        	    id
+	  	  	   ,  strength_img_url_1
+	  	  	   ,  strength_img_url_2
+	  	  	   ,  strength_img_url_3
+	  	  	   ,  strength_img_url_4
+	  	  	   ,  strength_img_url_5
+	  	  	   ,  strength_img_url_6
+	  	  	   ,  strength_img_url_7
+	  	  	   ,  strength_img_url_8
+	  	    </sql>
+
+
+  <!-- 增 -->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hd.entity.generator.MlsdMobileStrength" >
+    insert into mlsd_mobile_strength
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , strength_img_url_1
+		          	       , strength_img_url_2
+		          	       , strength_img_url_3
+		          	       , strength_img_url_4
+		          	       , strength_img_url_5
+		          	       , strength_img_url_6
+		          	       , strength_img_url_7
+		          	       , strength_img_url_8
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		  #{id,jdbcType=BIGINT}
+		      		 , #{strengthImgUrl1,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl2,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl3,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl4,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl5,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl6,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl7,jdbcType=VARCHAR}
+		      		 , #{strengthImgUrl8,jdbcType=VARCHAR}
+		          </trim>
+  </insert>
+
+  <!-- 替换 -->
+  <insert id="replaceSelective" parameterType="com.hd.entity.generator.MlsdMobileStrength" >
+     replace into mlsd_mobile_strength
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , strength_img_url_1
+		          	       , strength_img_url_2
+		          	       , strength_img_url_3
+		          	       , strength_img_url_4
+		          	       , strength_img_url_5
+		          	       , strength_img_url_6
+		          	       , strength_img_url_7
+		          	       , strength_img_url_8
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		 		 				#{id,jdbcType=BIGINT}
+		  		 ,		 				#{strengthImgUrl1,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl2,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl3,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl4,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl5,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl6,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl7,jdbcType=VARCHAR}
+		  		 ,		 				#{strengthImgUrl8,jdbcType=VARCHAR}
+		      </trim>
+  </insert>
+  
+  <!-- 删 -->
+  <delete id="deleteByExample" parameterType="com.hd.entity.generator.MlsdMobileStrengthExample" >
+    delete from mlsd_mobile_strength 
+	<if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  
+  <delete id="deleteByPrimaryKey" parameterType="com.hd.entity.generator.MlsdMobileStrengthKey" >
+    delete from mlsd_mobile_strength where id = 
+	    	     		  #{id,jdbcType=BIGINT}
+		 		      	          	          	          	          	          	          	          	          	 	
+  </delete>
+  
+  <!-- 改 -->
+  <update id="updateAllByExample">
+    update mlsd_mobile_strength
+    <set>
+	    		<if test="record.id !=null">
+        id = #{record.id,jdbcType=BIGINT},
+		 </if>
+				<if test="record.strengthImgUrl1 !=null">
+        strength_img_url_1 = #{record.strengthImgUrl1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl2 !=null">
+        strength_img_url_2 = #{record.strengthImgUrl2,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl3 !=null">
+        strength_img_url_3 = #{record.strengthImgUrl3,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl4 !=null">
+        strength_img_url_4 = #{record.strengthImgUrl4,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl5 !=null">
+        strength_img_url_5 = #{record.strengthImgUrl5,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl6 !=null">
+        strength_img_url_6 = #{record.strengthImgUrl6,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl7 !=null">
+        strength_img_url_7 = #{record.strengthImgUrl7,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.strengthImgUrl8 !=null">
+        strength_img_url_8 = #{record.strengthImgUrl8,jdbcType=VARCHAR},
+		 </if>
+		    </set>
+	<if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.hd.entity.generator.MlsdMobileStrength" >
+    update mlsd_mobile_strength
+    <set>
+	      <if test="id !=null">
+      id = #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="strengthImgUrl1 !=null">
+      strength_img_url_1 = #{strengthImgUrl1,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl2 !=null">
+      strength_img_url_2 = #{strengthImgUrl2,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl3 !=null">
+      strength_img_url_3 = #{strengthImgUrl3,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl4 !=null">
+      strength_img_url_4 = #{strengthImgUrl4,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl5 !=null">
+      strength_img_url_5 = #{strengthImgUrl5,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl6 !=null">
+      strength_img_url_6 = #{strengthImgUrl6,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl7 !=null">
+      strength_img_url_7 = #{strengthImgUrl7,jdbcType=VARCHAR},
+      </if>
+	      <if test="strengthImgUrl8 !=null">
+      strength_img_url_8 = #{strengthImgUrl8,jdbcType=VARCHAR},
+      </if>
+	    </set>
+    where 
+		      id = #{id,jdbcType=BIGINT}
+																		  </update>
+
+  
+  
+  <!-- 查1 -->
+  <select id="countByExample" parameterType="com.hd.entity.generator.MlsdMobileStrengthExample" resultType="java.lang.Integer">
+    select count(*) from mlsd_mobile_strength
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 查2 -->
+  <select id="selectByExample" parameterType="com.hd.entity.generator.MlsdMobileStrengthExample" resultMap="MlsdMobileStrengthMap">
+    select  
+	<if test="distinct">
+         distinct
+     </if> 
+	 <if test="columnName != null">
+            ${columnName.quereyColumnNameStr}
+     </if>
+	 <if test="columnName == null">
+			<include refid="Base_Column_List" />
+	 </if>
+	from mlsd_mobile_strength 
+   <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+	<if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  
+   <!-- 查3 -->
+  <select id="selectByPrimaryKey" resultMap="MlsdMobileStrengthMap" parameterType="com.hd.entity.generator.MlsdMobileStrength" >
+    select 
+	    	 id
+			, strength_img_url_1
+			, strength_img_url_2
+			, strength_img_url_3
+			, strength_img_url_4
+			, strength_img_url_5
+			, strength_img_url_6
+			, strength_img_url_7
+			, strength_img_url_8
+		    from mlsd_mobile_strength where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!-- 查4 -->
+  <select id="selectUnDelByPrimaryKey" resultMap="MlsdMobileStrengthMap" parameterType="com.hd.entity.generator.MlsdMobileStrength" >
+    select 
+	    	 id
+			, strength_img_url_1
+			, strength_img_url_2
+			, strength_img_url_3
+			, strength_img_url_4
+			, strength_img_url_5
+			, strength_img_url_6
+			, strength_img_url_7
+			, strength_img_url_8
+		    from mlsd_mobile_strength where id = #{id,jdbcType=BIGINT}
+																				
+  </select>
+  
+</mapper>

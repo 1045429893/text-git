@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 主键 -->
+<mapper namespace="com.hd.dao.business.CleanImageTaskBusinessMapper">
+    <select id="findImageNamesById" parameterType="java.util.HashMap"
+            resultType="java.util.HashMap">
+    SELECT *
+    from mlsd_home_page
+    LEFT JOIN mlsd_brand_culture ON mlsd_brand_culture.id=mlsd_home_page.id
+    LEFT JOIN mlsd_company_profile ON mlsd_company_profile.id=mlsd_home_page.id
+    LEFT JOIN mlsd_contact_us ON mlsd_contact_us.id=mlsd_home_page.id
+    LEFT JOIN mlsd_item_advantage ON mlsd_item_advantage.id=mlsd_home_page.id
+    LEFT JOIN mlsd_join_investment ON mlsd_join_investment.id=mlsd_home_page.id
+    LEFT JOIN mlsd_online_service ON mlsd_online_service.id=mlsd_home_page.id
+    LEFT JOIN mlsd_product_presentation ON mlsd_product_presentation.id=mlsd_home_page.id
+    LEFT JOIN mlsd_store_display ON mlsd_store_display.id=mlsd_home_page.id
+    LEFT JOIN mlsd_strength ON mlsd_strength.id=mlsd_home_page.id
+    where  mlsd_home_page.id=#{mlsdId,jdbcType=BIGINT}
+
+    </select>
+
+
+</mapper>

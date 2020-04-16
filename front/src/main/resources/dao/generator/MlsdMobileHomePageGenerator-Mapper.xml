@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.generator.MlsdMobileHomePageGeneratorMapper">
+  <resultMap id="MlsdMobileHomePageMap" type="com.hd.entity.generator.MlsdMobileHomePage" >
+ 	      	  <id column="id" property="id" jdbcType="BIGINT" />
+	            	  <result column="banner" property="banner" jdbcType="VARCHAR" />
+	            	  <result column="text" property="text" jdbcType="VARCHAR" />
+	            	  <result column="show_image" property="showImage" jdbcType="VARCHAR" />
+	        </resultMap>
+  
+  <!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+				 <when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+ <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+					#{listItem}
+                  </foreach>
+                </when>
+				<when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+    <sql id="Base_Column_List">
+	        	    id
+	  	  	   ,  banner
+	  	  	   ,  text
+	  	  	   ,  show_image
+	  	    </sql>
+
+
+  <!-- 增 -->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hd.entity.generator.MlsdMobileHomePage" >
+    insert into mlsd_mobile_home_page
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner
+		          	       , text
+		          	       , show_image
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		  #{id,jdbcType=BIGINT}
+		      		 , #{banner,jdbcType=VARCHAR}
+		      		 , #{text,jdbcType=VARCHAR}
+		      		 , #{showImage,jdbcType=VARCHAR}
+		          </trim>
+  </insert>
+
+  <!-- 替换 -->
+  <insert id="replaceSelective" parameterType="com.hd.entity.generator.MlsdMobileHomePage" >
+     replace into mlsd_mobile_home_page
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner
+		          	       , text
+		          	       , show_image
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		 		 				#{id,jdbcType=BIGINT}
+		  		 ,		 				#{banner,jdbcType=VARCHAR}
+		  		 ,		 				#{text,jdbcType=VARCHAR}
+		  		 ,		 				#{showImage,jdbcType=VARCHAR}
+		      </trim>
+  </insert>
+  
+  <!-- 删 -->
+  <delete id="deleteByExample" parameterType="com.hd.entity.generator.MlsdMobileHomePageExample" >
+    delete from mlsd_mobile_home_page 
+	<if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  
+  <delete id="deleteByPrimaryKey" parameterType="com.hd.entity.generator.MlsdMobileHomePageKey" >
+    delete from mlsd_mobile_home_page where id = 
+	    	     		  #{id,jdbcType=BIGINT}
+		 		      	          	          	          	 	
+  </delete>
+  
+  <!-- 改 -->
+  <update id="updateAllByExample">
+    update mlsd_mobile_home_page
+    <set>
+	    		<if test="record.id !=null">
+        id = #{record.id,jdbcType=BIGINT},
+		 </if>
+				<if test="record.banner !=null">
+        banner = #{record.banner,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.text !=null">
+        text = #{record.text,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.showImage !=null">
+        show_image = #{record.showImage,jdbcType=VARCHAR},
+		 </if>
+		    </set>
+	<if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.hd.entity.generator.MlsdMobileHomePage" >
+    update mlsd_mobile_home_page
+    <set>
+	      <if test="id !=null">
+      id = #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="banner !=null">
+      banner = #{banner,jdbcType=VARCHAR},
+      </if>
+	      <if test="text !=null">
+      text = #{text,jdbcType=VARCHAR},
+      </if>
+	      <if test="showImage !=null">
+      show_image = #{showImage,jdbcType=VARCHAR},
+      </if>
+	    </set>
+    where 
+		      id = #{id,jdbcType=BIGINT}
+								  </update>
+
+  
+  
+  <!-- 查1 -->
+  <select id="countByExample" parameterType="com.hd.entity.generator.MlsdMobileHomePageExample" resultType="java.lang.Integer">
+    select count(*) from mlsd_mobile_home_page
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 查2 -->
+  <select id="selectByExample" parameterType="com.hd.entity.generator.MlsdMobileHomePageExample" resultMap="MlsdMobileHomePageMap">
+    select  
+	<if test="distinct">
+         distinct
+     </if> 
+	 <if test="columnName != null">
+            ${columnName.quereyColumnNameStr}
+     </if>
+	 <if test="columnName == null">
+			<include refid="Base_Column_List" />
+	 </if>
+	from mlsd_mobile_home_page 
+   <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+	<if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  
+   <!-- 查3 -->
+  <select id="selectByPrimaryKey" resultMap="MlsdMobileHomePageMap" parameterType="com.hd.entity.generator.MlsdMobileHomePage" >
+    select 
+	    	 id
+			, banner
+			, text
+			, show_image
+		    from mlsd_mobile_home_page where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!-- 查4 -->
+  <select id="selectUnDelByPrimaryKey" resultMap="MlsdMobileHomePageMap" parameterType="com.hd.entity.generator.MlsdMobileHomePage" >
+    select 
+	    	 id
+			, banner
+			, text
+			, show_image
+		    from mlsd_mobile_home_page where id = #{id,jdbcType=BIGINT}
+										
+  </select>
+  
+</mapper>

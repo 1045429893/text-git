@@ -1,0 +1,598 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+.added-box {
+    margin-left: 50px;
+    width: 970px;
+}
+
+.layui-upload {
+    /*margin-left: 150px;*/
+}
+
+.layui-upload-list {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.layui-upload-list img {
+    width: 100%;
+}
+
+.layui-form-item .layui-input-inline {
+    width: 280px;
+}
+
+.layui-form-label {
+    width: 120px;
+    font-weight: bold;
+    color: #333;
+}
+
+.new-account-title {
+    font-size: 16px;
+    color: #333;
+    line-height: 42px;
+    border-bottom: 1px dashed #ccc;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+.layui-form-item .grounp-btn {
+    text-align: right;
+}
+
+.layui-form-item .grounp-btn .layui-btn {
+    padding: 0 25px;
+}
+
+.layui-upload .layui-btn {
+    height: 34px;
+    padding: 0 22px;
+    line-height: 34px;
+}
+
+.no-void {
+    display: inline-block;
+    line-height: 38px;
+    color: red;
+    float: left;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.form-input-tips {
+    width: 230px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    position: absolute;
+    left: 460px;
+    display: block;
+    background-color: rgb(237, 250, 255);
+    border: 1px solid rgb(45, 183, 245);
+    border-radius: 3px;
+}
+
+.new-shop-color,
+.layui-form-label {}
+
+.new-shop-color .layui-input-inline {
+    width: 350px;
+    height: 38px;
+    line-height: 38px;
+    color: #ccc;
+}
+
+.shop-color .layui-input-inline {
+    width: 80px;
+}
+
+.shop-color .dx {
+    width: 20px;
+}
+
+.color-add-btn {
+    display: inline-block;
+    float: left;
+    font-size: 14px;
+    line-height: 38px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.color-add-btn span {
+    font-size: 14px;
+}
+
+.invent-good th {
+    text-align: center;
+}
+
+.invent-good tr td {
+    text-align: center;
+}
+
+.invent-good tr td input {
+    width: 100px;
+    margin-right: 5px;
+}
+
+.LAY_demo1 {
+    margin-left: 150px;
+}
+
+.upload-color-box {
+    margin-left: 65px;
+}
+
+.upload-color-box .layui-inline .title {
+    width: 100px;
+    text-align: center;
+}
+
+
+.order-box {
+    width: 970px;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+.order-status {
+    height: 40px;
+    line-height: 40px;
+    background-color: #f2f2f2;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.order-status dl {
+    float: left;
+    width: 300px;
+}
+
+.order-status dl dt {
+    float: left;
+    font-weight: bold;
+}
+
+.status-color {
+    color: #17c817;
+    font-weight: bold;
+}
+
+.status-color-red {
+    color: red;
+    font-weight: bold;
+}
+
+.ui-stepBar-wrap {
+    position: relative;
+    width: 970px;
+    height: 150px;
+    overflow: hidden;
+    display: block;
+    z-index: 100;
+}
+
+.ui-stepBar-wrap .ui-stepBar {
+    position: relative;
+    width: 70%;
+    height: 3px;
+    background: #cccccc;
+    top: 50px;
+    z-index: 101;
+}
+
+.ui-stepBar-wrap .ui-stepBar .ui-stepProcess {
+    position: relative;
+    width: 0;
+    height: 5px;
+    background: #516784;
+    top: 0;
+    left: 0;
+    z-index: 102;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap {
+    width: 90%;
+    height: 100%;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap tr {
+    width: 100%;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo {
+    width: 25%;
+    position: relative;
+    float: left;
+    padding-top: 36px;
+    text-align: center;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepSequence {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    position: relative;
+    top: -12px;
+    z-index: 103;
+    background: url(../../images/flow_icon.png) no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepSequencenone {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    position: relative;
+    top: -12px;
+    z-index: 103;
+    background: url(../../images/flow_icon_none.png) no-repeat;
+    background-size: cover;
+    display: block;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .ui-stepName {
+    position: relative;
+    line-height: 22px;
+    z-index: 103;
+    text-align: left;
+    font-weight: bold;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change,
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change {
+    cursor: pointer;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-pre-change:hover {
+    box-shadow: 0 0 3px 1px #516784;
+}
+
+.ui-stepBar-wrap .ui-stepInfo-wrap .ui-stepInfo .judge-stepSequence-hind-change:hover {
+    box-shadow: 0 0 3px 1px #cccccc;
+}
+
+.judge-stepSequence-pre {
+    background: #516784;
+    color: #ffffff;
+}
+
+.judge-stepSequence-hind {
+    background: #cccccc;
+    color: #000000;
+}
+
+.ui-stepLayout {
+    width: 100%;
+}
+
+.author {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 40px auto;
+    color: #1569ec;
+    text-shadow: 1px 1px 0 #e7e7e7, 0 1px 7px #fff;
+}
+
+.col-order-infor {
+    width: 970px;
+    margin-left: 30px;
+    border: 3px solid #f2f2f2;
+    margin-top: 25px;
+}
+
+.order-infor-h3 {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f2f2f2;
+}
+
+.order-infor-h4 {
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+}
+
+.pre-infor p {
+    padding: 5px 10px;
+}
+
+.pre-infor p.address {
+    margin-bottom: 10px;
+}
+
+.order-pay-way {
+    padding: 20px 10px;
+}
+
+.shop-infor-table thead tr {
+    background: #fff;
+}
+
+.shop-infor-table thead th {
+    text-align: center;
+}
+
+.shop-infor-table-box {
+    padding: 10px;
+}
+
+.shop-infor-table {
+    font-size: 14px;
+    text-align: center;
+}
+
+.order-account {
+    padding: 10px;
+}
+
+.order-account p {
+    padding: 5px 0;
+    text-align: right;
+}
+
+.order-account p span {
+    font-weight: bold;
+}
+
+.order-account div i {
+    color: red;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.all-account {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+}
+
+.all-account i {
+    color: red;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.order-box .back-btn {
+    float: right;
+    padding: 10px 18px;
+    display: inline-block;
+    background-color: blue;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.h38 {
+    height: 38px;
+    line-height: 38px;
+}
+
+.layui-upload-list01 {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.layui-upload-list01 img {
+    width: 100%;
+}
+
+.layui-form-text .bcsm {
+    width: 640px;
+    float: left;
+    line-height: 22px;
+}
+
+.order-tab {
+    background-color: #f2f2f2;
+}
+
+.order-tab li {
+    float: left;
+    cursor: pointer;
+}
+
+.order-tab li.active h3 span {
+    background-color: #fff;
+}
+
+.order-tab li h3 {
+    padding-left: 0;
+}
+
+.order-tab li h3 span {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ccc;
+    text-align: center;
+    display: inline-block;
+}
+
+.invent-good .space-tr {
+    background-color: #ccc;
+}
+
+.invent-good .space-tr td {
+    height: 5px;
+    border: none;
+    padding: 0;
+}
+
+
+.seller-order-details {
+    width: 970px;
+}
+
+.seller-order-h2 {
+    height: 35px;
+    line-height: 35px;
+    background-color: #f3f3f3;
+}
+
+.seller-order-h2 span {
+    border-left: 5px solid #1abc9c;
+    padding-left: 10px;
+    display: block;
+}
+
+.seller-flow-box {
+    width: 900px;
+    margin-left: 165px;
+}
+
+.seller-o-wrapper {
+    width: 970px;
+    margin: 0 auto;
+}
+
+.ui-stepName span.title {
+    font-weight: bold;
+}
+
+.ui-stepName span {
+    font-weight: normal;
+    display: block;
+}
+
+.seller-s-box {
+    height: 80px;
+    line-height: 80px;
+    font-size: 16px;
+    background: #f3f3f3;
+    padding-left: 15px;
+    color: #f00;
+    border: 1px solid #ddd;
+    margin-top: 30px;
+}
+
+.seller-s-title {
+    height: 30px;
+    line-height: 30px;
+    border-left: 5px solid #1abc9c;
+    font-size: 16px;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+.seller-s-table {
+    text-align: center;
+}
+
+.seller-s-table tr th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.seller-s-table tr td a {
+    color: #333;
+}
+
+
+ul {
+    list-style: none;
+    display: inline-block;
+}
+
+
+ul a {
+    display: block;
+    text-decoration: none;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+
+.nav>li:first-child a {
+    margin-bottom: 5px;
+}
+.nav 
+.nav>li:last-child a {
+    // border-radius: 0 10px 10px 0;
+}
+.drop-down-content>li:first-child a{ margin-top: 5px;}
+
+.drop-down {
+    position: relative;
+}
+
+.drop-down-content {
+    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 200;
+    background: #fff;
+    border-radius: 3px;
+    border:1px solid #ccc;
+    top:18px;
+
+}
+.drop-down-content li a{ 
+    border:1px solid #ccc;
+    border-radius:3px;
+    margin-left:5px;
+    margin-right:5px;
+    color: #333;
+}
+h3 {
+    font-size: 30px;
+    clear: both;
+}
+
+.drop-down-content li:hover a {
+    
+}
+
+.nav .drop-down:hover .drop-down-content {
+    display: block;
+}
+
+.refund-table-h4{ height: 50px; line-height: 50px;  background: #fcfcfc; margin:0; padding-left: 15px; border:1px solid #e2e2e2; border-bottom:none; margin-top: 15px;}
+.refund-s-details .seller-s-table{  margin:0;}
+.refund-s-total{height: 50px; line-height: 50px; background: #fcfcfc; border:1px solid #e2e2e2; margin-bottom: 15px; border-top:none; text-align: right; padding-right: 15px;}
+.refund-s-total span{ color: red; font-weight: bold;}
+.server-ticket-infor .refund-table-h4{ margin-top: 0;}
+.server-ticket-infor .seller-s-table{ margin-top: 0; }
+.server-ticket-infor .seller-s-table tbody tr td:first-child{width: 150px; text-align: right; background: #f2f2f2;}
+.server-ticket-infor .seller-s-table td{ text-align: left;}
+.tkje{ color: red;}
+.server-ticket-infor .seller-s-table td img{ width: 100px; overflow: hidden; margin-right: 10px;}
+.negotiate-list{ }
+.negotiate-list li{ line-height: 25px;}
+.negotiate-list li.last img{vertical-align:text-top;}
+.refund-ground-btn{ text-align: center; margin-bottom: 15px; }
+.agree-btn{ width: 80px; height: 35px; line-height: 35px; color: #fff; border:none; background: green; border-radius: 3px; cursor: pointer; margin-right: 15px;}
+.repulse-btn{width: 80px; height: 35px; line-height: 35px; color: #fff; border:none; background: red;  border-radius: 3px; cursor: pointer;}
+

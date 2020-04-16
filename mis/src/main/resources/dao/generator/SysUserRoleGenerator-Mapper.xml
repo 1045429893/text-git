@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.generator.SysUserRoleGeneratorMapper">
+  <resultMap id="SysUserRoleMap" type="com.hd.entity.generator.SysUserRole" >
+ 	      	  <id column="id" property="id" jdbcType="BIGINT" />
+	            	  <result column="sys_user_id" property="sysUserId" jdbcType="BIGINT" />
+	            	  <result column="sys_role_id" property="sysRoleId" jdbcType="BIGINT" />
+	            	  <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+	            	  <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+	        </resultMap>
+  
+  <!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+				 <when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+ <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+					#{listItem}
+                  </foreach>
+                </when>
+				<when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+    <sql id="Base_Column_List">
+	        	    id
+	  	  	   ,  sys_user_id
+	  	  	   ,  sys_role_id
+	  	  	   ,  create_time
+	  	  	   ,  update_time
+	  	    </sql>
+
+
+  <!-- 增 -->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hd.entity.generator.SysUserRole" >
+    insert into sys_user_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , sys_user_id
+		          	       , sys_role_id
+		          	       , create_time
+		          	       , update_time
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		  #{id,jdbcType=BIGINT}
+		      		 , #{sysUserId,jdbcType=BIGINT}
+		      		 , #{sysRoleId,jdbcType=BIGINT}
+		      		 , #{createTime,jdbcType=TIMESTAMP}
+		      		 , #{updateTime,jdbcType=TIMESTAMP}
+		          </trim>
+  </insert>
+
+  <!-- 替换 -->
+  <insert id="replaceSelective" parameterType="com.hd.entity.generator.SysUserRole" >
+     replace into sys_user_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , sys_user_id
+		          	       , sys_role_id
+		          	       , create_time
+		          	       , update_time
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		 		 				#{id,jdbcType=BIGINT}
+		  		 ,		 				#{sysUserId,jdbcType=BIGINT}
+		  		 ,		 				#{sysRoleId,jdbcType=BIGINT}
+		  		 ,		 			  <if test= "createTime != null">
+			  #{createTime,jdbcType=TIMESTAMP}
+			  </if>
+			  <if test= "createTime == null">CURRENT_TIMESTAMP()</if>
+		  		 ,		 				#{updateTime,jdbcType=TIMESTAMP}
+		      </trim>
+  </insert>
+  
+  <!-- 删 -->
+  <delete id="deleteByExample" parameterType="com.hd.entity.generator.SysUserRoleExample" >
+    delete from sys_user_role 
+	<if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  
+  <delete id="deleteByPrimaryKey" parameterType="com.hd.entity.generator.SysUserRoleKey" >
+    delete from sys_user_role where id = 
+	    	     		  #{id,jdbcType=BIGINT}
+		 		      	          	          	          	          	 	
+  </delete>
+  
+  <!-- 改 -->
+  <update id="updateAllByExample">
+    update sys_user_role
+    <set>
+	    		<if test="record.id !=null">
+        id = #{record.id,jdbcType=BIGINT},
+		 </if>
+				<if test="record.sysUserId !=null">
+        sys_user_id = #{record.sysUserId,jdbcType=BIGINT},
+		 </if>
+				<if test="record.sysRoleId !=null">
+        sys_role_id = #{record.sysRoleId,jdbcType=BIGINT},
+		 </if>
+				<if test="record.createTime !=null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+		 </if>
+				<if test="record.updateTime !=null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+		 </if>
+		    </set>
+	<if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.hd.entity.generator.SysUserRole" >
+    update sys_user_role
+    <set>
+	      <if test="id !=null">
+      id = #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="sysUserId !=null">
+      sys_user_id = #{sysUserId,jdbcType=BIGINT},
+      </if>
+	      <if test="sysRoleId !=null">
+      sys_role_id = #{sysRoleId,jdbcType=BIGINT},
+      </if>
+	      <if test="createTime !=null">
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+	      <if test="updateTime !=null">
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+	    </set>
+    where 
+		      id = #{id,jdbcType=BIGINT}
+										  </update>
+
+  
+  
+  <!-- 查1 -->
+  <select id="countByExample" parameterType="com.hd.entity.generator.SysUserRoleExample" resultType="java.lang.Integer">
+    select count(*) from sys_user_role
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 查2 -->
+  <select id="selectByExample" parameterType="com.hd.entity.generator.SysUserRoleExample" resultMap="SysUserRoleMap">
+    select  
+	<if test="distinct">
+         distinct
+     </if> 
+	 <if test="columnName != null">
+            ${columnName.quereyColumnNameStr}
+     </if>
+	 <if test="columnName == null">
+			<include refid="Base_Column_List" />
+	 </if>
+	from sys_user_role 
+   <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+	<if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  
+   <!-- 查3 -->
+  <select id="selectByPrimaryKey" resultMap="SysUserRoleMap" parameterType="com.hd.entity.generator.SysUserRole" >
+    select 
+	    	 id
+			, sys_user_id
+			, sys_role_id
+			, create_time
+			, update_time
+		    from sys_user_role where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!-- 查4 -->
+  <select id="selectUnDelByPrimaryKey" resultMap="SysUserRoleMap" parameterType="com.hd.entity.generator.SysUserRole" >
+    select 
+	    	 id
+			, sys_user_id
+			, sys_role_id
+			, create_time
+			, update_time
+		    from sys_user_role where id = #{id,jdbcType=BIGINT}
+												
+  </select>
+  
+</mapper>

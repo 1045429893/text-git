@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>新增商品</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="css/seller/seller.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="css/seller/upload.css" />
+    <script src="js/jquery-1.8.3.js"></script>
+</head>
+
+<body>
+    <div class="added-box">
+        <form class="layui-form" action="">
+            <div>
+                <h2 class="new-account-title">新增商品</h2>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品名称：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" lay-verify="required" placeholder="请输入商品名称" autocomplete="off" class="layui-input">
+                    </div>
+                    <span class="no-void">*</span>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品销售价：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" lay-verify="required" placeholder="请输入商品销售价" autocomplete="off" class="layui-input">
+                    </div>
+                    <span class="no-void">*</span>
+                    <div class="form-input-tips">商品在雪托帮商城的实际销售价格</div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品原价：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" lay-verify="required" placeholder="请输入商品原价" autocomplete="off" class="layui-input">
+                    </div>
+                    <span class="no-void">*</span>
+                    <div class="form-input-tips">商品销售价的参照价</div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品品牌：</label>
+                    <div class="layui-input-inline">
+                        <select name="interest" lay-filter="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <span class="no-void">*</span>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商品品类：</label>
+                    <div class="layui-input-inline">
+                        <select name="interest" lay-filter="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <span class="no-void">*</span>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"></label>
+                    <div class="layui-input-inline">
+                        <select name="interest" lay-filter="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <span class="no-void">*</span>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"></label>
+                    <div class="layui-input-inline">
+                        <select name="interest" lay-filter="">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <span class="no-void">*</span>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">发货时间描述：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="" placeholder="如：订单72小时内发货" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <h2 class="new-account-title"></h2>
+            <div class="layui-form-item new-shop-color">
+                <label class="layui-form-label">商品颜色：</label>
+                <div class="layui-input-inline">（必填，包括但不限于颜色，勾选后生效）</div>
+            </div>
+            <div class="layui-form-item shop-color" pane="">
+                <label class="layui-form-label"></label>
+                <div id="addColor">
+                    <div class="layui-input-inline dx">
+                        <input type="checkbox" name="like1[read]" lay-skin="primary" title="">
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="" lay-verify="" placeholder="红色" autocomplete="off" class="layui-input ">
+                    </div>
+                </div>
+                <div id="addColor1">
+                    <div class="layui-input-inline dx">
+                        <input type="checkbox" name="like1[read]" lay-skin="primary" title="">
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="" lay-verify="" placeholder="蓝色" autocomplete="off" class="layui-input ">
+                    </div>
+                </div>
+                <div class="color-add-btn"><span class="fa fa-plus"></span>&nbsp;添加</div>
+            </div>
+            <h2 class="new-account-title"></h2>
+            <div class="layui-form-item new-shop-color">
+                <label class="layui-form-label">商品规格：</label>
+                <div class="layui-input-inline">（非必填，可填入：鞋码，尺码，长度等，勾选后生效）</div>
+            </div>
+            <div class="layui-form-item shop-color" pane="">
+                <label class="layui-form-label"></label>
+                <div id="addColor">
+                    <div class="layui-input-inline dx">
+                        <input type="checkbox" name="like1[read]" lay-skin="primary" title="">
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="" lay-verify="" placeholder="36码" autocomplete="off" class="layui-input ">
+                    </div>
+                </div>
+                <div id="addColor1">
+                    <div class="layui-input-inline dx">
+                        <input type="checkbox" name="like1[read]" lay-skin="primary" title="">
+                    </div>
+                    <div class="layui-input-inline">
+                        <input type="text" name="" lay-verify="" placeholder="37码" autocomplete="off" class="layui-input ">
+                    </div>
+                </div>
+                <div class="color-add-btn"><span class="fa fa-plus"></span>&nbsp;添加</div>
+            </div>
+            <h2 class="new-account-title"></h2>
+            <table class="layui-table invent-good">
+                <thead>
+                    <tr>
+                        <th>颜色</th>
+                        <th>规格</th>
+                        <th>商品库存</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr class="space-tr"> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr class="space-tr"> 
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>红色</td>
+                        <td>36</td>
+                        <td>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                            </div>
+                            <span>件</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="new-account-title"></h2>
+            <div class="layui-form-item">
+                <div class="layui-form-item new-shop-color">
+                    <label class="layui-form-label">商品主图：</label>
+                    <div class="layui-input-inline">（必填）</div>
+                </div>
+                <div style="margin-left: 65px;" class="clearfix">
+                    <div id="ossfile">你的浏览器不支持flash,Silverlight或者HTML5！</div>
+                    <div class="upload-wrapper">
+                        <pre id="console"></pre>
+                        <p>&nbsp;</p>
+                        <div id="picDivId"></div>
+                        <div id="container">
+                            <a id="selectfiles" href="javascript:void(0);" class='btn'>选择主图一</a>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper">
+                        <pre id="console1"></pre>
+                        <p>&nbsp;</p>
+                        <div id="picDivId1"></div>
+                        <div id="container1">
+                            <a id="selectfiles1" href="javascript:void(0);" class='btn'>选择主图二</a>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper">
+                        <pre id="console2"></pre>
+                        <p>&nbsp;</p>
+                        <div id="picDivId2"></div>
+                        <div id="container2">
+                            <a id="selectfiles2" href="javascript:void(0);" class='btn'>选择主图三</a>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper">
+                        <pre id="console3"></pre>
+                        <p>&nbsp;</p>
+                        <div id="picDivId3"></div>
+                        <div id="container3">
+                            <a id="selectfiles3" href="javascript:void(0);" class='btn'>选择主图四</a>
+                        </div>
+                    </div>
+                    <div class="upload-wrapper">
+                        <pre id="console4"></pre>
+                        <p>&nbsp;</p>
+                        <div id="picDivId4"></div>
+                        <div id="container4">
+                            <a id="selectfiles4" href="javascript:void(0);" class='btn'>选择主图五</a>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="new-account-title"></h2>
+                <div class="layui-form-item">
+                    <div class="layui-form-item new-shop-color">
+                        <label class="layui-form-label">颜色缩略图：</label>
+                        <div class="layui-input-inline">（必填）</div>
+                    </div>
+                    <div class="upload-color-box">
+                        <div id="ossfile1">你的浏览器不支持flash,Silverlight或者HTML5！</div>
+                        <div class="layui-inline">
+                            <p class="title">红色</p>
+                            <div class="upload-wrapper">
+                                <pre id="console5"></pre>
+                                <p>&nbsp;</p>
+                                <div id="picDivId5"></div>
+                                <div id="container5">
+                                    <a id="selectfiles5" href="javascript:void(0);" class='btn'>选择图片</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <p class="title">黑色</p>
+                            <div class="upload-wrapper">
+                                <pre id="console6"></pre>
+                                <p>&nbsp;</p>
+                                <div id="picDivId6"></div>
+                                <div id="container6">
+                                    <a id="selectfiles6" href="javascript:void(0);" class='btn'>选择图片</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <p class="title">蓝色</p>
+                            <div class="upload-wrapper">
+                                <pre id="console7"></pre>
+                                <p>&nbsp;</p>
+                                <div id="picDivId7"></div>
+                                <div id="container7">
+                                    <a id="selectfiles7" href="javascript:void(0);" class='btn'>选择图片</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="new-account-title"></h2>
+                <div class="layui-form-item new-shop-color">
+                    <label class="layui-form-label">商品详情：</label>
+                    <div class="layui-input-inline">（必填）</div>
+                </div>
+                <div style="margin-left: 65px;">
+                    <textarea class="layui-textarea" id="LAY_demo1" style="display: none">
+                        把编辑器的初始内容放在这textarea即可
+                    </textarea>
+                </div>
+                <h2 class="new-account-title"></h2>
+                <div class="layui-form-item">
+                    <div class="layui-input-block grounp-btn">
+                        <button class="layui-btn" lay-submit="" lay-filter="save">保存</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">取消</button>
+                    </div>
+                </div>
+        </form>
+        </div>
+        <script type="text/javascript" src="js/plupload.full.min.js"></script>
+        <script type="text/javascript" src="js/upload.js"></script>
+        <input type="hidden" value="http://localhost:8080/seller/oss/getSellerPrivateBucketInfo.do" id="getBucketInfoUrlId">
+        <input type="hidden" value="http://localhost:8080/seller/oss/getSellerPrivateOssUrl.do" id="getOssUrlId">
+        <script src="layui/layui.js" charset="utf-8"></script>
+        <script>
+        layui.use(['form', 'layedit', 'laydate'], function() {
+            var layedit = layui.layedit,
+                $ = layui.jquery;
+
+            //构建一个默认的编辑器
+            var index = layedit.build('LAY_demo1');
+            var form = layui.form,
+                layer = layui.layer,
+                layedit = layui.layedit,
+                laydate = layui.laydate;
+            //自定义验证规则
+            form.verify({
+                title: function(value) {
+                    if (value.length < 5) {
+                        return '标题至少得5个字符啊';
+                    }
+                },
+                pass: [/(.+){6,12}$/, '密码必须6到12位'],
+                content: function(value) {
+                    layedit.sync(editIndex);
+                }
+            });
+            //监听提交
+            form.on('submit(save)', function(data) {
+                layer.alert(JSON.stringify(data.field), {
+                    title: '最终的提交信息'
+                })
+                return false;
+            });
+        });
+        </script>
+</body>
+
+</html>

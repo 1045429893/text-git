@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+  <!-- 主键 -->
+  <mapper namespace="com.hd.dao.generator.MlsdItemAdvantageGeneratorMapper">
+  <resultMap id="MlsdItemAdvantageMap" type="com.hd.entity.generator.MlsdItemAdvantage" >
+ 	      	  <id column="id" property="id" jdbcType="BIGINT" />
+	            	  <result column="banner_1" property="banner1" jdbcType="VARCHAR" />
+	            	  <result column="company_shows_text_img_url" property="companyShowsTextImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="company_shows_title_img_url" property="companyShowsTitleImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="company_shows_img_url" property="companyShowsImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="company_shows_advantage_img_url" property="companyShowsAdvantageImgUrl" jdbcType="VARCHAR" />
+	            	  <result column="support_img_url" property="supportImgUrl" jdbcType="VARCHAR" />
+	        </resultMap>
+  
+  <!-- 查询where部分sql限制条件集合 -->
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim  prefixOverrides="and" prefix="(" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="("  close=")" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+				 <when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+
+ <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach  collection="criterion.value" item="listItem" open="(" close=")" separator=",">
+					#{listItem}
+                  </foreach>
+                </when>
+				<when test="criterion.customValue">
+                      ${criterion.value}
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  
+    <sql id="Base_Column_List">
+	        	    id
+	  	  	   ,  banner_1
+	  	  	   ,  company_shows_text_img_url
+	  	  	   ,  company_shows_title_img_url
+	  	  	   ,  company_shows_img_url
+	  	  	   ,  company_shows_advantage_img_url
+	  	  	   ,  support_img_url
+	  	    </sql>
+
+
+  <!-- 增 -->
+  <insert id="insertSelective" useGeneratedKeys="true" keyProperty="id" parameterType="com.hd.entity.generator.MlsdItemAdvantage" >
+    insert into mlsd_item_advantage
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner_1
+		          	       , company_shows_text_img_url
+		          	       , company_shows_title_img_url
+		          	       , company_shows_img_url
+		          	       , company_shows_advantage_img_url
+		          	       , support_img_url
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		  #{id,jdbcType=BIGINT}
+		      		 , #{banner1,jdbcType=VARCHAR}
+		      		 , #{companyShowsTextImgUrl,jdbcType=VARCHAR}
+		      		 , #{companyShowsTitleImgUrl,jdbcType=VARCHAR}
+		      		 , #{companyShowsImgUrl,jdbcType=VARCHAR}
+		      		 , #{companyShowsAdvantageImgUrl,jdbcType=VARCHAR}
+		      		 , #{supportImgUrl,jdbcType=VARCHAR}
+		          </trim>
+  </insert>
+
+  <!-- 替换 -->
+  <insert id="replaceSelective" parameterType="com.hd.entity.generator.MlsdItemAdvantage" >
+     replace into mlsd_item_advantage
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+	   	   	        id
+		          	       , banner_1
+		          	       , company_shows_text_img_url
+		          	       , company_shows_title_img_url
+		          	       , company_shows_img_url
+		          	       , company_shows_advantage_img_url
+		          	       , support_img_url
+		              </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+	      		 		 				#{id,jdbcType=BIGINT}
+		  		 ,		 				#{banner1,jdbcType=VARCHAR}
+		  		 ,		 				#{companyShowsTextImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{companyShowsTitleImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{companyShowsImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{companyShowsAdvantageImgUrl,jdbcType=VARCHAR}
+		  		 ,		 				#{supportImgUrl,jdbcType=VARCHAR}
+		      </trim>
+  </insert>
+  
+  <!-- 删 -->
+  <delete id="deleteByExample" parameterType="com.hd.entity.generator.MlsdItemAdvantageExample" >
+    delete from mlsd_item_advantage 
+	<if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  
+  <delete id="deleteByPrimaryKey" parameterType="com.hd.entity.generator.MlsdItemAdvantageKey" >
+    delete from mlsd_item_advantage where id = 
+	    	     		  #{id,jdbcType=BIGINT}
+		 		      	          	          	          	          	          	          	 	
+  </delete>
+  
+  <!-- 改 -->
+  <update id="updateAllByExample">
+    update mlsd_item_advantage
+    <set>
+	    		<if test="record.id !=null">
+        id = #{record.id,jdbcType=BIGINT},
+		 </if>
+				<if test="record.banner1 !=null">
+        banner_1 = #{record.banner1,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.companyShowsTextImgUrl !=null">
+        company_shows_text_img_url = #{record.companyShowsTextImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.companyShowsTitleImgUrl !=null">
+        company_shows_title_img_url = #{record.companyShowsTitleImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.companyShowsImgUrl !=null">
+        company_shows_img_url = #{record.companyShowsImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.companyShowsAdvantageImgUrl !=null">
+        company_shows_advantage_img_url = #{record.companyShowsAdvantageImgUrl,jdbcType=VARCHAR},
+		 </if>
+				<if test="record.supportImgUrl !=null">
+        support_img_url = #{record.supportImgUrl,jdbcType=VARCHAR},
+		 </if>
+		    </set>
+	<if test="_parameter != null">
+       <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  
+  <update id="updateByPrimaryKeySelective" parameterType="com.hd.entity.generator.MlsdItemAdvantage" >
+    update mlsd_item_advantage
+    <set>
+	      <if test="id !=null">
+      id = #{id,jdbcType=BIGINT},
+      </if>
+	      <if test="banner1 !=null">
+      banner_1 = #{banner1,jdbcType=VARCHAR},
+      </if>
+	      <if test="companyShowsTextImgUrl !=null">
+      company_shows_text_img_url = #{companyShowsTextImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="companyShowsTitleImgUrl !=null">
+      company_shows_title_img_url = #{companyShowsTitleImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="companyShowsImgUrl !=null">
+      company_shows_img_url = #{companyShowsImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="companyShowsAdvantageImgUrl !=null">
+      company_shows_advantage_img_url = #{companyShowsAdvantageImgUrl,jdbcType=VARCHAR},
+      </if>
+	      <if test="supportImgUrl !=null">
+      support_img_url = #{supportImgUrl,jdbcType=VARCHAR},
+      </if>
+	    </set>
+    where 
+		      id = #{id,jdbcType=BIGINT}
+														  </update>
+
+  
+  
+  <!-- 查1 -->
+  <select id="countByExample" parameterType="com.hd.entity.generator.MlsdItemAdvantageExample" resultType="java.lang.Integer">
+    select count(*) from mlsd_item_advantage
+    <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+
+  <!-- 查2 -->
+  <select id="selectByExample" parameterType="com.hd.entity.generator.MlsdItemAdvantageExample" resultMap="MlsdItemAdvantageMap">
+    select  
+	<if test="distinct">
+         distinct
+     </if> 
+	 <if test="columnName != null">
+            ${columnName.quereyColumnNameStr}
+     </if>
+	 <if test="columnName == null">
+			<include refid="Base_Column_List" />
+	 </if>
+	from mlsd_item_advantage 
+   <if test="_parameter != null">
+       <include refid="Example_Where_Clause" />
+    </if>
+	<if test="orderByClause != null">
+       order by ${orderByClause}
+    </if>
+    <if test="limitStart &gt;= 0 and limitEnd &gt;= 0">
+       limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  
+   <!-- 查3 -->
+  <select id="selectByPrimaryKey" resultMap="MlsdItemAdvantageMap" parameterType="com.hd.entity.generator.MlsdItemAdvantage" >
+    select 
+	    	 id
+			, banner_1
+			, company_shows_text_img_url
+			, company_shows_title_img_url
+			, company_shows_img_url
+			, company_shows_advantage_img_url
+			, support_img_url
+		    from mlsd_item_advantage where id = #{id,jdbcType=BIGINT}
+  </select>
+
+    <!-- 查4 -->
+  <select id="selectUnDelByPrimaryKey" resultMap="MlsdItemAdvantageMap" parameterType="com.hd.entity.generator.MlsdItemAdvantage" >
+    select 
+	    	 id
+			, banner_1
+			, company_shows_text_img_url
+			, company_shows_title_img_url
+			, company_shows_img_url
+			, company_shows_advantage_img_url
+			, support_img_url
+		    from mlsd_item_advantage where id = #{id,jdbcType=BIGINT}
+																
+  </select>
+  
+</mapper>
